@@ -1,0 +1,6 @@
+#include "textBox.hpp"
+
+TextBox::TextBox() {
+
+}
+

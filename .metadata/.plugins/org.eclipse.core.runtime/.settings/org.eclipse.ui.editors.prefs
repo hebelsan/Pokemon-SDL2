@@ -1,0 +1,11 @@
+coverage_stylePreferences=NONE
+coverage_text=false
+eclipse.preferences.version=1
+highlight.text.style=NONE
+nocoverage_stylePreferences=NONE
+nocoverage_text=false
+org.eclipse.cdt.ui.occurrenceIndicationColor=128,64,0
+org.eclipse.cdt.ui.overrideIndicatorColor=128,128,128
+overviewRuler_migration=migrated_3.1
+thcoverage_stylePreferences=NONE
+thcoverage_text=false

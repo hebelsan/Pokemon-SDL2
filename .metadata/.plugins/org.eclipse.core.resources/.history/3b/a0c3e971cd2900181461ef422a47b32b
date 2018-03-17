@@ -1,0 +1,6 @@
+#include "textBox.hpp"
+
+TextBox::TextBox(Graphics &graphics):
+	Sprite(graphics, "content/backgrounds/starter.png", 0, 0, 912, 160, 0, 0)
+{}
+

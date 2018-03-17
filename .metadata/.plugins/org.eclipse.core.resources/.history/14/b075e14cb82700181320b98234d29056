@@ -1,0 +1,20 @@
+/*
+ * buttonAction.hpp
+ *
+ *  Created on: 14.03.2018
+ *      Author: Alexander
+ */
+
+#ifndef BUTTONACTION_HPP_
+#define BUTTONACTION_HPP_
+
+class Player;
+class Input;
+
+namespace btnAction {
+	void handleArrowKeys(Input &input, Player &player);
+};
+
+
+
+#endif /* BUTTONACTION_HPP_ */

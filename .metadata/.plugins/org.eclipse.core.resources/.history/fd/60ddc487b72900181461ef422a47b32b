@@ -1,0 +1,85 @@
+#include "buttonAction.hpp"
+#include "input.hpp"
+#include "player.hpp"
+#include "npc.hpp"
+#include "level.hpp"
+
+#include <iostream>
+
+namespace btnAction {
+
+	// handle Player movement
+	void handleArrowKeys(Input &input, Player &player) {
+		SDL_Scancode arrowKey = input.getPressedArrowKey();
+		if (arrowKey == SDL_SCANCODE_UNKNOWN) {
+			player.stopMoving();
+		}
+		else if (arrowKey == SDL_SCANCODE_LEFT) {
+			player.moveLeft();
+		}
+		else if (arrowKey == SDL_SCANCODE_RIGHT) {
+			player.moveRight();
+		}
+		else if (arrowKey == SDL_SCANCODE_UP) {
+			player.moveUp();
+		}
+		else if (arrowKey == SDL_SCANCODE_DOWN) {
+			player.moveDown();
+		}
+	}
+
+	// handle EscapeKey
+	void handleEscapeKey(Input &input) {
+		if (input.wasKeyPressed(SDL_SCANCODE_ESCAPE) == true) {
+			exit(0);
+		}
+	}
+
+	// handle A Button
+	void handleButtonA(Input &input, Level &level, Player &player) {
+		if (input.wasKeyPressed(SDL_SCANCODE_A) == true) {
+
+			std::vector<Npc*> levelNpcs = level.getNpcs();
+			Direction playersDirection = player.getFacing();
+
+			// loop each npc and check position to player
+			for (int i = 0; i < levelNpcs.size(); i++) {
+				switch (playersDirection) {
+					case UP : {
+						if (player.getBoundingBox().getTop() - levelNpcs.at(i)->getBoundingBox().getBottom() == 1) {
+							levelNpcs.at(i)->setFacing(DOWN);
+							std::cout << "text" << std::endl;
+						}
+						break;
+					}
+					case DOWN : {
+						if (player.getBoundingBox().getBottom() - levelNpcs.at(i)->getBoundingBox().getTop() == -1) {
+
+							levelNpcs.at(i)->setFacing(UP);
+							std::cout << "text" << std::endl;
+						}
+						break;
+					}
+					case LEFT : {
+						if (player.getBoundingBox().getLeft() - levelNpcs.at(i)->getBoundingBox().getRight() == 1) {
+							levelNpcs.at(i)->setFacing(RIGHT);
+							std::cout << "text" << std::endl;
+						}
+						break;
+					}
+					case RIGHT : {
+						if (player.getBoundingBox().getRight() - levelNpcs.at(i)->getBoundingBox().getLeft() == 1) {
+							levelNpcs.at(i)->setFacing(LEFT);
+							std::cout << "text" << std::endl;
+						}
+						break;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+

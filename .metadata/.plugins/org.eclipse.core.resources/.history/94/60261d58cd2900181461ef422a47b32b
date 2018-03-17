@@ -1,0 +1,6 @@
+#include "textBox.hpp"
+
+TextBox::TextBox(Graphics &graphics):
+	Sprite(graphics, "filepath", sourceX, sourceY, width, height, posX, posY)
+{}
+

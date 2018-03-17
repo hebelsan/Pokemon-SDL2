@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Pokemon/source/headers/Door.hpp&apos; to &apos;door.hpp&apos;" description="Rename resource &apos;Door.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/headers/Door.hpp" name="door.hpp" stamp="1517559719495" updateReferences="true"/>
+</session>
