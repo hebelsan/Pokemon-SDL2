@@ -17,6 +17,7 @@ class Npc;
 class Player : public AnimatedSprite {
 public:
 	Player();
+	~Player();
 	Player(Graphics &graphics, Vector2 spawnPoint);
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
@@ -59,7 +60,6 @@ public:
 	const float getX() const;
 	const float getY() const;
 	const Direction getFacing() const;
-	TextBox* getTextBox() const;
 	SDL_Rect getCamera();
 private:
 	float _dx, _dy;
@@ -67,8 +67,6 @@ private:
 	Direction _facing;
 
 	SDL_Rect _camera;
-
-	TextBox* _textBox;
 };
 
 

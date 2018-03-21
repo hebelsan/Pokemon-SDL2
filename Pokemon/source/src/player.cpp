@@ -12,6 +12,8 @@ namespace player_constants {
 
 Player::Player() {}
 
+Player::~Player() {}
+
 Player::Player(Graphics &graphics, Vector2 spawnPoint) :
 	AnimatedSprite(graphics, "content/sprites/Ash.png", 0, 0, 16, 19, spawnPoint.x, spawnPoint.y, 150),
 	_dx(0),
@@ -22,7 +24,6 @@ Player::Player(Graphics &graphics, Vector2 spawnPoint) :
 	graphics.loadImage("content/sprites/Ash.png");
 	this->setupAnimations();
 	this->playAnimation("IdleDown");
-	_textBox = new TextBox(graphics);
 }
 
 void Player::setupAnimations() {
@@ -52,10 +53,6 @@ const Direction Player::getFacing() const {
 
 SDL_Rect Player::getCamera() {
 	return this->_camera;
-}
-
-TextBox* Player::getTextBox() const {
-	return this->_textBox;
 }
 
 void Player::moveLeft() {
@@ -213,7 +210,6 @@ void Player::update(float elapsedTime) {
 
 void Player::draw(Graphics &graphics) {
 	AnimatedSprite::drawPlayer(graphics, this->_x, this->_y, this->_camera);
-	this->_textBox->draw(graphics);
 }
 
 

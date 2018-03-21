@@ -35,6 +35,7 @@ void Game::gameLoop() {
 	music.loadMusicFile("content/music/LittlerootTown.mp3");
 	music.play(-1);
 
+	this->_gui = GUI(graphics);
 
 	int LAST_UPDATE_TIME = SDL_GetTicks();
 	// start game loop
@@ -58,10 +59,10 @@ void Game::gameLoop() {
 		btnAction::handleEscapeKey(input);
 
 		// handle arrowKeys and players moving
-		btnAction::handleArrowKeys(input, this->_player);
+		btnAction::handleArrowKeys(input, this->_player, this->_gui);
 
 		// Handle A Button
-		btnAction::handleButtonA(input, this->_level, this->_player);
+		btnAction::handleButtonA(input, this->_level, this->_player, this->_gui);
 
 
 		const int CURRENT_TIME_MS = SDL_GetTicks();
@@ -80,6 +81,7 @@ void Game::draw(Graphics &graphics) {
 
 	this->_level.draw(graphics, this->_player.getCamera());
 	this->_player.draw(graphics);
+	this->_gui.draw(graphics);
 
 	graphics.flip();
 }

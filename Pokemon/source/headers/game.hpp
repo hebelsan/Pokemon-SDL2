@@ -9,6 +9,7 @@
 #include "player.hpp"
 #include "level.hpp"
 #include "graphics.hpp"
+#include "GUI.hpp"
 
 
 class Game {
@@ -25,6 +26,8 @@ private:
 	Level _level;
 
 	Graphics _graphics;
+
+	GUI _gui;
 };
 
 

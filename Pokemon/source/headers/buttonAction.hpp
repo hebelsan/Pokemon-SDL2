@@ -11,11 +11,12 @@
 class Player;
 class Input;
 class Level;
+class GUI;
 
 namespace btnAction {
-	void handleArrowKeys(Input &input, Player &player);
+	void handleArrowKeys(Input &input, Player &player, GUI &gui);
 	void handleEscapeKey(Input &input);
-	void handleButtonA(Input &input, Level &level, Player &player);
+	void handleButtonA(Input &input, Level &level, Player &player, GUI &gui);
 };
 
 
