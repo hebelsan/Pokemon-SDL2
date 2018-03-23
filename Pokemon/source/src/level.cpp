@@ -352,6 +352,28 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 				XMLElement* pObject = pObjectGroup->FirstChildElement("object");
 				if (pObject != NULL) {
 					while (pObject) {
+						std::string npcText;
+						XMLElement* pProperties = pObject->FirstChildElement("properties");
+						if (pProperties != NULL) {
+							while (pProperties) {
+								XMLElement* pProperty = pProperties->FirstChildElement("property");
+								if (pProperty != NULL) {
+									while (pProperty) {
+										const char* name = pProperty->Attribute("name");
+										std::stringstream ss;
+										ss << name;
+										if (ss.str() == "text") {
+											const char* value = pProperty->Attribute("value");
+											std::stringstream ss2;
+											ss2 << value;
+											npcText = ss2.str();
+										}
+										pProperty = pProperty->NextSiblingElement("property");
+									}
+								}
+								pProperties = pObject->NextSiblingElement("properties");
+							}
+						}
 						x = pObject->FloatAttribute("x");
 						y = pObject->FloatAttribute("y");
 						const char* name = pObject->Attribute("name");
@@ -359,7 +381,7 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 						ss << name;
 						if (ss.str() == "dicker") {
 							this->_npcs.push_back(new Dicker(graphics, Vector2(std::floor(x) * globals::SPRITE_SCALE,
-									std::floor(y) * globals::SPRITE_SCALE)));
+									std::floor(y) * globals::SPRITE_SCALE), npcText));
 						}
 						pObject = pObject->NextSiblingElement("object");
 					}

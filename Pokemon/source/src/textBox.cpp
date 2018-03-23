@@ -1,6 +1,8 @@
 #include "textBox.hpp"
 #include "graphics.hpp"
 
+#include <string>
+
 TextBox::~TextBox() {
 	TTF_CloseFont(this->_font);
 	SDL_DestroyTexture(this->_spriteSheet);
@@ -35,9 +37,6 @@ TextBox::TextBox(Graphics &graphics) :
 	this->_fontColor.g = 0;
 	this->_fontColor.b = 0;
 
-	this->_textSections.push_back("hallo!");
-	this->_textSections.push_back("Blütenburg gefällt mir sehr gut.");
-
 	this->_sourceRect.w = 912;
 	this->_sourceRect.h = 160;
 	this->_sourceRect.x = 0;
@@ -58,7 +57,7 @@ void TextBox::draw(Graphics &graphics) {
 		graphics.blitSurface(this->_spriteSheet, &this->_sourceRect, &destinationRectangle);
 
 		// Draw Text
-		this->_fontSurface = TTF_RenderText_Blended_Wrapped(this->_font, this->_textSections.at(this->_sectionCounter).c_str(), this->_fontColor,
+		this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(this->_font, this->_textSections.at(this->_sectionCounter).c_str(), this->_fontColor,
 				(this->textBoxWidth - 30) * (int)globals::SPRITE_SCALE);
 		this->_fontTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurface);
 		SDL_QueryTexture(this->_fontTexture, NULL, NULL, &this->txtWidth, &this->txtHeight);
@@ -75,6 +74,25 @@ bool TextBox::isVisible() const {
 
 void TextBox::setVisible(bool value) {
 	this->_visible = value;
+}
+
+// parse the string and fill textsection vector
+void TextBox::setText(std::string strText) {
+	// clear old text
+	this->_textSections.clear();
+
+	std::string delimiter = "###";
+
+	size_t pos = 0;
+	std::string section;
+	while ((pos = strText.find(delimiter)) != std::string::npos) {
+		section = strText.substr(0, pos);
+	    this->_textSections.push_back(section);
+	    strText.erase(0, pos + delimiter.length());
+	}
+	this->_textSections.push_back(strText);
+
+	this->_visible = true;
 }
 
 void TextBox::nextTextSection() {

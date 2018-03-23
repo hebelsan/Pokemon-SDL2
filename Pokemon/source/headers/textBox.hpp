@@ -24,6 +24,7 @@ public:
 
 	bool isVisible() const;
 	void setVisible(bool value);
+	void setText(std::string text);
 
 	void nextTextSection();
 

@@ -4,10 +4,11 @@
 Npc::Npc() {}
 
 Npc::Npc(Graphics &graphics, std::string filePath, int sourceX, int sourceY, int width, int height,
-		Vector2 spawnPoint, int timeToUpdate) :
+		Vector2 spawnPoint, int timeToUpdate, std::string text) :
 				AnimatedSprite(graphics, filePath, sourceX, sourceY, width, height,
 						spawnPoint.x, spawnPoint.y, timeToUpdate),
-						_facing(DOWN)
+						_facing(DOWN),
+						_text(text)
 {}
 
 void Npc::update(int elapsedTime, Player &player) {
@@ -32,11 +33,15 @@ void Npc::setFacing(Direction facing) {
 	}
 }
 
+std::string Npc::getText() {
+	return this->_text;
+}
+
 //Dicker Class
 Dicker::Dicker() {}
 
-Dicker::Dicker(Graphics &graphics, Vector2 spawnPoint) :
-		Npc(graphics, "content/sprites/dicker.png", 0, 0, 16, 18, spawnPoint, 140)
+Dicker::Dicker(Graphics &graphics, Vector2 spawnPoint, std::string text) :
+		Npc(graphics, "content/sprites/dicker.png", 0, 0, 16, 18, spawnPoint, 140, text)
 {
 	this->setupAnimations();
 	this->playAnimation("idleDown");

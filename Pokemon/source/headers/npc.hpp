@@ -16,18 +16,20 @@ class Npc : public AnimatedSprite {
 public:
 	Npc();
 	Npc(Graphics &graphics, std::string filePath, int sourceX, int sourceY,
-			int width, int heigth, Vector2 spawnPoint, int timeToUpdate);
+			int width, int heigth, Vector2 spawnPoint, int timeToUpdate, std::string text);
 	virtual void update(int elapsedTime, Player &player);
 	virtual void draw(Graphics &graphics);
 	void setFacing(Direction facing);
+	std::string getText();
 protected:
 	Direction _facing;
+	std::string _text;
 };
 
 class Dicker : public Npc {
 public:
 	Dicker();
-	Dicker(Graphics &graphics, Vector2 spawnPoint);
+	Dicker(Graphics &graphics, Vector2 spawnPoint, std::string text);
 	void update(int elapsedTime, Player &player);
 	void draw(Graphics &graphics);
 

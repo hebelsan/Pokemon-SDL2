@@ -1660,9 +1660,15 @@
  <objectgroup name="slopes"/>
  <objectgroup color="#5500ff" name="NPC">
   <object id="47" name="dicker" x="241.333" y="223.333" width="2.66667" height="3.33333">
+   <properties>
+    <property name="text" value="ich bin auch ein NPC."/>
+   </properties>
    <ellipse/>
   </object>
   <object id="48" name="dicker" x="67.3333" y="31.3333" width="2.66667" height="2.33333">
+   <properties>
+    <property name="text" value="hallo!###Rosental ist ein wirklich schöner Ort.###Alle Leute in diesem Dorf sind so gelassen und freundlich.###Ich wünschte ich wäre auch hier aufgewachsen..."/>
+   </properties>
    <ellipse/>
   </object>
  </objectgroup>

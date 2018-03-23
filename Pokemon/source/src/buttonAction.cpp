@@ -67,7 +67,7 @@ namespace btnAction {
 								levelNpcs.at(i)->setFacing(DOWN);
 
 								player.playAnimation("IdleUp");
-								gui.getTextBox()->setVisible(true);
+								gui.getTextBox()->setText(levelNpcs.at(i)->getText());
 							}
 							break;
 						}
@@ -78,7 +78,7 @@ namespace btnAction {
 								levelNpcs.at(i)->setFacing(UP);
 
 								player.playAnimation("IdleDown");
-								gui.getTextBox()->setVisible(true);
+								gui.getTextBox()->setText(levelNpcs.at(i)->getText());
 							}
 							break;
 						}
@@ -89,7 +89,7 @@ namespace btnAction {
 								levelNpcs.at(i)->setFacing(RIGHT);
 
 								player.playAnimation("IdleLeft");
-								gui.getTextBox()->setVisible(true);
+								gui.getTextBox()->setText(levelNpcs.at(i)->getText());
 							}
 							break;
 						}
@@ -100,7 +100,7 @@ namespace btnAction {
 								levelNpcs.at(i)->setFacing(LEFT);
 
 								player.playAnimation("IdleRight");
-								gui.getTextBox()->setVisible(true);
+								gui.getTextBox()->setText(levelNpcs.at(i)->getText());
 							}
 							break;
 						}
