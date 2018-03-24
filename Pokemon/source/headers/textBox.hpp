@@ -50,7 +50,8 @@ private:
 	int _sectionCounter;
 
 	SDL_Rect _sourceRect;
-	SDL_Texture* _spriteSheet;
+	SDL_Rect _textBoxDestinationRectangle;
+	SDL_Texture* _textBoxTexture;
 	SDL_Texture* _fontTexture;
 	SDL_Surface* _fontSurface;
 	TTF_Font* _font;

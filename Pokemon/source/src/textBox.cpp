@@ -5,7 +5,7 @@
 
 TextBox::~TextBox() {
 	TTF_CloseFont(this->_font);
-	SDL_DestroyTexture(this->_spriteSheet);
+	SDL_DestroyTexture(this->_textBoxTexture);
 	SDL_DestroyTexture(this->_fontTexture);
 	delete this->_fontSurface;
 }
@@ -37,12 +37,17 @@ TextBox::TextBox(Graphics &graphics) :
 	this->_fontColor.g = 0;
 	this->_fontColor.b = 0;
 
-	this->_sourceRect.w = 912;
-	this->_sourceRect.h = 160;
 	this->_sourceRect.x = 0;
 	this->_sourceRect.y = 0;
-	this->_spriteSheet = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/textBox.png"));
-	if (this->_spriteSheet == NULL) {
+	this->_sourceRect.w = 912;
+	this->_sourceRect.h = 160;
+
+	this->_textBoxDestinationRectangle.x = textBoxPosX;
+	this->_textBoxDestinationRectangle.y = textBoxPosY;
+	this->_textBoxDestinationRectangle.w = textBoxWidth * (int)globals::SPRITE_SCALE;
+	this->_textBoxDestinationRectangle.h = textBoxHeight * (int)globals::SPRITE_SCALE;
+	this->_textBoxTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/textBox.png"));
+	if (this->_textBoxTexture == NULL) {
 		printf("\nError: Unable to load image\n");
 		printf(SDL_GetError());
 	}
@@ -51,10 +56,7 @@ TextBox::TextBox(Graphics &graphics) :
 void TextBox::draw(Graphics &graphics) {
 	 if (this->_visible) {
 		// Draw TextBox
-		SDL_Rect destinationRectangle = { textBoxPosX, textBoxPosY,
-				textBoxWidth * (int)globals::SPRITE_SCALE,
-				textBoxHeight * (int)globals::SPRITE_SCALE};
-		graphics.blitSurface(this->_spriteSheet, &this->_sourceRect, &destinationRectangle);
+		graphics.blitSurface(this->_textBoxTexture, &this->_sourceRect, &this->_textBoxDestinationRectangle);
 
 		// Draw Text
 		this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(this->_font, this->_textSections.at(this->_sectionCounter).c_str(), this->_fontColor,

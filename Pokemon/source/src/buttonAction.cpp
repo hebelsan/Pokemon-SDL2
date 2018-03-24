@@ -14,23 +14,30 @@ namespace btnAction {
 	// handle Player movement
 	void handleArrowKeys(Input &input, Player &player, GUI &gui) {
 		// player can only walk if he's not talking
-		if (!gui.getTextBox()->isVisible()) {
-			SDL_Scancode arrowKey = input.getPressedArrowKey();
-			if (arrowKey == SDL_SCANCODE_UNKNOWN) {
-				player.stopMoving();
-			}
-			else if (arrowKey == SDL_SCANCODE_LEFT) {
-				player.moveLeft();
-			}
-			else if (arrowKey == SDL_SCANCODE_RIGHT) {
-				player.moveRight();
-			}
-			else if (arrowKey == SDL_SCANCODE_UP) {
-				player.moveUp();
-			}
-			else if (arrowKey == SDL_SCANCODE_DOWN) {
-				player.moveDown();
-			}
+		if (gui.getTextBox()->isVisible()) {
+			return;
+		}
+
+		// player should not walk if menu box is visible
+		if (gui.getMenuBox()->visible() == true) {
+			return;
+		}
+
+		SDL_Scancode arrowKey = input.getPressedArrowKey();
+		if (arrowKey == SDL_SCANCODE_UNKNOWN) {
+			player.stopMoving();
+		}
+		else if (arrowKey == SDL_SCANCODE_LEFT) {
+			player.moveLeft();
+		}
+		else if (arrowKey == SDL_SCANCODE_RIGHT) {
+			player.moveRight();
+		}
+		else if (arrowKey == SDL_SCANCODE_UP) {
+			player.moveUp();
+		}
+		else if (arrowKey == SDL_SCANCODE_DOWN) {
+			player.moveDown();
 		}
 	}
 
@@ -47,6 +54,12 @@ namespace btnAction {
 	// handle A Button
 	void handleButtonA(Input &input, Level &level, Player &player, GUI &gui) {
 		if (input.wasKeyPressed(SDL_SCANCODE_A) == true) {
+
+			// handle menu interaction
+			if (gui.getMenuBox()->visible() == true) {
+				// TODO
+				return;
+			}
 
 			// first check if the player is already talking
 			if (gui.getTextBox()->isVisible()) {
@@ -110,7 +123,13 @@ namespace btnAction {
 		}
 	}
 
+	void handleReturnKey(Input &input, GUI &gui) {
+		if (input.wasKeyPressed(SDL_SCANCODE_RETURN) == true) {
+			gui.getMenuBox()->setVisible(!gui.getMenuBox()->visible());
+		}
+	}
 }
+
 
 
 

@@ -9,6 +9,7 @@
 #define GUI_HPP_
 
 #include "textBox.hpp"
+#include "menuBox.hpp"
 
 class Graphics;
 
@@ -20,8 +21,10 @@ public:
 	void draw(Graphics &graphics);
 
 	TextBox* getTextBox();
+	MenuBox* getMenuBox();
 private:
 	TextBox *_textBox;
+	MenuBox *_menuBox;
 };
 
 
