@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextobjectid="20">
+ <tileset firstgid="1" name="Tileset1" tilewidth="16" tileheight="16" tilecount="1710" columns="45">
+	<image source="../tilesets/TilesetIndoor.png" width="720" height="608"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="20" height="15">
+  <data>
+   <tile gid="1065"/>
+   <tile gid="1065"/>
+   <tile gid="1065"/>
+   <tile gid="1066"/>
+   <tile gid="1067"/>
+   <tile gid="1068"/>
+   <tile gid="1069"/>
+   <tile gid="1070"/>
+   <tile gid="1071"/>
+   <tile gid="1072"/>
+   <tile gid="1073"/>
+   <tile gid="1074"/>
+   <tile gid="1075"/>
+   <tile gid="1076"/>
+   <tile gid="1077"/>
+   <tile gid="1078"/>
+   <tile gid="1079"/>
+   <tile gid="1080"/>
+   <tile gid="1065"/>
+   <tile gid="1065"/>
+   <tile gid="1110"/>
+   <tile gid="1110"/>
+   <tile gid="1110"/>
+   <tile gid="1111"/>
+   <tile gid="1112"/>
+   <tile gid="1113"/>
+   <tile gid="1114"/>
+   <tile gid="1115"/>
+   <tile gid="1116"/>
+   <tile gid="1117"/>
+   <tile gid="1118"/>
+   <tile gid="1119"/>
+   <tile gid="1120"/>
+   <tile gid="1121"/>
+   <tile gid="1122"/>
+   <tile gid="1123"/>
+   <tile gid="1124"/>
+   <tile gid="1125"/>
+   <tile gid="1110"/>
+   <tile gid="1110"/>
+   <tile gid="1155"/>
+   <tile gid="1155"/>
+   <tile gid="1155"/>
+   <tile gid="1156"/>
+   <tile gid="1157"/>
+   <tile gid="1158"/>
+   <tile gid="1159"/>
+   <tile gid="1160"/>
+   <tile gid="1161"/>
+   <tile gid="1162"/>
+   <tile gid="1163"/>
+   <tile gid="1164"/>
+   <tile gid="1165"/>
+   <tile gid="1166"/>
+   <tile gid="1167"/>
+   <tile gid="1168"/>
+   <tile gid="1169"/>
+   <tile gid="1170"/>
+   <tile gid="1155"/>
+   <tile gid="1155"/>
+   <tile gid="1200"/>
+   <tile gid="1200"/>
+   <tile gid="1200"/>
+   <tile gid="1201"/>
+   <tile gid="1202"/>
+   <tile gid="1203"/>
+   <tile gid="1204"/>
+   <tile gid="1205"/>
+   <tile gid="1206"/>
+   <tile gid="1207"/>
+   <tile gid="1208"/>
+   <tile gid="1209"/>
+   <tile gid="1210"/>
+   <tile gid="1211"/>
+   <tile gid="1212"/>
+   <tile gid="1213"/>
+   <tile gid="1214"/>
+   <tile gid="1215"/>
+   <tile gid="1200"/>
+   <tile gid="1200"/>
+   <tile gid="1245"/>
+   <tile gid="1245"/>
+   <tile gid="1245"/>
+   <tile gid="1246"/>
+   <tile gid="1247"/>
+   <tile gid="1248"/>
+   <tile gid="1249"/>
+   <tile gid="1250"/>
+   <tile gid="1251"/>
+   <tile gid="1252"/>
+   <tile gid="1253"/>
+   <tile gid="1254"/>
+   <tile gid="1255"/>
+   <tile gid="1256"/>
+   <tile gid="1257"/>
+   <tile gid="1258"/>
+   <tile gid="1259"/>
+   <tile gid="1260"/>
+   <tile gid="1245"/>
+   <tile gid="1245"/>
+   <tile gid="1290"/>
+   <tile gid="1290"/>
+   <tile gid="1290"/>
+   <tile gid="1291"/>
+   <tile gid="1292"/>
+   <tile gid="1293"/>
+   <tile gid="1294"/>
+   <tile gid="1295"/>
+   <tile gid="1296"/>
+   <tile gid="1297"/>
+   <tile gid="1298"/>
+   <tile gid="1299"/>
+   <tile gid="1300"/>
+   <tile gid="1301"/>
+   <tile gid="1302"/>
+   <tile gid="1303"/>
+   <tile gid="1304"/>
+   <tile gid="1305"/>
+   <tile gid="1290"/>
+   <tile gid="1290"/>
+   <tile gid="1335"/>
+   <tile gid="1335"/>
+   <tile gid="1335"/>
+   <tile gid="1336"/>
+   <tile gid="1337"/>
+   <tile gid="1338"/>
+   <tile gid="1339"/>
+   <tile gid="1340"/>
+   <tile gid="1341"/>
+   <tile gid="1342"/>
+   <tile gid="1343"/>
+   <tile gid="1344"/>
+   <tile gid="1345"/>
+   <tile gid="1346"/>
+   <tile gid="1347"/>
+   <tile gid="1348"/>
+   <tile gid="1349"/>
+   <tile gid="1350"/>
+   <tile gid="1335"/>
+   <tile gid="1335"/>
+   <tile gid="1380"/>
+   <tile gid="1380"/>
+   <tile gid="1380"/>
+   <tile gid="1381"/>
+   <tile gid="1382"/>
+   <tile gid="1383"/>
+   <tile gid="1384"/>
+   <tile gid="1385"/>
+   <tile gid="1386"/>
+   <tile gid="1387"/>
+   <tile gid="1388"/>
+   <tile gid="1389"/>
+   <tile gid="1390"/>
+   <tile gid="1391"/>
+   <tile gid="1392"/>
+   <tile gid="1393"/>
+   <tile gid="1394"/>
+   <tile gid="1395"/>
+   <tile gid="1380"/>
+   <tile gid="1380"/>
+   <tile gid="1425"/>
+   <tile gid="1425"/>
+   <tile gid="1425"/>
+   <tile gid="1426"/>
+   <tile gid="1427"/>
+   <tile gid="1428"/>
+   <tile gid="1429"/>
+   <tile gid="1430"/>
+   <tile gid="1431"/>
+   <tile gid="1432"/>
+   <tile gid="1433"/>
+   <tile gid="1434"/>
+   <tile gid="1435"/>
+   <tile gid="1436"/>
+   <tile gid="1437"/>
+   <tile gid="1438"/>
+   <tile gid="1439"/>
+   <tile gid="1440"/>
+   <tile gid="1425"/>
+   <tile gid="1425"/>
+   <tile gid="1470"/>
+   <tile gid="1470"/>
+   <tile gid="1470"/>
+   <tile gid="1471"/>
+   <tile gid="1472"/>
+   <tile gid="1473"/>
+   <tile gid="1474"/>
+   <tile gid="1475"/>
+   <tile gid="1476"/>
+   <tile gid="1477"/>
+   <tile gid="1478"/>
+   <tile gid="1479"/>
+   <tile gid="1480"/>
+   <tile gid="1481"/>
+   <tile gid="1482"/>
+   <tile gid="1483"/>
+   <tile gid="1484"/>
+   <tile gid="1485"/>
+   <tile gid="1470"/>
+   <tile gid="1470"/>
+   <tile gid="1515"/>
+   <tile gid="1515"/>
+   <tile gid="1515"/>
+   <tile gid="1516"/>
+   <tile gid="1517"/>
+   <tile gid="1518"/>
+   <tile gid="1519"/>
+   <tile gid="1520"/>
+   <tile gid="1521"/>
+   <tile gid="1522"/>
+   <tile gid="1523"/>
+   <tile gid="1524"/>
+   <tile gid="1525"/>
+   <tile gid="1526"/>
+   <tile gid="1527"/>
+   <tile gid="1528"/>
+   <tile gid="1529"/>
+   <tile gid="1530"/>
+   <tile gid="1515"/>
+   <tile gid="1515"/>
+   <tile gid="1560"/>
+   <tile gid="1560"/>
+   <tile gid="1560"/>
+   <tile gid="1561"/>
+   <tile gid="1562"/>
+   <tile gid="1563"/>
+   <tile gid="1564"/>
+   <tile gid="1565"/>
+   <tile gid="1566"/>
+   <tile gid="1567"/>
+   <tile gid="1568"/>
+   <tile gid="1569"/>
+   <tile gid="1570"/>
+   <tile gid="1571"/>
+   <tile gid="1572"/>
+   <tile gid="1573"/>
+   <tile gid="1574"/>
+   <tile gid="1575"/>
+   <tile gid="1560"/>
+   <tile gid="1560"/>
+   <tile gid="1605"/>
+   <tile gid="1605"/>
+   <tile gid="1605"/>
+   <tile gid="1606"/>
+   <tile gid="1607"/>
+   <tile gid="1608"/>
+   <tile gid="1609"/>
+   <tile gid="1610"/>
+   <tile gid="1611"/>
+   <tile gid="1612"/>
+   <tile gid="1613"/>
+   <tile gid="1614"/>
+   <tile gid="1615"/>
+   <tile gid="1616"/>
+   <tile gid="1617"/>
+   <tile gid="1618"/>
+   <tile gid="1619"/>
+   <tile gid="1620"/>
+   <tile gid="1605"/>
+   <tile gid="1605"/>
+   <tile gid="1650"/>
+   <tile gid="1650"/>
+   <tile gid="1650"/>
+   <tile gid="1651"/>
+   <tile gid="1652"/>
+   <tile gid="1653"/>
+   <tile gid="1654"/>
+   <tile gid="1655"/>
+   <tile gid="1656"/>
+   <tile gid="1657"/>
+   <tile gid="1658"/>
+   <tile gid="1659"/>
+   <tile gid="1660"/>
+   <tile gid="1661"/>
+   <tile gid="1662"/>
+   <tile gid="1663"/>
+   <tile gid="1664"/>
+   <tile gid="1665"/>
+   <tile gid="1650"/>
+   <tile gid="1650"/>
+   <tile gid="1695"/>
+   <tile gid="1695"/>
+   <tile gid="1695"/>
+   <tile gid="1696"/>
+   <tile gid="1697"/>
+   <tile gid="1698"/>
+   <tile gid="1699"/>
+   <tile gid="1700"/>
+   <tile gid="1701"/>
+   <tile gid="1702"/>
+   <tile gid="1703"/>
+   <tile gid="1704"/>
+   <tile gid="1705"/>
+   <tile gid="1706"/>
+   <tile gid="1707"/>
+   <tile gid="1708"/>
+   <tile gid="1709"/>
+   <tile gid="1710"/>
+   <tile gid="1695"/>
+   <tile gid="1695"/>
+  </data>
+ </layer>
+ <objectgroup name="spawn points" opacity="0.9">
+  <object id="19" name="player" x="150.667" y="209" width="2.66667" height="2.33333">
+   <properties>
+    <property name="location" value="pokeLabor"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="collisions">
+  <object id="1" x="45.6667" y="15.3333" width="2.33333" height="212.667"/>
+  <object id="2" x="48.6667" y="224.333" width="93" height="3"/>
+  <object id="3" x="177.333" y="224" width="95.6667" height="2.66667"/>
+  <object id="4" x="272" y="16" width="8.33333" height="207"/>
+  <object id="5" x="45.3333" y="11" width="229" height="5"/>
+  <object id="6" x="209.333" y="138" width="60.6667" height="37"/>
+  <object id="7" x="209" y="90" width="44.3333" height="22.6667"/>
+  <object id="8" x="49" y="138.667" width="61.6667" height="35.6667"/>
+  <object id="9" x="114.333" y="65" width="10.6667" height="3"/>
+  <object id="10" x="49.6667" y="32" width="138.667" height="19"/>
+  <object id="11" x="190" y="31" width="18.3333" height="7"/>
+  <object id="12" x="211" y="37" width="61" height="8.66667"/>
+  <object id="13" x="59.6667" y="75" width="24.3333" height="47.6667"/>
+ </objectgroup>
+ <objectgroup name="doors">
+  <object id="14" x="146" y="231" width="28.3333" height="2.33333">
+   <properties>
+    <property name="destination" value="startTown"/>
+    <property name="destinationSpawnPoint" value="pokeLaborDoor"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

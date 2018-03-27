@@ -13,6 +13,7 @@ namespace btnAction {
 
 	// handle Player movement
 	void handleArrowKeys(Input &input, Player &player, GUI &gui) {
+
 		// player can only walk if he's not talking
 		if (gui.getTextBox()->isVisible()) {
 			return;
@@ -20,6 +21,12 @@ namespace btnAction {
 
 		// player should not walk if menu box is visible
 		if (gui.getMenuBox()->visible() == true) {
+			if (input.wasKeyPressed(SDL_SCANCODE_UP) == true) {
+				gui.getMenuBox()->selectUp();
+			}
+			else if (input.wasKeyPressed(SDL_SCANCODE_DOWN) == true) {
+				gui.getMenuBox()->selectDown();
+			}
 			return;
 		}
 
@@ -57,7 +64,13 @@ namespace btnAction {
 
 			// handle menu interaction
 			if (gui.getMenuBox()->visible() == true) {
-				// TODO
+				if (gui.getMenuBox()->getMenuItem() == MenuItem::POKEMON) {
+					gui.getMenuBox()->setVisible(false);
+					gui.getPokemonBag()->setVisible(true);
+				}
+				if (gui.getMenuBox()->getMenuItem() == MenuItem::BACK) {
+					gui.getMenuBox()->setVisible(false);
+				}
 				return;
 			}
 

@@ -2,6 +2,8 @@
 #include "graphics.hpp"
 #include "globals.hpp"
 
+#include <iostream>
+
 MenuBox::~MenuBox() {
 	SDL_DestroyTexture(this->_menuBoxTexture);
 }
@@ -9,7 +11,8 @@ MenuBox::~MenuBox() {
 MenuBox::MenuBox() {}
 
 MenuBox::MenuBox(Graphics &graphics) :
-	_visible(false)
+	_visible(false),
+	_menuItemsIndex(0)
 {
 	this->_menuBoxSourceRect.x = 0;
 	this->_menuBoxSourceRect.y = 0;
@@ -33,7 +36,7 @@ MenuBox::MenuBox(Graphics &graphics) :
 	this->_menuSelectorSourceRect.h = 20;
 
 	this->_menuSelectorDestinationRect.x = globals::SCREEN_WIDTH - 164;
-	this->_menuSelectorDestinationRect.y = 95;
+	this->_menuSelectorDestinationRect.y = 96;
 	this->_menuSelectorDestinationRect.w = 6 * (int)globals::SPRITE_SCALE;
 	this->_menuSelectorDestinationRect.h = 10 * (int)globals::SPRITE_SCALE;
 
@@ -42,6 +45,8 @@ MenuBox::MenuBox(Graphics &graphics) :
 		printf("\nError: Unable to load image menuBoxButton\n");
 		printf(SDL_GetError());
 	}
+
+	// initialize MenuItemList
 }
 
 void MenuBox::draw(Graphics &graphics){
@@ -58,5 +63,24 @@ bool MenuBox::visible() const{
 
 void MenuBox::setVisible(bool value){
 	this->_visible = value;
+}
+
+void MenuBox::selectUp() {
+	if (_menuItemsIndex > 0) {
+		this->_menuSelectorDestinationRect.y -= 38;
+		this->_menuItemsIndex--;
+	}
+}
+
+void MenuBox::selectDown() {
+	// the menu has 8 entries
+	if (_menuItemsIndex < 7) {
+		this->_menuSelectorDestinationRect.y += 38;
+		this->_menuItemsIndex++;
+	}
+}
+
+MenuItem MenuBox::getMenuItem() {
+	return this->_menuItemsArray[this->_menuItemsIndex];
 }
 

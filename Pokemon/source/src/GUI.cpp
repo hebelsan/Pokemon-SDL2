@@ -13,9 +13,13 @@ GUI::GUI(Graphics &graphics)
 {
 	this->_textBox = new TextBox(graphics);
 	this->_menuBox = new MenuBox(graphics);
+	this->_pokemonBag = new PokemonBag(graphics);
 }
 
 void GUI::draw(Graphics &graphics) {
+	// the order is important !!
+	this->_pokemonBag->draw(graphics);
+
 	this->_textBox->draw(graphics);
 	this->_menuBox->draw(graphics);
 }
@@ -26,6 +30,10 @@ TextBox* GUI::getTextBox() {
 
 MenuBox* GUI::getMenuBox() {
 	return this->_menuBox;
+}
+
+PokemonBag* GUI::getPokemonBag() {
+	return this->_pokemonBag;
 }
 
 

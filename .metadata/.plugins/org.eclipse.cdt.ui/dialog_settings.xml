@@ -19,8 +19,12 @@
 			<item value="background"/>
 		</list>
 	</section>
+	<section name="RenameInformationPopup">
+	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="0" key="askReindex.detail"/>
+	</section>
+	<section name="CRenameRefactoringInputPage">
 	</section>
 	<section name="completion_proposal_size">
 	</section>

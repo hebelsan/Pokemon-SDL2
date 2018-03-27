@@ -39,6 +39,17 @@ enum Direction {
 	DOWN
 };
 
+enum MenuItem {
+	POKEDEX,
+	POKEMON,
+	BAG,
+	POKECOM,
+	ASH,
+	SAVE,
+	OPTION,
+	BACK
+};
+
 struct Vector2 {
 	int x, y;
 	Vector2() :

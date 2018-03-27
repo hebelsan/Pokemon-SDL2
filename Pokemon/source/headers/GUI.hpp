@@ -10,6 +10,7 @@
 
 #include "textBox.hpp"
 #include "menuBox.hpp"
+#include "pokemonBag.hpp"
 
 class Graphics;
 
@@ -22,9 +23,11 @@ public:
 
 	TextBox* getTextBox();
 	MenuBox* getMenuBox();
+	PokemonBag* getPokemonBag();
 private:
 	TextBox *_textBox;
 	MenuBox *_menuBox;
+	PokemonBag *_pokemonBag;
 };
 
 
