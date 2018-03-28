@@ -327,3 +327,825 @@ g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\s
 Info: Nothing to build for Pokemon
 Info: Nothing to build for Pokemon
 Info: Nothing to build for Pokemon
+19:01:33 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+In file included from ..\source\src\level.cpp:4:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/npc.hpp:42:2: error: 'PokeProf::PokeProf(Graphics&, Vector2, std::string)' is private
+  PokeProf(Graphics &graphics, Vector2 spawnPoint, std::string text);
+  ^
+..\source\src\level.cpp:388:64: error: within this context
+                 std::floor(y) * globals::SPRITE_SCALE), npcText));
+                                                                ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+19:02:11 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\npc.o" "..\\source\\src\\npc.cpp" 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
+..\source\src\buttonAction.cpp: In function 'void btnAction::handleButtonA(Input&, Level&, Player&, GUI&)':
+..\source\src\buttonAction.cpp:87:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < levelNpcs.size(); i++) {
+                                        ^
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\player.o" "..\\source\\src\\player.cpp" 
+..\source\src\player.cpp: In member function 'void Player::handleTileCollisions(std::vector<Rectangle>&)':
+..\source\src\player.cpp:128:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < others.size(); i++) {
+                                  ^
+..\source\src\player.cpp:131:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
+    switch (collisionSide) {
+           ^
+..\source\src\player.cpp: In member function 'void Player::handleSlopeCollisions(std::vector<Slope>&)':
+..\source\src\player.cpp:152:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < others.size(); i++) {
+                                  ^
+..\source\src\player.cpp: In member function 'void Player::handleDoorCollision(std::vector<Door>&, Level&, Graphics&)':
+..\source\src\player.cpp:170:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < others.size(); i++) {
+                                  ^
+..\source\src\player.cpp: In member function 'void Player::handleNpcCollision(std::vector<Npc*>)':
+..\source\src\player.cpp:179:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < others.size(); i++) {
+                                  ^
+..\source\src\player.cpp:183:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
+    switch (collisionSide) {
+           ^
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon
+21:35:31 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:36:45 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:37:27 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:46:30 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:50:26 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:51:17 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:52:29 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:53:19 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:55:06 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+21:57:12 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
+In file included from ..\source\src\level.cpp:3:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   while (pos != std::string::npos) {
+                              ^
+..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
+..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 2; i < strlen(source); i++) {
+                                     ^
+..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
+    char* path;
+          ^
+..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_tilesets.size(); i++) {
+                                                 ^
+..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+                                                          ^
+..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i = 0; i < ati.TileIds.size(); i++) {
+                                             ^
+..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int i = 0; i < pairs.size(); i++) {
+                                       ^
+..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+       for (int i = 0; i < points.size(); i += 2) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
+..\source\src\level.cpp:401:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                  ^
+..\source\src\level.cpp:404:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
+..\source\src\level.cpp:411:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_tileList.size(); i++) {
+                                           ^
+..\source\src\level.cpp:414:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_animatedTileList.size(); i++) {
+                                                   ^
+..\source\src\level.cpp:417:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_npcs.size(); i++) {
+                                       ^
+..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
+..\source\src\level.cpp:429:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_collisionRects.size(); i++) {
+                                                 ^
+..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
+..\source\src\level.cpp:439:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_slopes.size(); i++) {
+                                         ^
+..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
+..\source\src\level.cpp:449:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < this->_doorList.size(); i++) {
+                                           ^
+..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
+..\source\src\level.cpp:459:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i < this->_npcs.size(); i++) {
+                                        ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon

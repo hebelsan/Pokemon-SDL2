@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextobjectid="20">
+<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextobjectid="30">
  <tileset firstgid="1" name="Tileset1" tilewidth="16" tileheight="16" tilecount="1710" columns="45">
-	<image source="../tilesets/TilesetIndoor.png" width="720" height="608"/>
+  <image source="../tilesets/TilesetIndoor.png" width="720" height="608"/>
+ </tileset>
+ <tileset firstgid="1711" name="Tileset2" tilewidth="16" tileheight="16" tilecount="3888" columns="8">
+  <image source="../tilesets/Tileset2.png" width="128" height="7776"/>
+  <tile id="237">
+   <animation>
+    <frame tileid="180" duration="1000"/>
+    <frame tileid="181" duration="1000"/>
+    <frame tileid="182" duration="1000"/>
+    <frame tileid="183" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="238">
+   <animation>
+    <frame tileid="196" duration="1000"/>
+    <frame tileid="197" duration="1000"/>
+    <frame tileid="198" duration="1000"/>
+    <frame tileid="199" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="239">
+   <animation>
+    <frame tileid="204" duration="1000"/>
+    <frame tileid="205" duration="1000"/>
+    <frame tileid="206" duration="1000"/>
+    <frame tileid="207" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="245">
+   <animation>
+    <frame tileid="188" duration="1000"/>
+    <frame tileid="189" duration="1000"/>
+    <frame tileid="190" duration="1000"/>
+    <frame tileid="191" duration="1000"/>
+   </animation>
+  </tile>
  </tileset>
  <layer name="Kachelebene 1" width="20" height="15">
   <data>
@@ -174,7 +209,7 @@
    <tile gid="1429"/>
    <tile gid="1430"/>
    <tile gid="1431"/>
-   <tile gid="1432"/>
+   <tile gid="1423"/>
    <tile gid="1433"/>
    <tile gid="1434"/>
    <tile gid="1435"/>
@@ -194,7 +229,7 @@
    <tile gid="1474"/>
    <tile gid="1475"/>
    <tile gid="1476"/>
-   <tile gid="1477"/>
+   <tile gid="1468"/>
    <tile gid="1478"/>
    <tile gid="1479"/>
    <tile gid="1480"/>
@@ -214,7 +249,7 @@
    <tile gid="1519"/>
    <tile gid="1520"/>
    <tile gid="1521"/>
-   <tile gid="1522"/>
+   <tile gid="1468"/>
    <tile gid="1523"/>
    <tile gid="1524"/>
    <tile gid="1525"/>
@@ -307,6 +342,335 @@
    <tile gid="1695"/>
   </data>
  </layer>
+ <layer name="Kachelebene 2" width="20" height="15">
+  <data>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile gid="3410"/>
+   <tile gid="3410"/>
+   <tile gid="3410"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+  </data>
+ </layer>
+ <objectgroup color="#5500ff" name="NPC">
+  <object id="20" name="PokeProf" x="153.333" y="77" width="2.33333" height="2.33333">
+   <properties>
+    <property name="text" value="Guten Tag.###Mein Name is Professor Eich.###Mein ganzes Leben schon erforsche ich die Welt der Pokemon.###Willst du mir dabei helfen die Geheimnisse dieser Welt zu lüften?###Nimm dir eins der Pokemon auf dem Tisch rechts von mir."/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ffff00" name="Item">
+  <object id="27" name="Pokeball" x="209.75" y="99.75" width="11.75" height="12.75">
+   <properties>
+    <property name="action" value="endivie"/>
+   </properties>
+  </object>
+  <object id="28" name="Pokeball" x="226" y="99.75" width="11.5" height="12.75">
+   <properties>
+    <property name="action" value="feurigel"/>
+   </properties>
+  </object>
+  <object id="29" name="Pokeball" x="241.75" y="99.5" width="11.5" height="13">
+   <properties>
+    <property name="action" value="karnimani"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup name="spawn points" opacity="0.9">
   <object id="19" name="player" x="150.667" y="209" width="2.66667" height="2.33333">
    <properties>

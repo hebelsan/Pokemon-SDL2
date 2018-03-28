@@ -37,6 +37,17 @@ public:
 	void setupAnimations();
 };
 
+class PokeProf : public Npc {
+public:
+	PokeProf();
+	PokeProf(Graphics &graphics, Vector2 spawnPoint, std::string text);
+	void update(int elapsedTime, Player &player);
+	void draw(Graphics &graphics);
+
+	void animationDone(std::string currentAnimation);
+	void setupAnimations();
+};
+
 
 
 #endif /* NPC_HPP_ */

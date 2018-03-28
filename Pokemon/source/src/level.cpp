@@ -383,6 +383,10 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 							this->_npcs.push_back(new Dicker(graphics, Vector2(std::floor(x) * globals::SPRITE_SCALE,
 									std::floor(y) * globals::SPRITE_SCALE), npcText));
 						}
+						if (ss.str() == "PokeProf") {
+							this->_npcs.push_back(new PokeProf(graphics, Vector2(std::floor(x) * globals::SPRITE_SCALE,
+																std::floor(y) * globals::SPRITE_SCALE), npcText));
+						}
 						pObject = pObject->NextSiblingElement("object");
 					}
 				}
@@ -468,7 +472,10 @@ Vector2 Level::getTilesetPosition(Tileset tls, int gid, int tileWidth, int tileH
 	int tilesetWidth, tilesetHeight;
 	int tsxx, tsyy = 0;
 	SDL_QueryTexture(tls.Texture, NULL, NULL, &tilesetWidth, &tilesetHeight);
-	tsxx = (gid - 1) % (tilesetWidth / tileWidth);
+	// to support multiple tilesets
+	int tmGgid = gid + 1 - tls.FirstGid;
+
+	tsxx = (tmGgid - 1) % (tilesetWidth / tileWidth);
 	tsxx *= tileWidth;
 	if (tsxx < 0) {
 		tsxx = ((tilesetWidth / tileWidth) -1) * tileWidth;

@@ -67,3 +67,31 @@ void Dicker::setupAnimations() {
 
 void Dicker::animationDone(std::string currentAnimation) {}
 
+//Poke Professor Class
+PokeProf::PokeProf() {}
+
+PokeProf::PokeProf(Graphics &graphics, Vector2 spawnPoint, std::string text) :
+		Npc(graphics, "content/sprites/PokemonProf.png", 0, 0, 17, 25, spawnPoint, 140, text)
+{
+	this->setupAnimations();
+	this->playAnimation("idleDown");
+}
+
+void PokeProf::update(int elapsedTime, Player &player) {
+	this->_facing = player.getX() > this->_x ? RIGHT : LEFT;
+
+	Npc::update(elapsedTime, player);
+}
+
+void PokeProf::draw(Graphics &graphics) {
+	Npc::draw(graphics);
+}
+
+void PokeProf::setupAnimations() {
+	this->addAnimation(1, 0, 0, "idleDown", 17, 25, Vector2(0,0));
+	this->addAnimation(1, 0, 25, "idleUp", 17,25, Vector2(0,0));
+	this->addAnimation(1, 0, 50, "idleRight", 17, 25, Vector2(0,0));
+	this->addAnimation(1, 0, 75, "idleLeft", 17, 25, Vector2(0,0));
+}
+
+void PokeProf::animationDone(std::string currentAnimation) {}

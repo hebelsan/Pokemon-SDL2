@@ -19,6 +19,7 @@
 #include <map>
 #include <SDL2/SDL.h>
 #include "animatedTile.hpp"
+#include "levelItem.hpp"
 
 class Graphics;
 class Npc;
@@ -70,6 +71,8 @@ private:
 	std::vector<Door> _doorList;
 
 	std::vector<Npc*> _npcs;
+
+	std::vector<LevelItem> _levelItemList;
 
 	/* void loadMap
 	 * loads a map

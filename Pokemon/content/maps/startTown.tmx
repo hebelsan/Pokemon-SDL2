@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="26" height="26" tilewidth="16" tileheight="16" infinite="0" nextobjectid="60">
+<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="26" height="26" tilewidth="16" tileheight="16" infinite="0" nextobjectid="61">
  <tileset firstgid="1" name="Tileset1" tilewidth="16" tileheight="16" tilecount="3408" columns="8">
   <image source="../tilesets/Tileset1.png" width="128" height="6816"/>
  </tileset>
  <tileset firstgid="3409" name="Tileset2" tilewidth="16" tileheight="16" tilecount="3888" columns="8">
   <image source="../tilesets/Tileset2.png" width="128" height="7776"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="220" duration="1000"/>
+    <frame tileid="221" duration="1000"/>
+    <frame tileid="222" duration="1000"/>
+    <frame tileid="223" duration="1000"/>
+   </animation>
+  </tile>
   <tile id="237">
    <animation>
     <frame tileid="180" duration="1000"/>
