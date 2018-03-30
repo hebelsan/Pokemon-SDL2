@@ -655,17 +655,17 @@
   </object>
  </objectgroup>
  <objectgroup color="#ffff00" name="Item">
-  <object id="27" name="Pokeball" x="209.75" y="99.75" width="11.75" height="12.75">
+  <object id="27" name="Pokeball" x="210.25" y="97.5" width="13.25" height="15">
    <properties>
     <property name="action" value="endivie"/>
    </properties>
   </object>
-  <object id="28" name="Pokeball" x="226" y="99.75" width="11.5" height="12.75">
+  <object id="28" name="Pokeball" x="224.5" y="97.75" width="15" height="14.75">
    <properties>
     <property name="action" value="feurigel"/>
    </properties>
   </object>
-  <object id="29" name="Pokeball" x="241.75" y="99.5" width="11.5" height="13">
+  <object id="29" name="Pokeball" x="240.5" y="97.5" width="12.75" height="15">
    <properties>
     <property name="action" value="karnimani"/>
    </properties>

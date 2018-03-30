@@ -7,6 +7,7 @@
 
 #include "animatedSprite.hpp"
 #include "textBox.hpp"
+#include "pokemon.hpp"
 
 class Graphics;
 class Slope;
@@ -61,10 +62,16 @@ public:
 	const float getY() const;
 	const Direction getFacing() const;
 	SDL_Rect getCamera();
+
+	void addPokemon(Pokemon pokemon);
+	Pokemon getPokemon(int index);
 private:
 	float _dx, _dy;
 
 	Direction _facing;
+
+	Pokemon _pokemons[6];
+	int _amountPokemon;
 
 	SDL_Rect _camera;
 };

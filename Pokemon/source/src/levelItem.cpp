@@ -9,6 +9,12 @@ LevelItem::LevelItem(Rectangle r, std::string itemName, std::string itemAction) 
 		_action(itemAction)
 {}
 
+std::string LevelItem::getItemName() const {
+	return this->_name;
+}
 
+std::string LevelItem::getItemAction() const {
+	return this->_action;
+}
 
 

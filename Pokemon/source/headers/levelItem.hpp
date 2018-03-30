@@ -15,8 +15,12 @@ class LevelItem : public Rectangle {
 public:
 	LevelItem();
 	LevelItem(Rectangle r, std::string itemName, std::string itemAction);
+	std::string getItemName() const;
+	std::string getItemAction() const;
 private:
+	// name of the item
 	std::string _name;
+	// name of the items action eg. getHealthPotion
 	std::string _action;
 };
 

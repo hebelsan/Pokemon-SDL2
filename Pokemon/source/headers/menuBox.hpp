@@ -36,7 +36,8 @@ private:
 			ASH,
 			SAVE,
 			OPTION,
-			BACK};
+			BACK
+	};
 
 	const int _menuBoxWidth = 90;
 	const int _menuBoxHeight = 170;

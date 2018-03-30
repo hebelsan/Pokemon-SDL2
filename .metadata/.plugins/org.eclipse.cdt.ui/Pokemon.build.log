@@ -1,1 +1,11 @@
-Info: Nothing to build for Pokemon
+16:15:24 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
+..\source\src\buttonAction.cpp: In function 'void btnAction::handleButtonA(Input&, Level&, Player&, GUI&)':
+..\source\src\buttonAction.cpp:153:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < level.getLevelItems().size(); i++) {
+                                                    ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+
+16:15:28 Build Finished (took 3s.830ms)
+

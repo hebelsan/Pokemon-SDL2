@@ -42,6 +42,7 @@ public:
 	const Vector2 getPlayerSpawnPoint(std::string spawnPointLocation) const;
 
 	std::vector<Npc*> getNpcs() const;
+	std::vector<LevelItem> getLevelItems() const;
 
 	const int getMapWidth() const {
 		return _mapW;

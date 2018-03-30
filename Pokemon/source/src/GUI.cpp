@@ -17,11 +17,10 @@ GUI::GUI(Graphics &graphics)
 }
 
 void GUI::draw(Graphics &graphics) {
-	// the order is important !!
-	this->_pokemonBag->draw(graphics);
-
 	this->_textBox->draw(graphics);
 	this->_menuBox->draw(graphics);
+	// the order is important !!
+	this->_pokemonBag->draw(graphics);
 }
 
 TextBox* GUI::getTextBox() {

@@ -67,6 +67,9 @@ void Game::gameLoop() {
 		// Handle A Button
 		btnAction::handleButtonA(input, this->_level, this->_player, this->_gui);
 
+		// Handle B Button
+		btnAction::handleButtonB(input, this->_gui);
+
 		const int CURRENT_TIME_MS = SDL_GetTicks();
 		int ELAPSED_TIME_MS = CURRENT_TIME_MS - LAST_UPDATE_TIME;
 

@@ -5,6 +5,8 @@
 #include "door.hpp"
 #include "npc.hpp"
 
+#include <iostream>
+
 
 namespace player_constants {
 	const float WALK_SPEED = 0.1f;
@@ -19,7 +21,8 @@ Player::Player(Graphics &graphics, Vector2 spawnPoint) :
 	_dx(0),
 	_dy(0),
 	_facing(DOWN),
-	_camera({0, 0, globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT})
+	_camera({0, 0, globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT}),
+	_amountPokemon(0)
 {
 	graphics.loadImage("content/sprites/Ash.png");
 	this->setupAnimations();
@@ -210,6 +213,20 @@ void Player::update(float elapsedTime) {
 
 void Player::draw(Graphics &graphics) {
 	AnimatedSprite::drawPlayer(graphics, this->_x, this->_y, this->_camera);
+}
+
+void Player::addPokemon(Pokemon pokemon) {
+	if (this->_amountPokemon < 6) {
+		this->_pokemons[_amountPokemon] = pokemon;
+		_amountPokemon++;
+	}
+}
+
+Pokemon Player::getPokemon(int index) {
+	if (index > this->_amountPokemon) {
+		std::cout << "FALSCHER INDEX ZUGRIFF AUF PLAYERS POKEMON" << std::endl;
+	}
+	return this->_pokemons[index];
 }
 
 

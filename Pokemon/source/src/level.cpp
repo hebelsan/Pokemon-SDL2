@@ -392,6 +392,50 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 				}
 			}
 
+			else if (ss.str() == "Item") {
+				XMLElement* pObject = pObjectGroup->FirstChildElement("object");
+				if (pObject != NULL) {
+					while (pObject) {
+						float x = pObject->FloatAttribute("x");
+						float y = pObject->FloatAttribute("y");
+						float w = pObject->FloatAttribute("width");
+						float h = pObject->FloatAttribute("height");
+						Rectangle rect = Rectangle(x, y, w, h);
+						std::string levelItemAction;
+
+						XMLElement* pProperties = pObject->FirstChildElement("properties");
+						if (pProperties != NULL) {
+							while (pProperties) {
+								XMLElement* pProperty = pProperties->FirstChildElement("property");
+								if (pProperty != NULL) {
+									while (pProperty) {
+										const char* name = pProperty->Attribute("name");
+										std::stringstream ss;
+										ss << name;
+										if (ss.str() == "action") {
+											const char* value = pProperty->Attribute("value");
+											std::stringstream ss2;
+											ss2 << value;
+											levelItemAction = ss2.str();
+										}
+										pProperty = pProperty->NextSiblingElement("property");
+									}
+								}
+								pProperties = pObject->NextSiblingElement("properties");
+							}
+						}
+						const char* name = pObject->Attribute("name");
+						std::stringstream ss;
+						ss << name;
+						std::string levelItemName = ss.str();
+
+						this->_levelItemList.push_back(LevelItem(rect, levelItemName, levelItemAction));
+
+						pObject = pObject->NextSiblingElement("object");
+					}
+				}
+			}
+
 			pObjectGroup = pObjectGroup->NextSiblingElement("objectgroup");
 		}
 	}
@@ -495,4 +539,8 @@ Vector2 Level::getTilesetPosition(Tileset tls, int gid, int tileWidth, int tileH
 
 std::vector<Npc*> Level::getNpcs() const {
 	return this->_npcs;
+}
+
+std::vector<LevelItem> Level::getLevelItems() const {
+	return this->_levelItemList;
 }
