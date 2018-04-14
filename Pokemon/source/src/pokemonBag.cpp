@@ -9,6 +9,7 @@
 PokemonBag::~PokemonBag() {
 	SDL_DestroyTexture(this->_backgroundTexture);
 	SDL_DestroyTexture(this->_pokeBallTexture);
+	SDL_DestroyTexture(this->_healthBarTexture);
 }
 
 PokemonBag::PokemonBag() {}
@@ -41,6 +42,11 @@ PokemonBag::PokemonBag(Graphics &graphics) :
 		printf("\nError: Unable to load Pokemons Texture\n");
 		printf(SDL_GetError());
 	}
+	this->_healthBarTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/PokemonBag/healthBar.png"));
+	if (this->_pokemonsTexture == NULL) {
+		printf("\nError: Unable to load healthBar Texture\n");
+		printf(SDL_GetError());
+	}
 }
 
 void PokemonBag::draw(Graphics &graphics, Player &player) {
@@ -61,8 +67,13 @@ void PokemonBag::drawPokemonStats(Graphics &graphics, Player &player) {
 		int lvY = 147;
 		int thumbNailX = 16;
 		int thumbNailY = 90;
+		int healthX = 145;
+		int healthY = 200;
+		int healthBarX = 85;
+		int healthBarY = 182;
 
-		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY, lvX, lvY, thumbNailX, thumbNailY);
+		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY,
+				lvX, lvY, thumbNailX, thumbNailY, healthX, healthY, healthBarX, healthBarY);
 	}
 	if (player.getNumberOfPokemons() > 1) {
 		int pkmBagNumber = 1;
@@ -74,8 +85,13 @@ void PokemonBag::drawPokemonStats(Graphics &graphics, Player &player) {
 		int lvY = 69;
 		int thumbNailX = 245;
 		int thumbNailY = 42;
+		int healthX = 550;
+		int healthY = 70;
+		int healthBarX = 488;
+		int healthBarY = 53;
 
-		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY, lvX, lvY, thumbNailX, thumbNailY);
+		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY,
+				lvX, lvY, thumbNailX, thumbNailY, healthX, healthY, healthBarX, healthBarY);
 	}
 	if (player.getNumberOfPokemons() > 2) {
 		int pkmBagNumber = 2;
@@ -87,104 +103,78 @@ void PokemonBag::drawPokemonStats(Graphics &graphics, Player &player) {
 		int lvY = 142;
 		int thumbNailX = 245;
 		int thumbNailY = 115;
+		int healthX = 550;
+		int healthY = 142;
+		int healthBarX = 488;
+		int healthBarY = 125;
 
-		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY, lvX, lvY, thumbNailX, thumbNailY);
+		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY,
+				lvX, lvY, thumbNailX, thumbNailY, healthX, healthY, healthBarX, healthBarY);
 	}
 	if (player.getNumberOfPokemons() > 3) {
-		//Draw Pokeball
-		SDL_Rect srcRectBall = {0, 0, 20, 20};
-		SDL_Rect dstRectBall = {232, 177, 58, 58};
-		graphics.blitSurface(this->_pokeBallTexture, &srcRectBall, &dstRectBall);
+		int pkmBagNumber = 3;
+		int ballX = 232;
+		int ballY = 177;
+		int nameX = 325;
+		int nameY = 192;
+		int lvX = 325;
+		int lvY = 214;
+		int thumbNailX = 245;
+		int thumbNailY = 187;
+		int healthX = 550;
+		int healthY = 214;
+		int healthBarX = 488;
+		int healthBarY = 197;
 
-		std::string pokemonName = player.getPokemon(3).getName();
-		int pokemonLevel = player.getPokemon(3).getLevel();
-		char pokemonSex = player.getPokemon(3).getSex();
-
-		SDL_Surface* fontSurfacePName = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-				pokemonName.c_str(), Font::colorWhite(), 200);
-		int nameW, nameH;
-		SDL_Texture* fontTexturePName = SDL_CreateTextureFromSurface(graphics.getRenderer(), fontSurfacePName);
-		SDL_QueryTexture(fontTexturePName, NULL, NULL, &nameW, &nameH);
-		SDL_Rect srcRectPName = {0,0, nameW, nameH};
-		SDL_Rect dstRectPName = {325, 192, nameW, nameH};
-		graphics.blitSurface(fontTexturePName, &srcRectPName, &dstRectPName);
-
-		std::string level = "lv" + std::to_string(pokemonLevel) + "    sex: " + pokemonSex;
-		SDL_Surface* levelSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-				level.c_str(), Font::colorWhite(), 200);
-		int levelWidth, levelHeight;
-		SDL_Texture* levelTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), levelSurface);
-		SDL_QueryTexture(levelTexture, NULL, NULL, &levelWidth, &levelHeight);
-		SDL_Rect srcRectLevel = {0,0, levelWidth, levelHeight};
-		SDL_Rect dstRectLevel = {325,214, levelWidth, levelHeight};
-		graphics.blitSurface(levelTexture, &srcRectLevel, &dstRectLevel);
+		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY,
+				lvX, lvY, thumbNailX, thumbNailY, healthX, healthY, healthBarX, healthBarY);
 	}
 	if (player.getNumberOfPokemons() > 4) {
-		//Draw Pokeball
-		SDL_Rect srcRectBall = {0, 0, 20, 20};
-		SDL_Rect dstRectBall = {232, 249, 58, 58};
-		graphics.blitSurface(this->_pokeBallTexture, &srcRectBall, &dstRectBall);
+		int pkmBagNumber = 4;
+		int ballX = 232;
+		int ballY = 249;
+		int nameX = 325;
+		int nameY = 264;
+		int lvX = 325;
+		int lvY = 286;
+		int thumbNailX = 245;
+		int thumbNailY = 259;
+		int healthX = 550;
+		int healthY = 286;
+		int healthBarX = 488;
+		int healthBarY = 269;
 
-		std::string pokemonName = player.getPokemon(4).getName();
-		int pokemonLevel = player.getPokemon(4).getLevel();
-		char pokemonSex = player.getPokemon(4).getSex();
-
-		SDL_Surface* fontSurfacePName = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-				pokemonName.c_str(), Font::colorWhite(), 200);
-		int nameW, nameH;
-		SDL_Texture* fontTexturePName = SDL_CreateTextureFromSurface(graphics.getRenderer(), fontSurfacePName);
-		SDL_QueryTexture(fontTexturePName, NULL, NULL, &nameW, &nameH);
-		SDL_Rect srcRectPName = {0,0, nameW, nameH};
-		SDL_Rect dstRectPName = {325, 264, nameW, nameH};
-		graphics.blitSurface(fontTexturePName, &srcRectPName, &dstRectPName);
-
-		std::string level = "lv" + std::to_string(pokemonLevel) + "    sex: " + pokemonSex;
-		SDL_Surface* levelSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-				level.c_str(), Font::colorWhite(), 200);
-		int levelWidth, levelHeight;
-		SDL_Texture* levelTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), levelSurface);
-		SDL_QueryTexture(levelTexture, NULL, NULL, &levelWidth, &levelHeight);
-		SDL_Rect srcRectLevel = {0,0, levelWidth, levelHeight};
-		SDL_Rect dstRectLevel = {325,286, levelWidth, levelHeight};
-		graphics.blitSurface(levelTexture, &srcRectLevel, &dstRectLevel);
+		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY,
+				lvX, lvY, thumbNailX, thumbNailY, healthX, healthY, healthBarX, healthBarY);
 	}
 	if (player.getNumberOfPokemons() > 5) {
-		//Draw Pokeball
-		SDL_Rect srcRectBall = {0, 0, 20, 20};
-		SDL_Rect dstRectBall = {232, 321, 58, 58};
-		graphics.blitSurface(this->_pokeBallTexture, &srcRectBall, &dstRectBall);
+		int pkmBagNumber = 5;
+		int ballX = 232;
+		int ballY = 321;
+		int nameX = 325;
+		int nameY = 336;
+		int lvX = 325;
+		int lvY = 358;
+		int thumbNailX = 245;
+		int thumbNailY = 331;
+		int healthX = 550;
+		int healthY = 358;
+		int healthBarX = 488;
+		int healthBarY = 341;
 
-		std::string pokemonName = player.getPokemon(5).getName();
-		int pokemonLevel = player.getPokemon(5).getLevel();
-		char pokemonSex = player.getPokemon(5).getSex();
-
-		SDL_Surface* fontSurfacePName = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-				pokemonName.c_str(), Font::colorWhite(), 200);
-		int nameW, nameH;
-		SDL_Texture* fontTexturePName = SDL_CreateTextureFromSurface(graphics.getRenderer(), fontSurfacePName);
-		SDL_QueryTexture(fontTexturePName, NULL, NULL, &nameW, &nameH);
-		SDL_Rect srcRectPName = {0,0, nameW, nameH};
-		SDL_Rect dstRectPName = {325, 336, nameW, nameH};
-		graphics.blitSurface(fontTexturePName, &srcRectPName, &dstRectPName);
-
-		std::string level = "lv" + std::to_string(pokemonLevel) + "    sex: " + pokemonSex;
-		SDL_Surface* levelSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-				level.c_str(), Font::colorWhite(), 200);
-		int levelWidth, levelHeight;
-		SDL_Texture* levelTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), levelSurface);
-		SDL_QueryTexture(levelTexture, NULL, NULL, &levelWidth, &levelHeight);
-		SDL_Rect srcRectLevel = {0,0, levelWidth, levelHeight};
-		SDL_Rect dstRectLevel = {325,358, levelWidth, levelHeight};
-		graphics.blitSurface(levelTexture, &srcRectLevel, &dstRectLevel);
+		this->drawSinglePokemonStat(graphics, player, pkmBagNumber, ballX, ballY, nameX, nameY,
+				lvX, lvY, thumbNailX, thumbNailY, healthX, healthY, healthBarX, healthBarY);
 	}
 }
 
 void PokemonBag::drawSinglePokemonStat(Graphics & graphics, Player &player, int pkmBagNumber, int ballX, int ballY,
-			int nameX, int nameY, int lvX, int lvY, int thumbNailX, int thumbNailY) {
+			int nameX, int nameY, int lvX, int lvY, int thumbNailX, int thumbNailY, int healthX, int healthY, int healthBarX, int healthBarY) {
 	std::string pokemonName = player.getPokemon(pkmBagNumber).getName();
 	int pokemonLevel = player.getPokemon(pkmBagNumber).getLevel();
 	char pokemonSex = player.getPokemon(pkmBagNumber).getSex();
 	int pokedexNumber = player.getPokemon(pkmBagNumber).getPokedexNumber();
+	int pokemonCurrentHealtH = player.getPokemon(pkmBagNumber).getCurrentHealth();
+	int pokemonMaxHealth = player.getPokemon(pkmBagNumber).getKP();
 
 	//Draw Pokeball
 	SDL_Rect srcRectBall = {0, 0, 20, 20};
@@ -200,6 +190,7 @@ void PokemonBag::drawSinglePokemonStat(Graphics & graphics, Player &player, int 
 	SDL_Rect dstRectPName = {nameX,nameY, nameW, nameH};
 	graphics.blitSurface(fontTexturePName, &srcRectPName, &dstRectPName);
 
+	// draw lv
 	std::string level = "lv" + std::to_string(pokemonLevel) + "    sex: " + pokemonSex;
 	SDL_Surface* levelSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
 		level.c_str(), Font::colorWhite(), 200);
@@ -209,6 +200,24 @@ void PokemonBag::drawSinglePokemonStat(Graphics & graphics, Player &player, int 
 	SDL_Rect srcRectLevel = {0,0, levelWidth, levelHeight};
 	SDL_Rect dstRectLevel = {lvX, lvY, levelWidth, levelHeight};
 	graphics.blitSurface(levelTexture, &srcRectLevel, &dstRectLevel);
+
+	//draw Health Text
+	std::string health = std::to_string(pokemonMaxHealth) + "/ " + std::to_string(pokemonCurrentHealtH);
+	SDL_Surface* healthSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
+			health.c_str(), Font::colorWhite(), 200);
+	int healtStrWidth, healthStrHeight;
+	SDL_Texture* healthTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), healthSurface);
+	SDL_QueryTexture(healthTexture, NULL, NULL, &healtStrWidth, &healthStrHeight);
+	SDL_Rect srcRectHealth = {0,0, healtStrWidth, healthStrHeight};
+	SDL_Rect dstRectHealth = {healthX, healthY, healtStrWidth, healthStrHeight};
+	graphics.blitSurface(healthTexture, &srcRectHealth, &dstRectHealth);
+
+	//draw HealthBar
+	int maxHealtWidth = 133;
+	int healthW = maxHealtWidth * (pokemonCurrentHealtH / pokemonMaxHealth);
+	SDL_Rect srcRectHealthBar = {0, 0, 50, 5};
+	SDL_Rect dstRectHealthBar = {healthBarX, healthBarY, healthW, 10};
+	graphics.blitSurface(this->_healthBarTexture, &srcRectHealthBar, &dstRectHealthBar);
 
 	// Draw pokemon Thumbnail
 	int x = ((pokedexNumber - 1) % 25) * 32;

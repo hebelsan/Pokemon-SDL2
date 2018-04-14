@@ -21,7 +21,8 @@ public:
 	void draw(Graphics &graphics, Player &player);
 	void drawPokemonStats(Graphics &graphics, Player &player);
 	void drawSinglePokemonStat(Graphics & graphics, Player &player, int pkmBagNumber, int ballX, int ballY,
-			int nameX, int nameY, int lvX, int lvY, int thumbNailX, int thumbNailY);
+			int nameX, int nameY, int lvX, int lvY, int thumbNailX, int thumbNailY, int healthX, int healthY,
+			int healthBarX, int healthBarY);
 
 	bool visible() const;
 	void setVisible(bool value);
@@ -33,6 +34,7 @@ private:
 	SDL_Texture* _backgroundTexture;
 	SDL_Texture* _pokeBallTexture;
 	SDL_Texture* _pokemonsTexture;
+	SDL_Texture* _healthBarTexture;
 };
 
 
