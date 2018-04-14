@@ -77,16 +77,16 @@ void Game::gameLoop() {
 		this->update(std::min(ELAPSED_TIME_MS, MAX_FRAME_TIME));
 		LAST_UPDATE_TIME = CURRENT_TIME_MS;
 
-		this->draw(graphics);
+		this->draw(graphics, this->_player);
 	}
 }
 
-void Game::draw(Graphics &graphics) {
+void Game::draw(Graphics &graphics, Player &player) {
 	graphics.clear();
 
 	this->_level.draw(graphics, this->_player.getCamera());
 	this->_player.draw(graphics);
-	this->_gui.draw(graphics);
+	this->_gui.draw(graphics, player);
 
 	graphics.flip();
 }

@@ -3495,7 +3495,7 @@
   </object>
  </objectgroup>
  <objectgroup color="#ff00ff" name="spawn points">
-  <object id="22" name="player" x="149" y="69.6667" width="4" height="4.33333">
+  <object id="22" name="player" x="277.333" y="354" width="4" height="4.33333">
    <properties>
     <property name="location" value="start"/>
    </properties>

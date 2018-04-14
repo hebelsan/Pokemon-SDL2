@@ -1,0 +1,6 @@
+ThirdGenerationFront = 64x64 = ein Pokemon
+
+int x = ((pokedexNumber - 1) % 25) * 64;
+int y = ((pokedexNumber - 1) / 25) * 64;
+SDL_Rect srcRectPokeTexture = {x, y, 64, 64};
+SDL_Rect dstRectPokeTexture = {6, 80, 55, 55};

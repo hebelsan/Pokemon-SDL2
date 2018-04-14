@@ -229,5 +229,8 @@ Pokemon Player::getPokemon(int index) {
 	return this->_pokemons[index];
 }
 
+int Player::getNumberOfPokemons() {
+	return this->_amountPokemon;
+}
 
 

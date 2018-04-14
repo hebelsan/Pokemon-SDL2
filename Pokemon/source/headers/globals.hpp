@@ -39,6 +39,16 @@ enum Direction {
 	DOWN
 };
 
+enum PokemonExpTyp {
+	SCHNELL,
+	MITTEL_SCHNELL,
+	MITTEL_LANGSAM,
+	LANGSAM,
+	ERRATIC,
+	FLUCTUATING,
+	UNKNOWN
+};
+
 enum MenuItem {
 	POKEDEX,
 	POKEMON,

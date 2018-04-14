@@ -1,223 +1,228 @@
-15:58:41 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\npc.o" "..\\source\\src\\npc.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-..\source\src\buttonAction.cpp: In function 'void btnAction::handleButtonA(Input&, Level&, Player&, GUI&)':
-..\source\src\buttonAction.cpp:153:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = 0; i < level.getLevelItems().size(); i++) {
-                                                    ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\player.o" "..\\source\\src\\player.cpp" 
-In file included from ..\source\src\player.cpp:1:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp: In constructor 'Player::Player(Graphics&, Vector2)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp:75:11: warning: 'Player::_camera' will be initialized after [-Wreorder]
-  SDL_Rect _camera;
-           ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp:73:6: warning:   'int Player::_amountPokemon' [-Wreorder]
-  int _amountPokemon;
-      ^
-..\source\src\player.cpp:17:1: warning:   when initialized here [-Wreorder]
- Player::Player(Graphics &graphics, Vector2 spawnPoint) :
- ^
-..\source\src\player.cpp: In member function 'void Player::handleTileCollisions(std::vector<Rectangle>&)':
-..\source\src\player.cpp:129:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp:132:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
-    switch (collisionSide) {
-           ^
-..\source\src\player.cpp: In member function 'void Player::handleSlopeCollisions(std::vector<Slope>&)':
-..\source\src\player.cpp:153:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp: In member function 'void Player::handleDoorCollision(std::vector<Door>&, Level&, Graphics&)':
-..\source\src\player.cpp:171:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp: In member function 'void Player::handleNpcCollision(std::vector<Npc*>)':
-..\source\src\player.cpp:180:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp:184:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
-    switch (collisionSide) {
-           ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
-In file included from ..\source\src\level.cpp:3:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   while (pos != std::string::npos) {
-                              ^
-..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
-..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    for (int i = 2; i < strlen(source); i++) {
-                                     ^
-..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
-    char* path;
-          ^
-..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (int i = 0; i < this->_tilesets.size(); i++) {
-                                                 ^
-..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
-                                                          ^
-..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         for(int i = 0; i < ati.TileIds.size(); i++) {
-                                             ^
-..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (int i = 0; i < pairs.size(); i++) {
-                                       ^
-..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-       for (int i = 0; i < points.size(); i += 2) {
-                                       ^
-..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
-..\source\src\level.cpp:445:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i = 0; i < this->_animatedTileList.size(); i++) {
-                                                  ^
-..\source\src\level.cpp:448:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_npcs.size(); i++) {
-                                       ^
-..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
-..\source\src\level.cpp:455:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_tileList.size(); i++) {
-                                           ^
-..\source\src\level.cpp:458:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_animatedTileList.size(); i++) {
-                                                   ^
-..\source\src\level.cpp:461:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_npcs.size(); i++) {
-                                       ^
-..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
-..\source\src\level.cpp:473:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_collisionRects.size(); i++) {
-                                                 ^
-..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
-..\source\src\level.cpp:483:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_slopes.size(); i++) {
-                                         ^
-..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
-..\source\src\level.cpp:493:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_doorList.size(); i++) {
-                                           ^
-..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
-..\source\src\level.cpp:503:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < this->_npcs.size(); i++) {
-                                        ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
 Info: Nothing to build for Pokemon
-16:12:32 **** Incremental Build of configuration Debug for project Pokemon ****
+09:38:05 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
-In file included from ..\source\src\level.cpp:3:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp: In static member function 'static unsigned int Utils::split(const string&, std::vector<std::basic_string<char> >&, char)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/utils.hpp:25:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   while (pos != std::string::npos) {
-                              ^
-..\source\src\level.cpp: In member function 'void Level::loadMap(std::string, Graphics&)':
-..\source\src\level.cpp:60:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    for (int i = 2; i < strlen(source); i++) {
-                                     ^
-..\source\src\level.cpp:57:10: warning: unused variable 'path' [-Wunused-variable]
-    char* path;
-          ^
-..\source\src\level.cpp:129:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (int i = 0; i < this->_tilesets.size(); i++) {
-                                                 ^
-..\source\src\level.cpp:164:58: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
-                                                          ^
-..\source\src\level.cpp:173:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         for(int i = 0; i < ati.TileIds.size(); i++) {
-                                             ^
-..\source\src\level.cpp:246:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (int i = 0; i < pairs.size(); i++) {
-                                       ^
-..\source\src\level.cpp:253:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-       for (int i = 0; i < points.size(); i += 2) {
-                                       ^
-..\source\src\level.cpp: In member function 'void Level::update(int, Player&)':
-..\source\src\level.cpp:445:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i = 0; i < this->_animatedTileList.size(); i++) {
-                                                  ^
-..\source\src\level.cpp:448:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_npcs.size(); i++) {
-                                       ^
-..\source\src\level.cpp: In member function 'void Level::draw(Graphics&, SDL_Rect)':
-..\source\src\level.cpp:455:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_tileList.size(); i++) {
-                                           ^
-..\source\src\level.cpp:458:51: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_animatedTileList.size(); i++) {
-                                                   ^
-..\source\src\level.cpp:461:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_npcs.size(); i++) {
-                                       ^
-..\source\src\level.cpp: In member function 'std::vector<Rectangle> Level::checkTileCollisions(const Rectangle&)':
-..\source\src\level.cpp:473:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_collisionRects.size(); i++) {
-                                                 ^
-..\source\src\level.cpp: In member function 'std::vector<Slope> Level::checkSlopeCollisions(const Rectangle&)':
-..\source\src\level.cpp:483:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_slopes.size(); i++) {
-                                         ^
-..\source\src\level.cpp: In member function 'std::vector<Door> Level::checkDoorCollisions(const Rectangle&)':
-..\source\src\level.cpp:493:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < this->_doorList.size(); i++) {
-                                           ^
-..\source\src\level.cpp: In member function 'std::vector<Npc*> Level::checkNpcCollisions(const Rectangle&)':
-..\source\src\level.cpp:503:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < this->_npcs.size(); i++) {
-                                        ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-..\source\src\buttonAction.cpp: In function 'void btnAction::handleButtonA(Input&, Level&, Player&, GUI&)':
-..\source\src\buttonAction.cpp:153:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = 0; i < level.getLevelItems().size(); i++) {
-                                                    ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\player.o" "..\\source\\src\\player.cpp" 
-In file included from ..\source\src\player.cpp:1:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp: In constructor 'Player::Player(Graphics&, Vector2)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp:76:11: warning: 'Player::_camera' will be initialized after [-Wreorder]
-  SDL_Rect _camera;
-           ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp:74:6: warning:   'int Player::_amountPokemon' [-Wreorder]
-  int _amountPokemon;
-      ^
-..\source\src\player.cpp:19:1: warning:   when initialized here [-Wreorder]
- Player::Player(Graphics &graphics, Vector2 spawnPoint) :
- ^
-..\source\src\player.cpp: In member function 'void Player::handleTileCollisions(std::vector<Rectangle>&)':
-..\source\src\player.cpp:131:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp:134:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
-    switch (collisionSide) {
-           ^
-..\source\src\player.cpp: In member function 'void Player::handleSlopeCollisions(std::vector<Slope>&)':
-..\source\src\player.cpp:155:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp: In member function 'void Player::handleDoorCollision(std::vector<Door>&, Level&, Graphics&)':
-..\source\src\player.cpp:173:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp: In member function 'void Player::handleNpcCollision(std::vector<Npc*>)':
-..\source\src\player.cpp:182:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp:186:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
-    switch (collisionSide) {
-           ^
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+..\source\src\pokemonBag.cpp: In member function 'void PokemonBag::drawPokemonStats(Graphics&, Player&)':
+..\source\src\pokemonBag.cpp:85:7: warning: unused variable 'x' [-Wunused-variable]
+   int x = (pokedexNumber - 1 % 25) * 65;
+       ^
+..\source\src\pokemonBag.cpp:86:7: warning: unused variable 'y' [-Wunused-variable]
+   int y = (pokedexNumber - 1 / 25) * 65;
+       ^
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:40:04 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:41:53 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:44:34 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:46:23 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:47:03 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:47:32 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+09:48:17 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+14:26:14 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+10:48:34 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
 g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\npc.o" "..\\source\\src\\npc.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
-g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-16:15:24 **** Incremental Build of configuration Debug for project Pokemon ****
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+10:54:47 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+10:56:04 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+10:56:32 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+10:57:03 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+10:57:45 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:00:31 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:01:47 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:02:42 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:04:01 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:04:27 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:09:50 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:10:38 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:12:18 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+11:13:07 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:15:24 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:16:01 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:17:12 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:17:44 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:18:30 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:18:54 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:31:41 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+11:34:13 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:34:56 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:52:07 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+11:52:58 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+11:57:27 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:00:17 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:01:19 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:02:16 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:04:55 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:05:49 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:07:15 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:09:02 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:09:47 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:23:30 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
 g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-..\source\src\buttonAction.cpp: In function 'void btnAction::handleButtonA(Input&, Level&, Player&, GUI&)':
-..\source\src\buttonAction.cpp:153:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = 0; i < level.getLevelItems().size(); i++) {
-                                                    ^
-g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\btnActionHelper.o" "..\\source\\src\\btnActionHelper.cpp" 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\GUI.o" "..\\source\\src\\GUI.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:25:12 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:27:24 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:28:39 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:30:52 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+12:32:49 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:34:03 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+12:38:26 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
+g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+Info: Nothing to build for Pokemon

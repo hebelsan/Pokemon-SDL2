@@ -3,8 +3,9 @@
 
 #include <string>
 
+#include "font.hpp"
+
 TextBox::~TextBox() {
-	TTF_CloseFont(this->_font);
 	SDL_DestroyTexture(this->_textBoxTexture);
 	SDL_DestroyTexture(this->_fontTexture);
 	delete this->_fontSurface;
@@ -32,10 +33,6 @@ TextBox::TextBox(Graphics &graphics) :
 	if (TTF_Init() < 0) {
 		printf("\nError: Unable to initialize Font\n");
 	}
-	_font = TTF_OpenFont("content/fonts/Pokemon_font.ttf", 26);
-	this->_fontColor.r = 0;
-	this->_fontColor.g = 0;
-	this->_fontColor.b = 0;
 
 	this->_sourceRect.x = 0;
 	this->_sourceRect.y = 0;
@@ -59,7 +56,7 @@ void TextBox::draw(Graphics &graphics) {
 		graphics.blitSurface(this->_textBoxTexture, &this->_sourceRect, &this->_textBoxDestinationRectangle);
 
 		// Draw Text
-		this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(this->_font, this->_textSections.at(this->_sectionCounter).c_str(), this->_fontColor,
+		this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(26), this->_textSections.at(this->_sectionCounter).c_str(), Font::colorBlack(),
 				(this->textBoxWidth - 30) * (int)globals::SPRITE_SCALE);
 		this->_fontTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurface);
 		SDL_QueryTexture(this->_fontTexture, NULL, NULL, &this->txtWidth, &this->txtHeight);

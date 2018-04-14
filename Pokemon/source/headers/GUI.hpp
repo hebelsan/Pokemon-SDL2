@@ -19,7 +19,7 @@ public:
 	~GUI();
 	GUI();
 	GUI(Graphics &graphics);
-	void draw(Graphics &graphics);
+	void draw(Graphics &graphics, Player &player);
 
 	TextBox* getTextBox();
 	MenuBox* getMenuBox();

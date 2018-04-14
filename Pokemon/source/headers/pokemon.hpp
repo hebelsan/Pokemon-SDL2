@@ -9,11 +9,23 @@
 #define POKEMON_HPP_
 
 #include <string>
+#include "globals.hpp"
 
 class Pokemon {
 public:
+	~Pokemon();
 	Pokemon();
+
 	void setLevel(int level);
+
+	std::string getName();
+	int getLevel();
+	char getSex();
+	PokemonExpTyp getExpType();
+	int getPokedexNumber();
+
+	int getCurrentHealth();
+
 	int getKP();
 	int getPhysicAttack();
 	int getSpecialAttack();
@@ -23,6 +35,11 @@ public:
 protected:
 	std::string _name;
 	int _level;
+	char _sex;
+	PokemonExpTyp _expType;
+	int _pokedexNumber;
+
+	int _currentKP;
 
 	// permanent attributes
 	int _kp;

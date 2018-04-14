@@ -64,6 +64,7 @@ public:
 	SDL_Rect getCamera();
 
 	void addPokemon(Pokemon pokemon);
+	int getNumberOfPokemons();
 	Pokemon getPokemon(int index);
 private:
 	float _dx, _dy;

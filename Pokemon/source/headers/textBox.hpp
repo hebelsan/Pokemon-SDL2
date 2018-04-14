@@ -9,7 +9,6 @@
 #define TEXTBOX_HPP_
 
 #include <SDL2/SDL.h>
-#include "SDL2/SDL_ttf.h"
 #include <vector>
 #include "sprite.hpp"
 
@@ -42,8 +41,6 @@ private:
 	int txtWidth;
 	int txtHeight;
 
-	SDL_Color _fontColor;
-
 	bool _visible;
 
 	std::vector<std::string> _textSections;
@@ -54,7 +51,6 @@ private:
 	SDL_Texture* _textBoxTexture;
 	SDL_Texture* _fontTexture;
 	SDL_Surface* _fontSurface;
-	TTF_Font* _font;
 };
 
 

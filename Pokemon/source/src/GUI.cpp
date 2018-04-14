@@ -16,11 +16,11 @@ GUI::GUI(Graphics &graphics)
 	this->_pokemonBag = new PokemonBag(graphics);
 }
 
-void GUI::draw(Graphics &graphics) {
+void GUI::draw(Graphics &graphics, Player &player) {
 	this->_textBox->draw(graphics);
 	this->_menuBox->draw(graphics);
 	// the order is important !!
-	this->_pokemonBag->draw(graphics);
+	this->_pokemonBag->draw(graphics, player);
 }
 
 TextBox* GUI::getTextBox() {

@@ -54,10 +54,9 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 		while (pTileset) {
 			int firstgid;
 			const char* source = pTileset->FirstChildElement("image")->Attribute("source");
-			char* path;
 			std::stringstream ss;
 			ss << "content";
-			for (int i = 2; i < strlen(source); i++) {
+			for (unsigned int i = 2; i < strlen(source); i++) {
 				ss << source[i];
 			}
 			pTileset->QueryIntAttribute("firstgid", &firstgid);
@@ -470,7 +469,7 @@ void Level::draw(Graphics &graphics, SDL_Rect camera) {
 
 std::vector<Rectangle> Level::checkTileCollisions(const Rectangle &other) {
 	std::vector<Rectangle> others;
-	for (int i = 0; i < this->_collisionRects.size(); i++) {
+	for (unsigned int i = 0; i < this->_collisionRects.size(); i++) {
 		if (this->_collisionRects.at(i).collidesWith(other)) {
 			others.push_back(this->_collisionRects.at(i));
 		}
@@ -480,7 +479,7 @@ std::vector<Rectangle> Level::checkTileCollisions(const Rectangle &other) {
 
 std::vector<Slope> Level::checkSlopeCollisions(const Rectangle &other) {
 	std::vector<Slope> others;
-	for (int i = 0; i < this->_slopes.size(); i++) {
+	for (unsigned int i = 0; i < this->_slopes.size(); i++) {
 		if (this->_slopes.at(i).collideWith(other)) {
 			others.push_back(this->_slopes.at(i));
 		}
@@ -490,7 +489,7 @@ std::vector<Slope> Level::checkSlopeCollisions(const Rectangle &other) {
 
 std::vector<Door> Level::checkDoorCollisions(const Rectangle &other) {
 	std::vector<Door> others;
-	for (int i = 0; i < this->_doorList.size(); i++) {
+	for (unsigned int i = 0; i < this->_doorList.size(); i++) {
 		if (this->_doorList.at(i).collidesWith(other)) {
 			others.push_back(this->_doorList.at(i));
 		}
@@ -500,7 +499,7 @@ std::vector<Door> Level::checkDoorCollisions(const Rectangle &other) {
 
 std::vector<Npc*> Level::checkNpcCollisions(const Rectangle &other) {
 	std::vector<Npc*> others;
-		for (int i = 0; i < this->_npcs.size(); i++) {
+		for (unsigned int i = 0; i < this->_npcs.size(); i++) {
 			if (this->_npcs.at(i)->getBoundingBox().collidesWith(other)) {
 				others.push_back(this->_npcs.at(i));
 			}
