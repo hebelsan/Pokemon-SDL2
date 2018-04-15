@@ -1,7 +1,1 @@
-01:03:40 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
-g++ -o Pokemon.exe "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-
-01:03:44 Build Finished (took 4s.91ms)
-
+Info: Nothing to build for Pokemon

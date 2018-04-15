@@ -4,6 +4,7 @@
 #include "npc.hpp"
 #include "level.hpp"
 #include "GUI.hpp"
+#include "attacken.hpp"
 
 #include <iostream>
 
@@ -101,6 +102,10 @@ namespace btnActionHelper {
 						// TEST
 						if (level.getLevelItems().at(i).getItemAction() == "endivie") {
 							player.addPokemon(Endivie(5));
+							std::vector<Attacken> attacken = player.getPokemon(0).getAttacken();
+							for (unsigned int i = 0; i < attacken.size(); i++) {
+								std::cout << attacken.at(i).getName() << std::endl;
+							}
 						} else if (level.getLevelItems().at(i).getItemAction() == "feurigel") {
 							player.addPokemon(Feurigel(5));
 						} else if (level.getLevelItems().at(i).getItemAction() == "karnimani") {

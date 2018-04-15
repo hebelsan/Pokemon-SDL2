@@ -19,7 +19,7 @@ public:
 	// returns the size of the vector
 	// 25,30,2,17 -> [25, 30, 2, 7]
 	static unsigned int split(const std::string &txt, std::vector<std::string> &strs, char ch) {
-		int pos = txt.find(ch);
+		unsigned int pos = txt.find(ch);
 		int initialPos = 0;
 		strs.clear();
 		while (pos != std::string::npos) {

@@ -9,7 +9,11 @@
 #define POKEMON_HPP_
 
 #include <string>
+#include <vector>
+#include <map>
+#include <set>
 #include "globals.hpp"
+#include "attacken.hpp"
 
 class Pokemon {
 public:
@@ -22,7 +26,9 @@ public:
 	int getLevel();
 	char getSex();
 	PokemonExpTyp getExpType();
+	PokemonTyp getTyp();
 	int getPokedexNumber();
+	std::vector<Attacken> getAttacken();
 
 	int getCurrentHealth();
 
@@ -32,11 +38,18 @@ public:
 	int getPhysicDefence();
 	int getSpecialDefence();
 	int getInitiative();
+
+	void initiateAttacksHelper(std::vector<Attacken> &attacken,
+			std::multimap <int, Attacken> &lernbareAttacken, int level);
 protected:
 	std::string _name;
 	int _level;
 	char _sex;
 	PokemonExpTyp _expType;
+	PokemonTyp _typ;
+	std::vector<Attacken> _attacken;
+	std::multimap <int, Attacken> _lernbareAttacken;  // < level, attack>
+
 	int _pokedexNumber;
 
 	int _currentKP;

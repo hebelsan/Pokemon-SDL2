@@ -125,7 +125,7 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 							int gid = pTile->IntAttribute("gid");
 							Tileset tls;
 							int closest = 0;
-							for (int i = 0; i < this->_tilesets.size(); i++) {
+							for (unsigned int i = 0; i < this->_tilesets.size(); i++) {
 								if (this->_tilesets[i].FirstGid <= gid) {
 									if (this->_tilesets[i].FirstGid > closest) {
 										closest = this->_tilesets[i].FirstGid;
@@ -160,7 +160,7 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 							// build the actual tile and add it to the level's tile list
 							bool isAnimatedTile = false;
 							AnimatedTileInfo ati;
-							for (int i = 0; i < this->_animatedTileInfos.size(); i++) {
+							for (unsigned int i = 0; i < this->_animatedTileInfos.size(); i++) {
 								if (this->_animatedTileInfos.at(i).StartTileId == gid) {
 									ati = this->_animatedTileInfos.at(i);
 									isAnimatedTile = true;
@@ -169,7 +169,7 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 							}
 							if (isAnimatedTile == true) {
 								std::vector<Vector2> tilesetPositions;
-								for(int i = 0; i < ati.TileIds.size(); i++) {
+								for(unsigned int i = 0; i < ati.TileIds.size(); i++) {
 									tilesetPositions.push_back(this->getTilesetPosition(tls, ati.TileIds.at(i),
 											tileWidth, tileHeight));
 								}
@@ -242,14 +242,14 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 							Utils::split(ss.str(), pairs, ' ');
 							// Now we have each off the pairs, loop through the list of pairs and split them
 							// into Vector2s and then store themin our points vector
-							for (int i = 0; i < pairs.size(); i++) {
+							for (unsigned int i = 0; i < pairs.size(); i++) {
 								std::vector<std::string> ps;
 								Utils::split(pairs.at(i), ps, ',');
 								points.push_back(Vector2(std::stoi(ps.at(0)), std::stoi(ps.at(1))));
 							}
 						}
 
-						for (int i = 0; i < points.size(); i += 2) {
+						for (unsigned int i = 0; i < points.size(); i += 2) {
 							this->_slopes.push_back(Slope(
 									Vector2((p1.x + points.at(i < 2 ? i : i - 1).x) * globals::SPRITE_SCALE,
 											(p1.y + points.at(i < 2 ? i : i - 1).y) * globals::SPRITE_SCALE),
@@ -441,23 +441,23 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 }
 
 void Level::update(int elapsedTime, Player &player) {
-	for(int i = 0; i < this->_animatedTileList.size(); i++) {
+	for(unsigned int i = 0; i < this->_animatedTileList.size(); i++) {
 		this->_animatedTileList.at(i).update(elapsedTime);
 	}
-	for (int i = 0; i < this->_npcs.size(); i++) {
+	for (unsigned int i = 0; i < this->_npcs.size(); i++) {
 		this->_npcs.at(i)->update(elapsedTime, player);
 	}
 }
 
 void Level::draw(Graphics &graphics, SDL_Rect camera) {
 	SDL_SetRenderTarget(graphics.getRenderer(), this->_backgroundTexture);
-	for (int i = 0; i < this->_tileList.size(); i++) {
+	for (unsigned int i = 0; i < this->_tileList.size(); i++) {
 		this->_tileList.at(i).draw(graphics);
 	}
-	for (int i = 0; i < this->_animatedTileList.size(); i++) {
+	for (unsigned int i = 0; i < this->_animatedTileList.size(); i++) {
 		this->_animatedTileList.at(i).draw(graphics);
 	}
-	for (int i = 0; i < this->_npcs.size(); i++) {
+	for (unsigned int i = 0; i < this->_npcs.size(); i++) {
 		this->_npcs.at(i)->draw(graphics);
 	}
 

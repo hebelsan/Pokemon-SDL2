@@ -49,6 +49,34 @@ enum PokemonExpTyp {
 	UNKNOWN
 };
 
+enum PokemonTyp {
+	NORMAL,
+	KAMPF,
+	FLUG,
+	GIFT,
+	BODEN,
+	GESTEIN,
+	KAEFER,
+	GEIST,
+	STAHL,
+	FEUER,
+	WASSER,
+	PFLANZE,
+	ELEKTRO,
+	PSYCHO,
+	EIS,
+	DRACHE,
+	UNLICHT,
+	UNKNOWNTYPE
+};
+
+enum SchadensKlasse {
+	PHYSISCH,
+	SPEZIAL,
+	STATUS,
+	UNKNOWNCLASS
+};
+
 enum MenuItem {
 	POKEDEX,
 	POKEMON,

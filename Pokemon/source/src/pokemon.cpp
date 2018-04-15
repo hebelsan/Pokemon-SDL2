@@ -9,6 +9,7 @@ Pokemon::Pokemon() :
 	_name(""),
 	_level(0),
 	_expType(PokemonExpTyp::UNKNOWN),
+	_typ(PokemonTyp::UNKNOWNTYPE),
 	_pokedexNumber(0),
 	_currentKP(0),
 	_kp(0),
@@ -90,8 +91,16 @@ PokemonExpTyp Pokemon::getExpType() {
 	return this->_expType;
 }
 
+PokemonTyp Pokemon::getTyp() {
+	return this->_typ;
+}
+
 int Pokemon::getPokedexNumber() {
 	return this->_pokedexNumber;
+}
+
+std::vector<Attacken> Pokemon::getAttacken(){
+	return this->_attacken;
 }
 
 int Pokemon::getCurrentHealth() {
@@ -122,6 +131,41 @@ int Pokemon::getInitiative() {
 	return this->_init;
 }
 
+void Pokemon::initiateAttacksHelper(std::vector<Attacken> &attacken,
+			std::multimap <int, Attacken> &lernbareAttacken, int level) {
+	std::vector<Attacken> attacks;
+	for (auto const& x : lernbareAttacken)
+	{
+		if (x.first <= level) {
+			attacks.push_back(x.second);
+		}
+	}
+
+	if (attacks.size() <= 4) {
+		for (unsigned int i = 0; i < attacks.size(); i++)
+		{
+			attacken.push_back(attacks.at(i));
+		}
+	}
+	else {
+		std::set<int> memoryNumbers;
+		int indexRand = 0;
+		bool isIn;
+		for (int i = 0; i < 4; i++)
+		{
+			do {
+			struct timespec ts;
+			clock_gettime(CLOCK_MONOTONIC, &ts);
+			srand((time_t)ts.tv_nsec);
+			indexRand = (rand() % attacks.size()); // number 0 - attackSize - 1
+			isIn = memoryNumbers.find(indexRand) != memoryNumbers.end();
+			} while(isIn);
+			memoryNumbers.insert(indexRand);
+			attacken.push_back(attacks.at(indexRand));
+		}
+	}
+}
+
 Endivie::Endivie(int level) :
 	Pokemon()
 {
@@ -129,6 +173,7 @@ Endivie::Endivie(int level) :
 	this->_pokedexNumber = 152;
 
 	this->_expType = PokemonExpTyp::MITTEL_LANGSAM;
+	this->_typ = PokemonTyp::PFLANZE;
 
 	// set basisWerte
 	this->_b_kp = 45;
@@ -138,7 +183,23 @@ Endivie::Endivie(int level) :
 	this->_b_spcDef = 65;
 	this->_b_init = 45;
 
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Tackle()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Heuler()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(6, Rasierblatt()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(9, Giftpuder()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(12, Synthese()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(17, Reflektor()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(20, Zauberblatt()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(23, Beerenkraefte()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(28, Lockduft()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(31, Lichtschild()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(34, Bodyslam()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(39, Bodyguard()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(42, Aromakur()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(45, Solarstrahl()));
 	this->setLevel(level);
+	this->initiateAttacksHelper(_attacken, _lernbareAttacken, level);
+
 	this->_currentKP = this->_kp;
 }
 
@@ -149,6 +210,7 @@ Feurigel::Feurigel(int level) :
 	this->_pokedexNumber = 155;
 
 	this->_expType = PokemonExpTyp::MITTEL_LANGSAM;
+	this->_typ = PokemonTyp::FEUER;
 
 	// set basisWerte
 	this->_b_kp = 39;
@@ -158,7 +220,26 @@ Feurigel::Feurigel(int level) :
 	this->_b_spcDef = 50;
 	this->_b_init = 65;
 
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Tackle()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Silberblick()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(6, Rauchwolke()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(10, Glut()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(13, Ruckzuckhieb()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(19, Flammenrad()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(22, Einigler()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(28, Nitroladung()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(31, Sternschauer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(37, Flammensturm()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(40, Flammenwurf()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(46, Inferno()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(49, Walzer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(55, Risikotackle()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(58, Ausbrennen()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(64, Eruption()));
 	this->setLevel(level);
+	this->initiateAttacksHelper(_attacken, _lernbareAttacken, level);
+
+	this->_currentKP = this->_kp;
 }
 
 Karnimani::Karnimani(int level) :
@@ -168,6 +249,7 @@ Karnimani::Karnimani(int level) :
 	this->_pokedexNumber = 158;
 
 	this->_expType = PokemonExpTyp::MITTEL_LANGSAM;
+	this->_typ = PokemonTyp::WASSER;
 
 	// set basisWerte
 	this->_b_kp = 50;
@@ -177,7 +259,26 @@ Karnimani::Karnimani(int level) :
 	this->_b_spcDef = 48;
 	this->_b_init = 43;
 
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Kratzer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Silberblick()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(6, Aquaknarre()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(10, Raserei()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(13, Biss()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(15, Grimasse()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(20, Eiszahn()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(22, Dreschflegel()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(27, Knirscher()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(29, Zermuerben()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(34, Schlitzer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(36, Kreideschrei()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(41, Fuchtler()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(43, Nassschweif()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(48, Kraftkoloss()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacken>(50, Hydropumpe()));
 	this->setLevel(level);
+	this->initiateAttacksHelper(_attacken, _lernbareAttacken, level);
+
+	this->_currentKP = this->_kp;
 }
 
 
