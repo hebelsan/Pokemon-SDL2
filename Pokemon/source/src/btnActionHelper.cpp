@@ -37,6 +37,7 @@ namespace btnActionHelper {
 							for (int k = 0; k < levelNpcs.at(i)->getPokemons().size(); k++) {
 								std::cout << levelNpcs.at(i)->getPokemons().at(k).getName() << std::endl;
 							}
+							gui.getFight()->startFight();
 						}
 					}
 					break;

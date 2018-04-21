@@ -30,22 +30,18 @@ PokemonBag::PokemonBag(Graphics &graphics) :
 	this->_backgroundTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/PokemonBag/PokemonBag_raw.png"));
 	if (this->_backgroundTexture == NULL) {
 		printf("\nError: Unable to load image menuBoxButton\n");
-		printf(SDL_GetError());
 	}
 	this->_pokeBallTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/PokemonBag/Pokeball_Passive.png"));
 	if (this->_pokeBallTexture == NULL) {
 		printf("\nError: Unable to load image pokeBall\n");
-		printf(SDL_GetError());
 	}
 	this->_pokemonsTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/Pokemon/pokemonIcons.png"));
 	if (this->_pokemonsTexture == NULL) {
 		printf("\nError: Unable to load Pokemons Texture\n");
-		printf(SDL_GetError());
 	}
 	this->_healthBarTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/PokemonBag/healthBar.png"));
 	if (this->_pokemonsTexture == NULL) {
 		printf("\nError: Unable to load healthBar Texture\n");
-		printf(SDL_GetError());
 	}
 }
 

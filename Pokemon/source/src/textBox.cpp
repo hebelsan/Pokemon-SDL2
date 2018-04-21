@@ -45,8 +45,7 @@ TextBox::TextBox(Graphics &graphics) :
 	this->_textBoxDestinationRectangle.h = textBoxHeight * (int)globals::SPRITE_SCALE;
 	this->_textBoxTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/textBox.png"));
 	if (this->_textBoxTexture == NULL) {
-		printf("\nError: Unable to load image\n");
-		printf(SDL_GetError());
+		printf("\nError: Unable to load image textBox\n");
 	}
 }
 

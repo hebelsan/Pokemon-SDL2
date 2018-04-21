@@ -11,6 +11,7 @@
 #include "textBox.hpp"
 #include "menuBox.hpp"
 #include "pokemonBag.hpp"
+#include "Fight/fight.hpp"
 
 class Graphics;
 
@@ -24,10 +25,12 @@ public:
 	TextBox* getTextBox();
 	MenuBox* getMenuBox();
 	PokemonBag* getPokemonBag();
+	Fight* getFight();
 private:
 	TextBox *_textBox;
 	MenuBox *_menuBox;
 	PokemonBag *_pokemonBag;
+	Fight *_fight;
 };
 
 
