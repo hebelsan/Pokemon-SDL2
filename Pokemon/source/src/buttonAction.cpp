@@ -19,6 +19,10 @@ namespace btnAction {
 		if (gui.getTextBox()->isVisible()) {
 			return;
 		}
+		if (gui.getFight()->isFighting()) {
+			btnActionHelper::handleFightArrowKeys(player, gui);
+			return;
+		}
 
 		// player should not walk if menu box is visible
 		if (gui.getMenuBox()->visible() == true) {
@@ -77,6 +81,9 @@ namespace btnAction {
 			// first check if the player is already talking
 			else if (gui.getTextBox()->isVisible()) {
 				gui.getTextBox()->nextTextSection();
+			}
+			else if (gui.getFight()->isFighting()) {
+				btnActionHelper::handleFightButtonA(level, player, gui);
 			}
 			else {
 				btnActionHelper::handlePlayerTalking(level, player, gui);

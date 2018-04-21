@@ -32,6 +32,20 @@ namespace sides {
 	}
 }
 
+namespace fight {
+	enum FightStatus {
+		NAVMAIN,
+		SELECTATTACK
+	};
+
+	enum NavMainItems {
+		Kampf,
+		Beutel,
+		Flucht,
+		Pokemon
+	};
+}
+
 enum Direction {
 	LEFT,
 	RIGHT,

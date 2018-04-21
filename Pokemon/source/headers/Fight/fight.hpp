@@ -10,6 +10,7 @@
 
 #include "graphics.hpp"
 #include "Fight/fightScene.hpp"
+#include "globals.hpp"
 
 class Fight {
 public:
@@ -18,8 +19,28 @@ public:
 	void draw(Graphics &graphics, Player &player);
 
 	void startFight();
+	void endFight();
+	bool isFighting();
+
+	void setStatus(fight::FightStatus status);
+	fight::FightStatus getStatus();
+
+	void selectUp();
+	void selectDown();
+	void selectLeft();
+	void selectRight();
+	fight::NavMainItems getNavMainItem();
 private:
 	FightScene *_fightScene;
+	fight::FightStatus _status;
+
+	int _mainNavItemsIndex;
+	fight::NavMainItems _mainNavigationItems[4] = {
+			fight::NavMainItems::Kampf,
+			fight::NavMainItems::Pokemon,
+			fight::NavMainItems::Beutel,
+			fight::NavMainItems::Flucht
+	};
 };
 
 

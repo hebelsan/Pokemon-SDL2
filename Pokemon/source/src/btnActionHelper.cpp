@@ -6,6 +6,7 @@
 #include "GUI.hpp"
 #include "attacken.hpp"
 #include "pokemonFactory.hpp"
+#include "globals.hpp"
 
 #include <iostream>
 
@@ -31,13 +32,14 @@ namespace btnActionHelper {
 						levelNpcs.at(i)->setFacing(DOWN);
 
 						player.playAnimation("IdleUp");
-						gui.getTextBox()->setText(levelNpcs.at(i)->getText());
-
+						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
-							for (int k = 0; k < levelNpcs.at(i)->getPokemons().size(); k++) {
-								std::cout << levelNpcs.at(i)->getPokemons().at(k).getName() << std::endl;
-							}
 							gui.getFight()->startFight();
+							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
+						}
+						// IF it is non Trainer start Text
+						else {
+							gui.getTextBox()->setText(levelNpcs.at(i)->getText());
 						}
 					}
 					break;
@@ -53,7 +55,15 @@ namespace btnActionHelper {
 						levelNpcs.at(i)->setFacing(UP);
 
 						player.playAnimation("IdleDown");
-						gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+						// IF its a trainer start Fighting
+						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
+							gui.getFight()->startFight();
+							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
+						}
+						// IF it is non Trainer start Text
+						else {
+							gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+						}
 					}
 					break;
 				}
@@ -68,7 +78,15 @@ namespace btnActionHelper {
 						levelNpcs.at(i)->setFacing(RIGHT);
 
 						player.playAnimation("IdleLeft");
-						gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+						// IF its a trainer start Fighting
+						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
+							gui.getFight()->startFight();
+							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
+						}
+						// IF it is non Trainer start Text
+						else {
+							gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+						}
 					}
 					break;
 				}
@@ -83,7 +101,15 @@ namespace btnActionHelper {
 						levelNpcs.at(i)->setFacing(LEFT);
 
 						player.playAnimation("IdleRight");
-						gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+						// IF its a trainer start Fighting
+						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
+							gui.getFight()->startFight();
+							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
+						}
+						// IF it is non Trainer start Text
+						else {
+							gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+						}
 					}
 					break;
 				}
@@ -158,5 +184,12 @@ namespace btnActionHelper {
 		}
 	}
 
+	void handleFightButtonA(Level &level, Player &player, GUI &gui) {
+
+	}
+
+	void handleFightArrowKeys(Player &player, GUI &gui) {
+
+	}
 }
 

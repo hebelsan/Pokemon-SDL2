@@ -16,6 +16,8 @@ class GUI;
 namespace btnActionHelper {
 	void handlePlayerTalking(Level &level, Player &player, GUI &gui);
 	void handleLevelItems(Level &level, Player &player, GUI &gui);
+	void handleFightButtonA(Level &level, Player &player, GUI &gui);
+	void handleFightArrowKeys(Player &player, GUI &gui);
 };
 
 
