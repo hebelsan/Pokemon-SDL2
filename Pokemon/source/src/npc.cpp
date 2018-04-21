@@ -1,4 +1,5 @@
 #include "npc.hpp"
+#include <iostream>
 
 //Base NPC class
 Npc::Npc() {}
@@ -37,11 +38,15 @@ std::string Npc::getText() {
 	return this->_text;
 }
 
+std::vector<Pokemon> Npc::getPokemons() {
+	return this->_pokemons;
+}
+
 //Dicker Class
 Dicker::Dicker() {}
 
 Dicker::Dicker(Graphics &graphics, Vector2 spawnPoint, std::string text) :
-		Npc(graphics, "content/sprites/dicker.png", 0, 0, 16, 18, spawnPoint, 140, text)
+		Npc(graphics, "content/sprites/NPC/dicker.png", 0, 0, 16, 18, spawnPoint, 140, text)
 {
 	this->setupAnimations();
 	this->playAnimation("idleDown");
@@ -71,15 +76,13 @@ void Dicker::animationDone(std::string currentAnimation) {}
 PokeProf::PokeProf() {}
 
 PokeProf::PokeProf(Graphics &graphics, Vector2 spawnPoint, std::string text) :
-		Npc(graphics, "content/sprites/PokemonProf.png", 0, 0, 17, 25, spawnPoint, 140, text)
+		Npc(graphics, "content/sprites/NPC/PokemonProf.png", 0, 0, 17, 25, spawnPoint, 140, text)
 {
 	this->setupAnimations();
 	this->playAnimation("idleDown");
 }
 
 void PokeProf::update(int elapsedTime, Player &player) {
-	this->_facing = player.getX() > this->_x ? RIGHT : LEFT;
-
 	Npc::update(elapsedTime, player);
 }
 
@@ -95,3 +98,31 @@ void PokeProf::setupAnimations() {
 }
 
 void PokeProf::animationDone(std::string currentAnimation) {}
+
+//Base Trainer Class
+Trainer::Trainer() {}
+
+Trainer::Trainer(Graphics &graphics, Vector2 spawnPoint, std::string text, std::vector<Pokemon> pokemons) :
+		Npc(graphics, "content/sprites/NPC/Trainer.png", 0, 0, 18, 23, spawnPoint, 140, text)
+{
+	this->setupAnimations();
+	this->playAnimation("idleDown");
+	this->_pokemons = pokemons;
+}
+
+void Trainer::update(int elapsedTime, Player &player) {
+	Npc::update(elapsedTime, player);
+}
+
+void Trainer::draw(Graphics &graphics) {
+	Npc::draw(graphics);
+}
+
+void Trainer::setupAnimations() {
+	this->addAnimation(1, 0, 0, "idleDown", 18, 23, Vector2(0,0));
+	this->addAnimation(1, 0, 23, "idleUp", 18,23, Vector2(0,0));
+	this->addAnimation(1, 0, 46, "idleRight", 18, 23, Vector2(0,0));
+	this->addAnimation(1, 0, 69, "idleLeft", 18, 23, Vector2(0,0));
+}
+
+void Trainer::animationDone(std::string currentAnimation) {}

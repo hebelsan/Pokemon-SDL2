@@ -19,6 +19,12 @@ public:
 		_height(height)
 	{}
 
+	void setX(int x) {
+		this->_x = x;
+	}
+	void setY(int y) {
+		this->_y = y;
+	}
 	const int getCenterX() const {
 		return this->_x + this->_width /2;
 	}

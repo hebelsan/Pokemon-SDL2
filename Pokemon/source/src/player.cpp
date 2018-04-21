@@ -50,6 +50,14 @@ const float Player::getY() const {
 	return this->_y;
 }
 
+const float Player::getDX() const {
+	return this->_dx;
+}
+
+const float Player::getDY() const {
+	return this->_dy;
+}
+
 const Direction Player::getFacing() const {
 	return this->_facing;
 }
@@ -205,9 +213,10 @@ void Player::handleNpcCollision(std::vector<Npc*> others) {
 
 void Player::update(float elapsedTime) {
 	// Move by dx
-	this->_x += this->_dx * elapsedTime;
-	this->_y += this->_dy * elapsedTime;
-
+	// if (!collides) {
+		this->_x += this->_dx * elapsedTime;
+		this->_y += this->_dy * elapsedTime;
+	// }
 	AnimatedSprite::update(elapsedTime);
 }
 

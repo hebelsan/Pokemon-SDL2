@@ -21,9 +21,11 @@ public:
 	virtual void draw(Graphics &graphics);
 	void setFacing(Direction facing);
 	std::string getText();
+	std::vector<Pokemon> getPokemons();
 protected:
 	Direction _facing;
 	std::string _text;
+	std::vector<Pokemon> _pokemons;
 };
 
 class Dicker : public Npc {
@@ -41,6 +43,17 @@ class PokeProf : public Npc {
 public:
 	PokeProf();
 	PokeProf(Graphics &graphics, Vector2 spawnPoint, std::string text);
+	void update(int elapsedTime, Player &player);
+	void draw(Graphics &graphics);
+
+	void animationDone(std::string currentAnimation);
+	void setupAnimations();
+};
+
+class Trainer : public Npc {
+public:
+	Trainer();
+	Trainer(Graphics &graphics, Vector2 spawnPoint, std::string text, std::vector<Pokemon>);
 	void update(int elapsedTime, Player &player);
 	void draw(Graphics &graphics);
 

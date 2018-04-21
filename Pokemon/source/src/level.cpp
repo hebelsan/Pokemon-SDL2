@@ -3,6 +3,7 @@
 #include "utils.hpp"
 #include "npc.hpp"
 #include "player.hpp"
+#include "pokemonFactory.hpp"
 
 #include "tinyxml2.h"
 
@@ -352,6 +353,7 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 				if (pObject != NULL) {
 					while (pObject) {
 						std::string npcText;
+						std::string trainerPokemons;
 						XMLElement* pProperties = pObject->FirstChildElement("properties");
 						if (pProperties != NULL) {
 							while (pProperties) {
@@ -366,6 +368,12 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 											std::stringstream ss2;
 											ss2 << value;
 											npcText = ss2.str();
+										}
+										if (ss.str() == "pokemons") {
+											const char* value = pProperty->Attribute("value");
+											std::stringstream ss2;
+											ss2 << value;
+											trainerPokemons = ss2.str();
 										}
 										pProperty = pProperty->NextSiblingElement("property");
 									}
@@ -382,9 +390,14 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 							this->_npcs.push_back(new Dicker(graphics, Vector2(std::floor(x) * globals::SPRITE_SCALE,
 									std::floor(y) * globals::SPRITE_SCALE), npcText));
 						}
-						if (ss.str() == "PokeProf") {
+						else if (ss.str() == "PokeProf") {
 							this->_npcs.push_back(new PokeProf(graphics, Vector2(std::floor(x) * globals::SPRITE_SCALE,
 																std::floor(y) * globals::SPRITE_SCALE), npcText));
+						}
+						else if (ss.str() == "trainer") {
+							this->_npcs.push_back(new Trainer(graphics, Vector2(std::floor(x) * globals::SPRITE_SCALE,
+																std::floor(y) * globals::SPRITE_SCALE), npcText,
+									PokemonFactory::createPokemonsFromString(trainerPokemons)));
 						}
 						pObject = pObject->NextSiblingElement("object");
 					}
@@ -499,11 +512,11 @@ std::vector<Door> Level::checkDoorCollisions(const Rectangle &other) {
 
 std::vector<Npc*> Level::checkNpcCollisions(const Rectangle &other) {
 	std::vector<Npc*> others;
-		for (unsigned int i = 0; i < this->_npcs.size(); i++) {
-			if (this->_npcs.at(i)->getBoundingBox().collidesWith(other)) {
-				others.push_back(this->_npcs.at(i));
-			}
+	for (unsigned int i = 0; i < this->_npcs.size(); i++) {
+		if (this->_npcs.at(i)->getBoundingBox().collidesWith(other)) {
+			others.push_back(this->_npcs.at(i));
 		}
+	}
 	return others;
 }
 

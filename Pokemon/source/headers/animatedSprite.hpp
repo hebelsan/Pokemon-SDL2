@@ -43,8 +43,8 @@ public:
 	void drawStartScreen(Graphics &graphics);
 
 protected:
-	double _timeToUpdate;
 	bool _currentAnimationOnce;
+	double _timeToUpdate;
 	std::string _currentAnimation;
 
 	/* void addAnimation

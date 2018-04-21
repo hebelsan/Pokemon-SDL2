@@ -93,7 +93,6 @@ void Game::draw(Graphics &graphics, Player &player) {
 
 void Game::update(float elapsedTime) {
 	this->_player.update(elapsedTime);
-	this->_player.setCamera(this->_level.getMapWidth(), this->_level.getMapHeight());
 	this->_level.update(elapsedTime, this->_player);
 
 	// check collision
@@ -117,6 +116,8 @@ void Game::update(float elapsedTime) {
 	std::vector<Npc*> otherNpcs;
 	if ((otherNpcs = this->_level.checkNpcCollisions(this->_player.getBoundingBox())).size() > 0) {
 		this->_player.handleNpcCollision(otherNpcs);
+	} else {
+		this->_player.setCamera(this->_level.getMapWidth(), this->_level.getMapHeight());
 	}
 }
 

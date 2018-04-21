@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextobjectid="2">
+<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextobjectid="41">
  <tileset firstgid="1" name="Tileset1" tilewidth="16" tileheight="16" tilecount="3408" columns="8">
   <image source="../tilesets/Tileset1.png" width="128" height="6816"/>
  </tileset>
@@ -1814,6 +1814,34 @@
    <tile/>
   </data>
  </layer>
+ <objectgroup color="#0000ff" name="NPC">
+  <object id="4" name="trainer" x="250.666" y="324.667" width="4" height="4">
+   <properties>
+    <property name="pokemons" value="feurigel,5:karnimani,3:endivie,2"/>
+    <property name="text" value="Hey!###Jetzt gehts los!"/>
+   </properties>
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <objectgroup name="collisions">
+  <object id="31" x="442.5" y="45.5" width="29" height="382.5"/>
+  <object id="32" x="6" y="434" width="223.5" height="37"/>
+  <object id="33" x="7.5" y="47.5" width="28.5" height="381.5"/>
+  <object id="34" x="284.5" y="293.5" width="22" height="34"/>
+  <object id="35" x="242" y="243" width="108" height="33"/>
+  <object id="36" x="238" y="193" width="118.5" height="36"/>
+  <object id="37" x="257.5" y="151.5" width="28" height="28"/>
+  <object id="38" x="309" y="151" width="25" height="29.5"/>
+  <object id="40" x="300.5" y="434" width="173.5" height="34.5"/>
+ </objectgroup>
+ <objectgroup name="doors">
+  <object id="16" x="249.375" y="477.75" width="28.875" height="1.75">
+   <properties>
+    <property name="destination" value="startTown"/>
+    <property name="destinationSpawnPoint" value="startTownRoad"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer name="background 3" width="30" height="30">
   <data>
    <tile gid="845"/>
@@ -2718,7 +2746,7 @@
    <tile gid="863"/>
   </data>
  </layer>
- <objectgroup name="spawn points">
+ <objectgroup color="#ff00ff" name="spawn points">
   <object id="1" name="player" x="249.667" y="437" width="5" height="7">
    <properties>
     <property name="location" value="start"/>

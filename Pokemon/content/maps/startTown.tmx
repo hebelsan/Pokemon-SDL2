@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="26" height="26" tilewidth="16" tileheight="16" infinite="0" nextobjectid="61">
+<map version="1.0" tiledversion="2018.01.23" orientation="orthogonal" renderorder="right-down" width="26" height="26" tilewidth="16" tileheight="16" infinite="0" nextobjectid="62">
  <tileset firstgid="1" name="Tileset1" tilewidth="16" tileheight="16" tilecount="3408" columns="8">
   <image source="../tilesets/Tileset1.png" width="128" height="6816"/>
  </tileset>
@@ -3495,7 +3495,7 @@
   </object>
  </objectgroup>
  <objectgroup color="#ff00ff" name="spawn points">
-  <object id="22" name="player" x="277.333" y="354" width="4" height="4.33333">
+  <object id="22" name="player" x="151.333" y="39" width="4" height="4.33333">
    <properties>
     <property name="location" value="start"/>
    </properties>
@@ -3510,6 +3510,12 @@
   <object id="58" name="player" x="275" y="332" width="2.33333" height="3">
    <properties>
     <property name="location" value="pokeLaborDoor"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="61" name="player" x="145" y="9.33333" width="2.33333" height="3">
+   <properties>
+    <property name="location" value="startTownRoad"/>
    </properties>
    <ellipse/>
   </object>

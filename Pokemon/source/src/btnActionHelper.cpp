@@ -5,6 +5,7 @@
 #include "level.hpp"
 #include "GUI.hpp"
 #include "attacken.hpp"
+#include "pokemonFactory.hpp"
 
 #include <iostream>
 
@@ -31,6 +32,12 @@ namespace btnActionHelper {
 
 						player.playAnimation("IdleUp");
 						gui.getTextBox()->setText(levelNpcs.at(i)->getText());
+
+						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
+							for (int k = 0; k < levelNpcs.at(i)->getPokemons().size(); k++) {
+								std::cout << levelNpcs.at(i)->getPokemons().at(k).getName() << std::endl;
+							}
+						}
 					}
 					break;
 				}
@@ -100,16 +107,10 @@ namespace btnActionHelper {
 							(playerXcenter  > itemLeft && playerXcenter < (itemLeft + itemWidth))) {
 
 						// TEST
-						if (level.getLevelItems().at(i).getItemAction() == "endivie") {
-							player.addPokemon(Endivie(5));
-							std::vector<Attacken> attacken = player.getPokemon(0).getAttacken();
-							for (unsigned int i = 0; i < attacken.size(); i++) {
-								std::cout << attacken.at(i).getName() << std::endl;
-							}
-						} else if (level.getLevelItems().at(i).getItemAction() == "feurigel") {
-							player.addPokemon(Feurigel(5));
-						} else if (level.getLevelItems().at(i).getItemAction() == "karnimani") {
-							player.addPokemon(Karnimani(5));
+						player.addPokemon(PokemonFactory::createPokemon(level.getLevelItems().at(i).getItemAction(), 5));
+						std::vector<Attacken> attacken = player.getPokemon(0).getAttacken();
+						for (unsigned int i = 0; i < attacken.size(); i++) {
+							std::cout << attacken.at(i).getName() << std::endl;
 						}
 						std::cout << level.getLevelItems().at(i).getItemAction() << std::endl;
 					}

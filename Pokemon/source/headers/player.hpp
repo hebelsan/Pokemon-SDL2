@@ -60,6 +60,8 @@ public:
 
 	const float getX() const;
 	const float getY() const;
+	const float getDX() const;
+	const float getDY() const;
 	const Direction getFacing() const;
 	SDL_Rect getCamera();
 
