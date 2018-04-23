@@ -18,6 +18,8 @@ public:
 	FightScene();
 	FightScene(Graphics &graphics);
 	void draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem);
+	void drawMainNav(Graphics &graphics, fight::FightStatus &fightStatus);
+	void drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus);
 	void drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem);
 
 	bool visible() const;
@@ -31,6 +33,9 @@ private:
 	SDL_Rect _mainNavSrcRect;
 	SDL_Rect _mainNavDstRect;
 	SDL_Texture* _mainNavigationTexture;
+	SDL_Rect _attackSelectBoxSrcRect;
+	SDL_Rect _attackSelectBoxDstRect;
+	SDL_Texture* _attackSelectBoxTexture;
 	SDL_Rect _selectArrowSrcRect;
 	SDL_Rect _selectArrowDstRect;
 	SDL_Texture* _selectArrowTexture;

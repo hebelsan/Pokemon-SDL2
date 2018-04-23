@@ -25,11 +25,12 @@ public:
 	void setStatus(fight::FightStatus status);
 	fight::FightStatus getStatus();
 
-	void selectUp();
-	void selectDown();
-	void selectLeft();
-	void selectRight();
+	void selectUpOrDown();
+	void selectLeftOrRight();
+	void pushA();
+	void pushB();
 	fight::NavMainItems getNavMainItem();
+	void setNavMainItem(fight::NavMainItems navMainItem);
 private:
 	FightScene *_fightScene;
 	fight::FightStatus _status;

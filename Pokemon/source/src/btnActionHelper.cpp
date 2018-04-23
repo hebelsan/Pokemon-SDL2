@@ -35,7 +35,6 @@ namespace btnActionHelper {
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
 							gui.getFight()->startFight();
-							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -58,7 +57,6 @@ namespace btnActionHelper {
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
 							gui.getFight()->startFight();
-							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -81,7 +79,6 @@ namespace btnActionHelper {
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
 							gui.getFight()->startFight();
-							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -104,7 +101,6 @@ namespace btnActionHelper {
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
 							gui.getFight()->startFight();
-							gui.getFight()->setStatus(fight::FightStatus::NAVMAIN);
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -185,11 +181,22 @@ namespace btnActionHelper {
 	}
 
 	void handleFightButtonA(Level &level, Player &player, GUI &gui) {
-
+		gui.getFight()->pushA();
 	}
 
-	void handleFightArrowKeys(Player &player, GUI &gui) {
-
+	void handleFightArrowKeys(Player &player, GUI &gui, Input &input) {
+		if (input.wasKeyPressed(SDL_SCANCODE_UP) == true) {
+			gui.getFight()->selectUpOrDown();
+		}
+		else if (input.wasKeyPressed(SDL_SCANCODE_DOWN) == true) {
+			gui.getFight()->selectUpOrDown();
+		}
+		else if (input.wasKeyPressed(SDL_SCANCODE_LEFT) == true) {
+			gui.getFight()->selectLeftOrRight();
+		}
+		else if (input.wasKeyPressed(SDL_SCANCODE_RIGHT) == true) {
+			gui.getFight()->selectLeftOrRight();
+		}
 	}
 }
 

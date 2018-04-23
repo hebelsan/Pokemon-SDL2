@@ -45,12 +45,27 @@ FightScene::FightScene(Graphics &graphics) :
 		printf("\nError: Unable to load image mainNavigation fightScene\n");
 	}
 
+	this->_attackSelectBoxSrcRect.x = 0;
+	this->_attackSelectBoxSrcRect.y = 0;
+	this->_attackSelectBoxSrcRect.w = 3114;
+	this->_attackSelectBoxSrcRect.h = 689;
+
+	this->_attackSelectBoxDstRect.x = 0;
+	this->_attackSelectBoxDstRect.y = globals::SCREEN_HEIGHT - 120;
+	this->_attackSelectBoxDstRect.w = globals::SCREEN_WIDTH;
+	this->_attackSelectBoxDstRect.h = 120;
+
+	this->_attackSelectBoxTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/attackSelectBox.png"));
+	if (this->_backgroundTexture == NULL) {
+		printf("\nError: Unable to load image attack Box\n");
+	}
+
 	this->_selectArrowSrcRect.x = 0;
 	this->_selectArrowSrcRect.y = 0;
 	this->_selectArrowSrcRect.w = 28;
 	this->_selectArrowSrcRect.h = 44;
 
-	this->_selectArrowDstRect = {0,0,0,0};
+	this->_selectArrowDstRect = {0,0,14,22};
 
 	this->_selectArrowTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/navigationButton.png"));
 	if (this->_backgroundTexture == NULL) {
@@ -61,13 +76,46 @@ FightScene::FightScene(Graphics &graphics) :
 void FightScene::draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem) {
 	if (this->_visible) {
 		graphics.blitSurface(this->_backgroundTexture, &this->_backgroundSrcRect, &this->_backgroundDstRect);
-		graphics.blitSurface(this->_mainNavigationTexture, &this->_mainNavSrcRect, &this->_mainNavDstRect);
+		drawMainNav(graphics, fightStatus);
+		drawAttackSelection(graphics, fightStatus);
 		drawNavigationArrow(graphics, player, fightStatus, navMainItem);
 	}
 }
 
-void FightScene::drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem) {
+void FightScene::drawMainNav(Graphics &graphics, fight::FightStatus &fightStatus) {
+	if (fightStatus == fight::FightStatus::NAVMAIN) {
+		graphics.blitSurface(this->_mainNavigationTexture, &this->_mainNavSrcRect, &this->_mainNavDstRect);
+	}
+}
 
+void FightScene::drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus) {
+	if (fightStatus == fight::FightStatus::SELECTATTACK) {
+		graphics.blitSurface(this->_attackSelectBoxTexture, &this->_attackSelectBoxSrcRect, &this->_attackSelectBoxDstRect);
+	}
+}
+
+void FightScene::drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem) {
+	if (fightStatus == fight::FightStatus::NAVMAIN) {
+		switch(navMainItem) {
+			case fight::NavMainItems::Kampf:
+				_selectArrowDstRect.x = globals::SCREEN_WIDTH - 235;
+				_selectArrowDstRect.y = globals::SCREEN_HEIGHT - 90;
+				break;
+			case fight::NavMainItems::Pokemon:
+				_selectArrowDstRect.x = globals::SCREEN_WIDTH - 235;
+				_selectArrowDstRect.y = globals::SCREEN_HEIGHT - 49;
+				break;
+			case fight::NavMainItems::Beutel:
+				_selectArrowDstRect.x = globals::SCREEN_WIDTH - 118;
+				_selectArrowDstRect.y = globals::SCREEN_HEIGHT - 90;
+				break;
+			case fight::NavMainItems::Flucht:
+				_selectArrowDstRect.x = globals::SCREEN_WIDTH - 118;
+				_selectArrowDstRect.y = globals::SCREEN_HEIGHT - 49;
+				break;
+		}
+		graphics.blitSurface(this->_selectArrowTexture, &this->_selectArrowSrcRect, &this->_selectArrowDstRect);
+	}
 }
 
 bool FightScene::visible() const {

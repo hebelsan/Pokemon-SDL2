@@ -20,7 +20,7 @@ namespace btnAction {
 			return;
 		}
 		if (gui.getFight()->isFighting()) {
-			btnActionHelper::handleFightArrowKeys(player, gui);
+			btnActionHelper::handleFightArrowKeys(player, gui, input);
 			return;
 		}
 
@@ -99,8 +99,12 @@ namespace btnAction {
 				gui.getPokemonBag()->setVisible(false);
 				return;
 			}
-			if (gui.getMenuBox()->visible()) {
+			else if (gui.getMenuBox()->visible()) {
 				gui.getMenuBox()->setVisible(false);
+				return;
+			}
+			else if (gui.getFight()->isFighting()) {
+				gui.getFight()->pushB();
 				return;
 			}
 		}

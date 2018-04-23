@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="handleNpcCollision" key="selection"/>
+		<item value="KAMPF" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="KAMPF"/>
 			<item value="handleNpcCollision"/>
 			<item value="poke"/>
 			<item value="ball"/>
@@ -22,7 +23,6 @@
 			<item value="closest"/>
 			<item value="textPosY"/>
 			<item value="textPosX"/>
-			<item value="getNpcs"/>
 		</list>
 		<list key="replacehistory">
 		</list>

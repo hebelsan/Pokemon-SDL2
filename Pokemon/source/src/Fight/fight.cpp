@@ -13,6 +13,8 @@ void Fight::draw(Graphics &graphics, Player &player) {
 
 void Fight::startFight() {
 	this->_fightScene->setVisible(true);
+	setStatus(fight::FightStatus::NAVMAIN);
+	_mainNavItemsIndex = 0;
 }
 
 void Fight::endFight() {
@@ -31,22 +33,69 @@ fight::FightStatus Fight::getStatus() {
 	return this->_status;
 }
 
-void Fight::selectUp() {
-
+void Fight::selectUpOrDown() {
+	if (this->_status == fight::FightStatus::NAVMAIN) {
+		switch(getNavMainItem()) {
+			case fight::NavMainItems::Kampf: setNavMainItem(fight::NavMainItems::Pokemon);
+				break;
+			case fight::NavMainItems::Pokemon: setNavMainItem(fight::NavMainItems::Kampf);
+				break;
+			case fight::NavMainItems::Beutel: setNavMainItem(fight::NavMainItems::Flucht);
+				break;
+			case fight::NavMainItems::Flucht: setNavMainItem(fight::NavMainItems::Beutel);
+				break;
+		}
+	}
 }
 
-void Fight::selectDown() {
-
+void Fight::selectLeftOrRight() {
+	if (this->_status == fight::FightStatus::NAVMAIN) {
+		switch(getNavMainItem()) {
+			case fight::NavMainItems::Kampf: setNavMainItem(fight::NavMainItems::Beutel);
+				break;
+			case fight::NavMainItems::Beutel: setNavMainItem(fight::NavMainItems::Kampf);
+				break;
+			case fight::NavMainItems::Pokemon: setNavMainItem(fight::NavMainItems::Flucht);
+				break;
+			case fight::NavMainItems::Flucht: setNavMainItem(fight::NavMainItems::Pokemon);
+				break;
+		}
+	}
 }
 
-void Fight::selectLeft() {
-
+void Fight::pushA() {
+	if (this->_status == fight::FightStatus::NAVMAIN) {
+		switch(getNavMainItem()) {
+			case fight::NavMainItems::Kampf: setStatus(fight::FightStatus::SELECTATTACK);
+				break;
+			case fight::NavMainItems::Beutel: // TODO
+				break;
+			case fight::NavMainItems::Pokemon: // TODO
+				break;
+			case fight::NavMainItems::Flucht: endFight();
+				break;
+		}
+	}
 }
 
-void Fight::selectRight() {
-
+void Fight::pushB() {
+	if (this->_status == fight::FightStatus::SELECTATTACK) {
+		setStatus(fight::FightStatus::NAVMAIN);
+	}
 }
 
 fight::NavMainItems Fight::getNavMainItem() {
 	return _mainNavigationItems[_mainNavItemsIndex];
+}
+
+void Fight::setNavMainItem(fight::NavMainItems navMainItem) {
+	if (navMainItem == fight::NavMainItems::Kampf) {
+		_mainNavItemsIndex = 0;
+	} else if (navMainItem == fight::NavMainItems::Pokemon) {
+		_mainNavItemsIndex = 1;
+	} else if (navMainItem == fight::NavMainItems::Beutel) {
+		_mainNavItemsIndex = 2;
+	} else if (navMainItem == fight::NavMainItems::Flucht) {
+		_mainNavItemsIndex = 3;
+	}
 }
