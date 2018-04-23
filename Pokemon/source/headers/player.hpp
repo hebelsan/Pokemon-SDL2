@@ -68,12 +68,13 @@ public:
 	void addPokemon(Pokemon pokemon);
 	int getNumberOfPokemons();
 	Pokemon getPokemon(int index);
+	const std::vector<Pokemon>& getAllPokemons();
 private:
 	float _dx, _dy;
 
 	Direction _facing;
 
-	Pokemon _pokemons[6];
+	std::vector<Pokemon> _pokemons;
 	int _amountPokemon;
 
 	SDL_Rect _camera;

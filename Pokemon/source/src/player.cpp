@@ -226,7 +226,7 @@ void Player::draw(Graphics &graphics) {
 
 void Player::addPokemon(Pokemon pokemon) {
 	if (this->_amountPokemon < 6) {
-		this->_pokemons[_amountPokemon] = pokemon;
+		this->_pokemons.push_back(pokemon);
 		_amountPokemon++;
 	}
 }
@@ -236,6 +236,10 @@ Pokemon Player::getPokemon(int index) {
 		std::cout << "FALSCHER INDEX ZUGRIFF AUF PLAYERS POKEMON" << std::endl;
 	}
 	return this->_pokemons[index];
+}
+
+const std::vector<Pokemon>& Player::getAllPokemons() {
+	return this->_pokemons;
 }
 
 int Player::getNumberOfPokemons() {

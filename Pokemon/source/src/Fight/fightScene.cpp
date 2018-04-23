@@ -73,11 +73,12 @@ FightScene::FightScene(Graphics &graphics) :
 	}
 }
 
-void FightScene::draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem) {
+void FightScene::draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus,
+		fight::NavMainItems navMainItem, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon) {
 	if (this->_visible) {
 		graphics.blitSurface(this->_backgroundTexture, &this->_backgroundSrcRect, &this->_backgroundDstRect);
 		drawMainNav(graphics, fightStatus);
-		drawAttackSelection(graphics, fightStatus);
+		drawAttackSelection(graphics, fightStatus, playerActivePokemon);
 		drawNavigationArrow(graphics, player, fightStatus, navMainItem);
 	}
 }
@@ -88,9 +89,36 @@ void FightScene::drawMainNav(Graphics &graphics, fight::FightStatus &fightStatus
 	}
 }
 
-void FightScene::drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus) {
+void FightScene::drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus, Pokemon &playerActivePokemon) {
 	if (fightStatus == fight::FightStatus::SELECTATTACK) {
 		graphics.blitSurface(this->_attackSelectBoxTexture, &this->_attackSelectBoxSrcRect, &this->_attackSelectBoxDstRect);
+
+		if (playerActivePokemon.getAttacken().size() > 0) {
+			this->_fontSurfaceAtOL = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(26),
+					playerActivePokemon.getAttacken().at(0).getName().c_str(), Font::colorBlack(), 100);
+			this->_fontTextureAtOL = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurfaceAtOL);
+			int txtWidth;
+			int txtHeight;
+			SDL_QueryTexture(this->_fontTextureAtOL, NULL, NULL, &txtWidth, &txtHeight);
+			SDL_Rect sourceRect = {0, 0, txtWidth, txtHeight};
+			SDL_Rect fontDestinationRectangle = { 45, 380,
+					txtWidth/2 * (int)globals::SPRITE_SCALE,
+					txtHeight/2 * (int)globals::SPRITE_SCALE};
+			graphics.blitSurface(this->_fontTextureAtOL, &sourceRect, &fontDestinationRectangle);
+		}
+		if (playerActivePokemon.getAttacken().size() > 1) {
+			this->_fontSurfaceAtOR = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(26),
+					playerActivePokemon.getAttacken().at(1).getName().c_str(), Font::colorBlack(), 100);
+			this->_fontTextureAtOR = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurfaceAtOR);
+			int txtWidth;
+			int txtHeight;
+			SDL_QueryTexture(this->_fontTextureAtOR, NULL, NULL, &txtWidth, &txtHeight);
+			SDL_Rect sourceRect = {0, 0, txtWidth, txtHeight};
+			SDL_Rect fontDestinationRectangle = { 250, 380,
+					txtWidth/2 * (int)globals::SPRITE_SCALE,
+					txtHeight/2 * (int)globals::SPRITE_SCALE};
+			graphics.blitSurface(this->_fontTextureAtOR, &sourceRect, &fontDestinationRectangle);
+		}
 	}
 }
 

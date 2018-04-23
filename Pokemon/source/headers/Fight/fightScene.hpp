@@ -17,9 +17,10 @@ public:
 	~FightScene();
 	FightScene();
 	FightScene(Graphics &graphics);
-	void draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem);
+	void draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus,
+			fight::NavMainItems navMainItem, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
 	void drawMainNav(Graphics &graphics, fight::FightStatus &fightStatus);
-	void drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus);
+	void drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus, Pokemon &playerActivePokemon);
 	void drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem);
 
 	bool visible() const;
@@ -39,6 +40,12 @@ private:
 	SDL_Rect _selectArrowSrcRect;
 	SDL_Rect _selectArrowDstRect;
 	SDL_Texture* _selectArrowTexture;
+
+	// Attacken Text
+	SDL_Texture* _fontTextureAtOL;
+	SDL_Surface* _fontSurfaceAtOL;
+	SDL_Texture* _fontTextureAtOR;
+	SDL_Surface* _fontSurfaceAtOR;
 };
 
 

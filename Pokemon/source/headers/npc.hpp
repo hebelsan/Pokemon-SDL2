@@ -21,7 +21,7 @@ public:
 	virtual void draw(Graphics &graphics);
 	void setFacing(Direction facing);
 	std::string getText();
-	std::vector<Pokemon> getPokemons();
+	const std::vector<Pokemon>& getPokemons();
 protected:
 	Direction _facing;
 	std::string _text;

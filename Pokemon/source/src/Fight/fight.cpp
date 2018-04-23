@@ -8,13 +8,19 @@ Fight::Fight(Graphics &graphics) {
 }
 
 void Fight::draw(Graphics &graphics, Player &player) {
-	this->_fightScene->draw(graphics, player, _status, getNavMainItem());
+	if (isFighting()) {
+		this->_fightScene->draw(graphics, player, _status, getNavMainItem(), getPlayersActivePokemon(), getEnemysActivePokemon());
+	}
 }
 
-void Fight::startFight() {
+void Fight::startFight(const std::vector<Pokemon> &playerPokemon, const std::vector<Pokemon> &enemyPokemon) {
 	this->_fightScene->setVisible(true);
 	setStatus(fight::FightStatus::NAVMAIN);
 	_mainNavItemsIndex = 0;
+	this->_playersPokemons = playerPokemon;
+	this->_enemysPokemons = enemyPokemon;
+	this->_playersActivePokemon = 0;;
+	this->_enemysActivePokemon = 0;
 }
 
 void Fight::endFight() {
@@ -98,4 +104,12 @@ void Fight::setNavMainItem(fight::NavMainItems navMainItem) {
 	} else if (navMainItem == fight::NavMainItems::Flucht) {
 		_mainNavItemsIndex = 3;
 	}
+}
+
+Pokemon& Fight::getPlayersActivePokemon() {
+	return this->_playersPokemons.at(_playersActivePokemon);
+}
+
+Pokemon& Fight::getEnemysActivePokemon() {
+	return this->_enemysPokemons.at(_enemysActivePokemon);
 }

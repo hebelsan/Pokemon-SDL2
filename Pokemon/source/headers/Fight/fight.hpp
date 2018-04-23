@@ -18,7 +18,7 @@ public:
 	Fight(Graphics &graphics);
 	void draw(Graphics &graphics, Player &player);
 
-	void startFight();
+	void startFight(const std::vector<Pokemon> &playerPokemon, const std::vector<Pokemon> &enemyPokemon);
 	void endFight();
 	bool isFighting();
 
@@ -31,6 +31,9 @@ public:
 	void pushB();
 	fight::NavMainItems getNavMainItem();
 	void setNavMainItem(fight::NavMainItems navMainItem);
+
+	Pokemon& getPlayersActivePokemon();
+	Pokemon& getEnemysActivePokemon();
 private:
 	FightScene *_fightScene;
 	fight::FightStatus _status;
@@ -42,6 +45,10 @@ private:
 			fight::NavMainItems::Beutel,
 			fight::NavMainItems::Flucht
 	};
+	std::vector<Pokemon> _playersPokemons;
+	std::vector<Pokemon> _enemysPokemons;
+	int _playersActivePokemon;
+	int _enemysActivePokemon;
 };
 
 

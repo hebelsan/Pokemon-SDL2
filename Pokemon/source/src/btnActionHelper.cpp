@@ -34,7 +34,7 @@ namespace btnActionHelper {
 						player.playAnimation("IdleUp");
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
-							gui.getFight()->startFight();
+							gui.getFight()->startFight(player.getAllPokemons(), levelNpcs.at(i)->getPokemons());
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -56,7 +56,7 @@ namespace btnActionHelper {
 						player.playAnimation("IdleDown");
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
-							gui.getFight()->startFight();
+							gui.getFight()->startFight(player.getAllPokemons(), levelNpcs.at(i)->getPokemons());
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -78,7 +78,7 @@ namespace btnActionHelper {
 						player.playAnimation("IdleLeft");
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
-							gui.getFight()->startFight();
+							gui.getFight()->startFight(player.getAllPokemons(), levelNpcs.at(i)->getPokemons());
 						}
 						// IF it is non Trainer start Text
 						else {
@@ -100,7 +100,7 @@ namespace btnActionHelper {
 						player.playAnimation("IdleRight");
 						// IF its a trainer start Fighting
 						if(levelNpcs.at(i)->getPokemons().size() > 0 ) {
-							gui.getFight()->startFight();
+							gui.getFight()->startFight(player.getAllPokemons(), levelNpcs.at(i)->getPokemons());
 						}
 						// IF it is non Trainer start Text
 						else {

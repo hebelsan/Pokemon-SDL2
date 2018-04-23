@@ -38,7 +38,7 @@ std::string Npc::getText() {
 	return this->_text;
 }
 
-std::vector<Pokemon> Npc::getPokemons() {
+const std::vector<Pokemon>& Npc::getPokemons() {
 	return this->_pokemons;
 }
 
