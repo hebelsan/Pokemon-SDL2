@@ -18,10 +18,13 @@ public:
 	FightScene();
 	FightScene(Graphics &graphics);
 	void draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus,
-			fight::NavMainItems navMainItem, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
+			fight::NavMainItems navMainItem, fight::AttackItems attackItem, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
 	void drawMainNav(Graphics &graphics, fight::FightStatus &fightStatus);
-	void drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus, Pokemon &playerActivePokemon);
-	void drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem);
+	void drawAttackSelection(Graphics &graphics, fight::FightStatus &fightStatus, Pokemon &playerActivePokemon, fight::AttackItems attackItem);
+	void drawAttackSelectionHelper(Graphics &graphics, Pokemon &playerActivePokemon, int attackIndex, int posX, int posY);
+	void drawAttackInfo(Graphics &graphics, Pokemon &playerActivePokemon, int attackIndex);
+	void drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem, fight::AttackItems attackItem);
+	void drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
 
 	bool visible() const;
 	void setVisible(bool value);
@@ -42,10 +45,13 @@ private:
 	SDL_Texture* _selectArrowTexture;
 
 	// Attacken Text
-	SDL_Texture* _fontTextureAtOL;
-	SDL_Surface* _fontSurfaceAtOL;
-	SDL_Texture* _fontTextureAtOR;
-	SDL_Surface* _fontSurfaceAtOR;
+	SDL_Texture* _fontTexture;
+	SDL_Surface* _fontSurface;
+
+	// PokemonsTextures
+	SDL_Rect _playersPokemonSrcRect;
+	SDL_Rect _playersPokemonDstRect;
+	SDL_Texture* _playersPokemonTexture;
 };
 
 

@@ -6,6 +6,8 @@
 #ifndef GLOBALS_HPP_
 #define GLOBALS_HPP_
 
+#include <string>
+
 namespace globals {
 	const int SCREEN_WIDTH = 640;
 	const int SCREEN_HEIGHT = 480;
@@ -43,6 +45,13 @@ namespace fight {
 		Beutel,
 		Flucht,
 		Pokemon
+	};
+	// Top-Left, Top-Right...
+	enum AttackItems {
+		TL,
+		TR,
+		BL,
+		BR
 	};
 }
 

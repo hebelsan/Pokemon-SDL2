@@ -5,11 +5,13 @@ Fight::Fight() {}
 Fight::Fight(Graphics &graphics) {
 	this->_fightScene = new FightScene(graphics);
 	_mainNavItemsIndex = 0;
+	_attackItemsIndex = 0;
 }
 
 void Fight::draw(Graphics &graphics, Player &player) {
 	if (isFighting()) {
-		this->_fightScene->draw(graphics, player, _status, getNavMainItem(), getPlayersActivePokemon(), getEnemysActivePokemon());
+		this->_fightScene->draw(graphics, player,
+				_status, getNavMainItem(), getAttackItem(), getPlayersActivePokemon(), getEnemysActivePokemon());
 	}
 }
 
@@ -51,6 +53,17 @@ void Fight::selectUpOrDown() {
 			case fight::NavMainItems::Flucht: setNavMainItem(fight::NavMainItems::Beutel);
 				break;
 		}
+	} else if (this->_status == fight::FightStatus::SELECTATTACK) {
+		switch(getAttackItem()) {
+			case fight::AttackItems::TL: setAttackItem(fight::AttackItems::BL);
+				break;
+			case fight::AttackItems::BL: setAttackItem(fight::AttackItems::TL);
+				break;
+			case fight::AttackItems::TR: setAttackItem(fight::AttackItems::BR);
+				break;
+			case fight::AttackItems::BR: setAttackItem(fight::AttackItems::TR);
+				break;
+		}
 	}
 }
 
@@ -64,6 +77,17 @@ void Fight::selectLeftOrRight() {
 			case fight::NavMainItems::Pokemon: setNavMainItem(fight::NavMainItems::Flucht);
 				break;
 			case fight::NavMainItems::Flucht: setNavMainItem(fight::NavMainItems::Pokemon);
+				break;
+		}
+	} else if (this->_status == fight::FightStatus::SELECTATTACK) {
+		switch(getAttackItem()) {
+			case fight::AttackItems::TL: setAttackItem(fight::AttackItems::TR);
+				break;
+			case fight::AttackItems::TR: setAttackItem(fight::AttackItems::TL);
+				break;
+			case fight::AttackItems::BR: setAttackItem(fight::AttackItems::BL);
+				break;
+			case fight::AttackItems::BL: setAttackItem(fight::AttackItems::BR);
 				break;
 		}
 	}
@@ -103,6 +127,23 @@ void Fight::setNavMainItem(fight::NavMainItems navMainItem) {
 		_mainNavItemsIndex = 2;
 	} else if (navMainItem == fight::NavMainItems::Flucht) {
 		_mainNavItemsIndex = 3;
+	}
+}
+
+fight::AttackItems Fight::getAttackItem() {
+	return _attackItems[_attackItemsIndex];
+}
+
+void Fight::setAttackItem(fight::AttackItems attackItem) {
+	int amountAttacks = getPlayersActivePokemon().getAttacken().size();
+	if (attackItem == fight::AttackItems::TL) {
+		_attackItemsIndex = 0;
+	} else if (attackItem == fight::AttackItems::TR && amountAttacks > 1) {
+		_attackItemsIndex = 1;
+	} else if (attackItem == fight::AttackItems::BL && amountAttacks > 2) {
+		_attackItemsIndex = 2;
+	} else if (attackItem == fight::AttackItems::BR && amountAttacks > 3) {
+		_attackItemsIndex = 3;
 	}
 }
 

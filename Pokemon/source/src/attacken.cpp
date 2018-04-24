@@ -7,7 +7,8 @@ Attacken::Attacken() :
 		_schadensKlasse(SchadensKlasse::UNKNOWNCLASS),
 		_strength(0),
 		_accuracy(0),
-		_ap(0)
+		_ap(0),
+		_apMax(0)
 {
 }
 
@@ -17,6 +18,10 @@ int Attacken::getAccuracy() const {
 
 int Attacken::getAp() const {
 	return _ap;
+}
+
+int Attacken::getApMax() const {
+	return _apMax;
 }
 
 int Attacken::getId() const {
@@ -55,6 +60,7 @@ Pfund::Pfund() :
 	this->_strength = 40;
 	this->_accuracy = 100;
 	this->_ap = 35;
+	this->_apMax = 35;
 }
 
 Kratzer::Kratzer() :
@@ -67,6 +73,7 @@ Kratzer::Kratzer() :
 	this->_strength = 40;
 	this->_accuracy = 100;
 	this->_ap = 35;
+	this->_apMax = 35;
 }
 
 Tackle::Tackle() :
@@ -79,6 +86,7 @@ Tackle::Tackle() :
 	this->_strength = 50;
 	this->_accuracy = 100;
 	this->_ap = 35;
+	this->_apMax = 35;
 }
 
 Bodyslam::Bodyslam() :
@@ -91,6 +99,7 @@ Bodyslam::Bodyslam() :
 	this->_strength = 85;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Fuchtler::Fuchtler() :
@@ -103,6 +112,7 @@ Fuchtler::Fuchtler() :
 	this->_strength = 120;
 	this->_accuracy = 100;
 	this->_ap = 10;
+	this->_apMax = 10;
 }
 
 Risikotackle::Risikotackle() :
@@ -115,6 +125,7 @@ Risikotackle::Risikotackle() :
 	this->_strength = 120;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Silberblick::Silberblick() :
@@ -127,6 +138,7 @@ Silberblick::Silberblick() :
 	this->_strength = 0;
 	this->_accuracy = 100;
 	this->_ap = 30;
+	this->_apMax = 30;
 }
 
 Biss::Biss() :
@@ -139,6 +151,7 @@ Biss::Biss() :
 	this->_strength = 60;
 	this->_accuracy = 100;
 	this->_ap = 25;
+	this->_apMax = 25;
 }
 
 Heuler::Heuler() :
@@ -151,6 +164,7 @@ Heuler::Heuler() :
 	this->_strength = 0;
 	this->_accuracy = 100;
 	this->_ap = 40;
+	this->_apMax = 40;
 }
 
 Glut::Glut() :
@@ -163,6 +177,7 @@ Glut::Glut() :
 	this->_strength = 40;
 	this->_accuracy = 100;
 	this->_ap = 25;
+	this->_apMax = 25;
 }
 
 Flammenwurf::Flammenwurf() :
@@ -175,6 +190,7 @@ Flammenwurf::Flammenwurf() :
 	this->_strength = 90;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Aquaknarre::Aquaknarre() :
@@ -199,6 +215,7 @@ Hydropumpe::Hydropumpe() :
 	this->_strength = 110;
 	this->_accuracy = 80;
 	this->_ap = 5;
+	this->_apMax = 5;
 }
 
 Rasierblatt::Rasierblatt() :
@@ -211,6 +228,7 @@ Rasierblatt::Rasierblatt() :
 	this->_strength = 55;
 	this->_accuracy = 95;
 	this->_ap = 25;
+	this->_apMax = 25;
 }
 
 Solarstrahl::Solarstrahl() :
@@ -223,6 +241,7 @@ Solarstrahl::Solarstrahl() :
 	this->_strength = 120;
 	this->_accuracy = 100;
 	this->_ap = 10;
+	this->_apMax = 10;
 }
 
 Giftpuder::Giftpuder() :
@@ -235,6 +254,7 @@ Giftpuder::Giftpuder() :
 	this->_strength = 0;
 	this->_accuracy = 75;
 	this->_ap = 35;
+	this->_apMax = 35;
 }
 
 Ruckzuckhieb::Ruckzuckhieb() :
@@ -247,6 +267,7 @@ Ruckzuckhieb::Ruckzuckhieb() :
 	this->_strength = 40;
 	this->_accuracy = 100;
 	this->_ap = 30;
+	this->_apMax = 30;
 }
 
 Raserei::Raserei() :
@@ -259,6 +280,7 @@ Raserei::Raserei() :
 	this->_strength = 20;
 	this->_accuracy = 100;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Kreideschrei::Kreideschrei() :
@@ -271,6 +293,7 @@ Kreideschrei::Kreideschrei() :
 	this->_strength = 0;
 	this->_accuracy = 85;
 	this->_ap = 40;
+	this->_apMax = 40;
 }
 
 Rauchwolke::Rauchwolke() :
@@ -283,6 +306,7 @@ Rauchwolke::Rauchwolke() :
 	this->_strength = 0;
 	this->_accuracy = 100;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Einigler::Einigler() :
@@ -295,6 +319,7 @@ Einigler::Einigler() :
 	this->_strength = 0;
 	this->_accuracy = 0;
 	this->_ap = 40;
+	this->_apMax = 40;
 }
 
 Lichtschild::Lichtschild() :
@@ -307,6 +332,7 @@ Lichtschild::Lichtschild() :
 	this->_strength = 0;
 	this->_accuracy = 0;
 	this->_ap = 30;
+	this->_apMax = 30;
 }
 
 Reflektor::Reflektor() :
@@ -319,6 +345,7 @@ Reflektor::Reflektor() :
 	this->_strength = 0;
 	this->_accuracy = 0;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Sternschauer::Sternschauer() :
@@ -331,6 +358,7 @@ Sternschauer::Sternschauer() :
 	this->_strength = 60;
 	this->_accuracy = -1;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Schlitzer::Schlitzer() :
@@ -343,6 +371,7 @@ Schlitzer::Schlitzer() :
 	this->_strength = 70;
 	this->_accuracy = 100;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Flammenrad::Flammenrad() :
@@ -355,6 +384,7 @@ Flammenrad::Flammenrad() :
 	this->_strength = 60;
 	this->_accuracy = 100;
 	this->_ap = 25;
+	this->_apMax = 25;
 }
 
 Dreschflegel::Dreschflegel() :
@@ -367,6 +397,7 @@ Dreschflegel::Dreschflegel() :
 	this->_strength = 0;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Grimasse::Grimasse() :
@@ -379,6 +410,7 @@ Grimasse::Grimasse() :
 	this->_strength = 0;
 	this->_accuracy = 100;
 	this->_ap = 10;
+	this->_apMax = 10;
 }
 
 Walzer::Walzer() :
@@ -391,6 +423,7 @@ Walzer::Walzer() :
 	this->_strength = 30;
 	this->_accuracy = 90;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 
@@ -404,6 +437,7 @@ Bodyguard::Bodyguard() :
 	this->_strength = 0;
 	this->_accuracy = 0;
 	this->_ap = 25;
+	this->_apMax = 25;
 }
 
 Lockduft::Lockduft() :
@@ -416,6 +450,7 @@ Lockduft::Lockduft() :
 	this->_strength = 0;
 	this->_accuracy = 100;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Synthese::Synthese() :
@@ -428,6 +463,7 @@ Synthese::Synthese() :
 	this->_strength = 0;
 	this->_accuracy = 0;
 	this->_ap = 5;
+	this->_apMax = 5;
 }
 
 Knirscher::Knirscher() :
@@ -440,6 +476,7 @@ Knirscher::Knirscher() :
 	this->_strength = 80;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Kraftkoloss::Kraftkoloss() :
@@ -452,6 +489,7 @@ Kraftkoloss::Kraftkoloss() :
 	this->_strength = 120;
 	this->_accuracy = 100;
 	this->_ap = 5;
+	this->_apMax = 5;
 }
 
 Eruption::Eruption() :
@@ -464,6 +502,7 @@ Eruption::Eruption() :
 	this->_strength = -1;
 	this->_accuracy = 100;
 	this->_ap = 5;
+	this->_apMax = 5;
 }
 
 Aromakur::Aromakur() :
@@ -476,6 +515,7 @@ Aromakur::Aromakur() :
 	this->_strength = 0;
 	this->_accuracy = 0;
 	this->_ap = 5;
+	this->_apMax = 5;
 }
 
 Zauberblatt::Zauberblatt() :
@@ -488,6 +528,7 @@ Zauberblatt::Zauberblatt() :
 	this->_strength = 60;
 	this->_accuracy = -1;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Beerenkraefte::Beerenkraefte() :
@@ -500,6 +541,7 @@ Beerenkraefte::Beerenkraefte() :
 	this->_strength = -1;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Nassschweif::Nassschweif() :
@@ -512,6 +554,7 @@ Nassschweif::Nassschweif() :
 	this->_strength = 90;
 	this->_accuracy = 90;
 	this->_ap = 10;
+	this->_apMax = 10;
 }
 
 Eiszahn::Eiszahn() :
@@ -524,6 +567,7 @@ Eiszahn::Eiszahn() :
 	this->_strength = 65;
 	this->_accuracy = 95;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Flammensturm::Flammensturm() :
@@ -536,6 +580,7 @@ Flammensturm::Flammensturm() :
 	this->_strength = 80;
 	this->_accuracy = 100;
 	this->_ap = 15;
+	this->_apMax = 15;
 }
 
 Nitroladung::Nitroladung() :
@@ -548,6 +593,7 @@ Nitroladung::Nitroladung() :
 	this->_strength = 50;
 	this->_accuracy = 100;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Zermuerben::Zermuerben() :
@@ -560,6 +606,7 @@ Zermuerben::Zermuerben() :
 	this->_strength = 70;
 	this->_accuracy = 100;
 	this->_ap = 20;
+	this->_apMax = 20;
 }
 
 Inferno::Inferno() :
@@ -572,6 +619,7 @@ Inferno::Inferno() :
 	this->_strength = 100;
 	this->_accuracy = 50;
 	this->_ap = 5;
+	this->_apMax = 5;
 }
 
 Ausbrennen::Ausbrennen() :
@@ -584,4 +632,5 @@ Ausbrennen::Ausbrennen() :
 	this->_strength = 130;
 	this->_accuracy = 100;
 	this->_ap = 5;
+	this->_apMax = 5;
 }

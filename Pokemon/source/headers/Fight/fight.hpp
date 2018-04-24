@@ -29,8 +29,12 @@ public:
 	void selectLeftOrRight();
 	void pushA();
 	void pushB();
+
 	fight::NavMainItems getNavMainItem();
 	void setNavMainItem(fight::NavMainItems navMainItem);
+
+	fight::AttackItems getAttackItem();
+	void setAttackItem(fight::AttackItems attackItem);
 
 	Pokemon& getPlayersActivePokemon();
 	Pokemon& getEnemysActivePokemon();
@@ -44,6 +48,13 @@ private:
 			fight::NavMainItems::Pokemon,
 			fight::NavMainItems::Beutel,
 			fight::NavMainItems::Flucht
+	};
+	int _attackItemsIndex;
+	fight::AttackItems _attackItems[4] = {
+			fight::AttackItems::TL,
+			fight::AttackItems::TR,
+			fight::AttackItems::BL,
+			fight::AttackItems::BR
 	};
 	std::vector<Pokemon> _playersPokemons;
 	std::vector<Pokemon> _enemysPokemons;

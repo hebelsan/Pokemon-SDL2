@@ -17,6 +17,7 @@ public:
 
 	int getAccuracy() const;
 	int getAp() const;
+	int getApMax() const;
 	int getId() const;
 	const std::string& getName() const;
 	SchadensKlasse getSchadensKlasse() const;
@@ -30,6 +31,7 @@ protected:
 	int _strength;
 	int _accuracy;
 	int _ap;
+	int _apMax;
 };
 
 class Pfund : public Attacken {
