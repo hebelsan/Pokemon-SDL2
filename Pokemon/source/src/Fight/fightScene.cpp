@@ -14,8 +14,8 @@ FightScene::~FightScene() {
 FightScene::FightScene() {}
 
 FightScene::FightScene(Graphics &graphics) :
-	_pokemonScaleFactor(2.3),
-	_visible(false)
+	_visible(false),
+	_pokemonScaleFactor(2.3)
 {
 	this->_backgroundSrcRect.x = 0;
 	this->_backgroundSrcRect.y = 0;
@@ -43,7 +43,7 @@ FightScene::FightScene(Graphics &graphics) :
 	this->_mainNavDstRect.h = 120;
 
 	this->_mainNavigationTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/mainNavigation.png"));
-	if (this->_backgroundTexture == NULL) {
+	if (this->_mainNavigationTexture == NULL) {
 		printf("\nError: Unable to load image mainNavigation fightScene\n");
 	}
 
@@ -58,7 +58,7 @@ FightScene::FightScene(Graphics &graphics) :
 	this->_attackSelectBoxDstRect.h = 120;
 
 	this->_attackSelectBoxTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/attackSelectBox.png"));
-	if (this->_backgroundTexture == NULL) {
+	if (this->_attackSelectBoxTexture == NULL) {
 		printf("\nError: Unable to load image attack Box\n");
 	}
 
@@ -70,7 +70,7 @@ FightScene::FightScene(Graphics &graphics) :
 	this->_selectArrowDstRect = {0,0,14,22};
 
 	this->_selectArrowTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/navigationButton.png"));
-	if (this->_backgroundTexture == NULL) {
+	if (this->_selectArrowTexture == NULL) {
 		printf("\nError: Unable to load image FightScene NavigationButton\n");
 	}
 
@@ -78,16 +78,48 @@ FightScene::FightScene(Graphics &graphics) :
 	this->_playersPokemonDstRect = {0,0,0,0};
 
 	this->_playersPokemonTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/Pokemon/thirdGenerationBack.png"));
-	if (this->_backgroundTexture == NULL) {
+	if (this->_playersPokemonTexture == NULL) {
 		printf("\nError: Unable to load image Pokemons Back\n");
 	}
 
 	this->_enemiesPokemonSrcRect = {0,0,0,0};
-	this->_enemiessPokemonDstRect = {0,0,0,0};
+	this->_enemiesPokemonDstRect = {0,0,0,0};
 
 	this->_enemiesPokemonTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/Pokemon/thirdGenerationFront.png"));
-	if (this->_backgroundTexture == NULL) {
-		printf("\nError: Unable to load image Pokemons Front\n");
+	if (this->_enemiesPokemonTexture == NULL) {
+		printf("\nError: Unable to load image Pokemons front\n");
+	}
+
+	this->_playersPkmInfoSrcRect = {0,0,0,0};
+	this->_playersPkmInfoDstRect = {0,0,0,0};
+
+	this->_playersPkmInfoTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/playerInfo.png"));
+	if (this->_playersPkmInfoTexture == NULL) {
+		printf("\nError: Unable to load image players Pokemon info\n");
+	}
+
+	this->_enemiesPkmInfoSrcRect = {0,0,0,0};
+	this->_enemiesPkmInfoDstRect = {0,0,0,0};
+
+	this->_enemiesPkmInfoTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/enemyInfo.png"));
+	if (this->_enemiesPkmInfoTexture == NULL) {
+		printf("\nError: Unable to load enemies Pokemons info\n");
+	}
+
+	this->_masculinSrcRect = {0,0,29,34};
+	this->_masculinDstRect = {385,315,19,24};
+
+	this->_masculinTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/masculin.png"));
+	if (this->_masculinTexture == NULL) {
+		printf("\nError: Unable to load masculin sign BattleScene\n");
+	}
+
+	this->_femininSrcRect = {0,0,29,36};
+	this->_femininDstRect = {385,315,19,24};
+
+	this->_femininTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/feminin.png"));
+	if (this->_masculinTexture == NULL) {
+		printf("\nError: Unable to load feminin sign BattleScene\n");
 	}
 }
 
@@ -145,17 +177,9 @@ void FightScene::drawAttackSelection(Graphics &graphics, fight::FightStatus &fig
 }
 
 void FightScene::drawAttackSelectionHelper(Graphics &graphics, Pokemon &playerActivePokemon, int attackIndex, int posX, int posY) {
-	this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(28),
-						playerActivePokemon.getAttacken().at(attackIndex).getName().c_str(), Font::colorBlack(), 100);
-	this->_fontTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurface);
-	int txtWidth;
-	int txtHeight;
-	SDL_QueryTexture(this->_fontTexture, NULL, NULL, &txtWidth, &txtHeight);
-	SDL_Rect sourceRect = {0, 0, txtWidth, txtHeight};
-	SDL_Rect fontDestinationRectangle = { posX, posY,
-			txtWidth/2 * (int)globals::SPRITE_SCALE,
-			txtHeight/2 * (int)globals::SPRITE_SCALE};
-	graphics.blitSurface(this->_fontTexture, &sourceRect, &fontDestinationRectangle);
+	std::string attackName = playerActivePokemon.getAttacken().at(attackIndex).getName();
+
+	Font::drawText(graphics, attackName, posX, posY, Font::getStandartFont(28), Font::colorBlack(), 100);
 }
 
 void FightScene::drawAttackInfo(Graphics &graphics, Pokemon &playerActivePokemon, int attackIndex) {
@@ -165,41 +189,11 @@ void FightScene::drawAttackInfo(Graphics &graphics, Pokemon &playerActivePokemon
 	std::string typ = "Type/" + PokemonTypeConverter::pokemonTypToString(
 			playerActivePokemon.getAttacken().at(attackIndex).getTyp());
 
-	this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(28),
-			"AP", Font::colorBlack(), 100);
-	this->_fontTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurface);
-	int txtWidth;
-	int txtHeight;
-	SDL_QueryTexture(this->_fontTexture, NULL, NULL, &txtWidth, &txtHeight);
-	SDL_Rect sourceRect = {0, 0, txtWidth, txtHeight};
-	SDL_Rect fontDestinationRectangle = { 450, 390,
-			txtWidth/2 * (int)globals::SPRITE_SCALE,
-			txtHeight/2 * (int)globals::SPRITE_SCALE};
-	graphics.blitSurface(this->_fontTexture, &sourceRect, &fontDestinationRectangle);
+	Font::drawText(graphics, "AP", 450, 390, Font::getStandartFont(28), Font::colorBlack(), 100);
 
-	this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(28),
-			leftAp.c_str(), Font::colorBlack(), 100);
-	this->_fontTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurface);
-	txtWidth;
-	txtHeight;
-	SDL_QueryTexture(this->_fontTexture, NULL, NULL, &txtWidth, &txtHeight);
-	sourceRect = {0, 0, txtWidth, txtHeight};
-	fontDestinationRectangle = { 550, 390,
-			txtWidth/2 * (int)globals::SPRITE_SCALE,
-			txtHeight/2 * (int)globals::SPRITE_SCALE};
-	graphics.blitSurface(this->_fontTexture, &sourceRect, &fontDestinationRectangle);
+	Font::drawText(graphics, leftAp, 550, 390, Font::getStandartFont(28), Font::colorBlack(), 100);
 
-	this->_fontSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(28),
-						typ.c_str(), Font::colorBlack(), 100);
-	this->_fontTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), this->_fontSurface);
-	txtWidth;
-	txtHeight;
-	SDL_QueryTexture(this->_fontTexture, NULL, NULL, &txtWidth, &txtHeight);
-	sourceRect = {0, 0, txtWidth, txtHeight};
-	fontDestinationRectangle = { 450, 430,
-			txtWidth/2 * (int)globals::SPRITE_SCALE,
-			txtHeight/2 * (int)globals::SPRITE_SCALE};
-	graphics.blitSurface(this->_fontTexture, &sourceRect, &fontDestinationRectangle);
+	Font::drawText(graphics, typ, 450, 430, Font::getStandartFont(28), Font::colorBlack(), 100);
 }
 
 void FightScene::drawNavigationArrow(Graphics &graphics, Player &player,
@@ -260,8 +254,33 @@ void FightScene::drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, 
 	x = ((enemiesPokedexNumber - 1) % 25) * 64;
 	y = ((enemiesPokedexNumber - 1) / 25) * 64;
 	_enemiesPokemonSrcRect = {x, y, 64, 64};
-	_enemiessPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
-	graphics.blitSurface(this->_enemiesPokemonTexture, &_enemiesPokemonSrcRect, &_enemiessPokemonDstRect);
+	_enemiesPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+	graphics.blitSurface(this->_enemiesPokemonTexture, &_enemiesPokemonSrcRect, &_enemiesPokemonDstRect);
+
+	drawPokemonsInfo(graphics, playerActivePokemon, enemyActivePokemon);
+}
+
+void FightScene::drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon) {
+	// Draw players pokemon Info
+	_playersPkmInfoSrcRect = {0, 0, 412, 144};
+	_playersPkmInfoDstRect = {350, 245, 270, 110};
+	graphics.blitSurface(this->_playersPkmInfoTexture, &_playersPkmInfoSrcRect, &_playersPkmInfoDstRect);
+
+	std::string playersPkmName = playerActivePokemon.getName();
+	std::string playersPkmLevel = "Lv." + std::to_string(playerActivePokemon.getLevel());
+
+	Font::drawText(graphics, playersPkmName, 395, 260, Font::getStandartFont(28), Font::colorBlack(), 100);
+	Font::drawText(graphics, playersPkmLevel, 545, 260, Font::getStandartFont(28), Font::colorBlack(), 100);
+	if (playerActivePokemon.getSex() == 'm') {
+		graphics.blitSurface(this->_masculinTexture, &_masculinSrcRect, &_masculinDstRect);
+	} else if (playerActivePokemon.getSex() == 'f') {
+		graphics.blitSurface(this->_femininTexture, &_femininSrcRect, &_femininDstRect);
+	}
+
+	// Draw enemies pokemon Info
+	_enemiesPkmInfoSrcRect = {0, 0, 400, 112};
+	_enemiesPkmInfoDstRect = {40, 50, 270, 80};
+	graphics.blitSurface(this->_enemiesPkmInfoTexture, &_enemiesPkmInfoSrcRect, &_enemiesPkmInfoDstRect);
 }
 
 bool FightScene::visible() const {
