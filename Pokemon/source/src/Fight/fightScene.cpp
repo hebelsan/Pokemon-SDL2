@@ -14,6 +14,7 @@ FightScene::~FightScene() {
 FightScene::FightScene() {}
 
 FightScene::FightScene(Graphics &graphics) :
+	_pokemonScaleFactor(2.3),
 	_visible(false)
 {
 	this->_backgroundSrcRect.x = 0;
@@ -79,6 +80,14 @@ FightScene::FightScene(Graphics &graphics) :
 	this->_playersPokemonTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/Pokemon/thirdGenerationBack.png"));
 	if (this->_backgroundTexture == NULL) {
 		printf("\nError: Unable to load image Pokemons Back\n");
+	}
+
+	this->_enemiesPokemonSrcRect = {0,0,0,0};
+	this->_enemiessPokemonDstRect = {0,0,0,0};
+
+	this->_enemiesPokemonTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/Pokemon/thirdGenerationFront.png"));
+	if (this->_backgroundTexture == NULL) {
+		printf("\nError: Unable to load image Pokemons Front\n");
 	}
 }
 
@@ -239,13 +248,20 @@ void FightScene::drawNavigationArrow(Graphics &graphics, Player &player,
 
 void FightScene::drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon) {
 	// Draw players pokemon
-	float scaleFactor = 2.5;
-	int pokedexNumber = playerActivePokemon.getPokedexNumber();
-	int x = ((pokedexNumber - 1) % 25) * 64;
-	int y = ((pokedexNumber - 1) / 25) * 64;
+	int plyersPokedexNumber = playerActivePokemon.getPokedexNumber();
+	int x = ((plyersPokedexNumber - 1) % 25) * 64;
+	int y = ((plyersPokedexNumber - 1) / 25) * 64;
 	_playersPokemonSrcRect = {x, y, 64, 64};
-	_playersPokemonDstRect = {100, 225, 64 * scaleFactor, 64 * scaleFactor};
+	_playersPokemonDstRect = {85, 213, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
 	graphics.blitSurface(this->_playersPokemonTexture, &_playersPokemonSrcRect, &_playersPokemonDstRect);
+
+	// Draw enemies pokemon
+	int enemiesPokedexNumber = enemyActivePokemon.getPokedexNumber();
+	x = ((enemiesPokedexNumber - 1) % 25) * 64;
+	y = ((enemiesPokedexNumber - 1) / 25) * 64;
+	_enemiesPokemonSrcRect = {x, y, 64, 64};
+	_enemiessPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+	graphics.blitSurface(this->_enemiesPokemonTexture, &_enemiesPokemonSrcRect, &_enemiessPokemonDstRect);
 }
 
 bool FightScene::visible() const {

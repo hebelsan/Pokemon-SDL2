@@ -1,221 +1,53 @@
+14:37:20 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
+In file included from ..\source\src\Fight\fightScene.cpp:6:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
+   switch(typ) {
+         ^
+In file included from ..\source\src\Fight\fightScene.cpp:1:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fightScene.hpp: In constructor 'FightScene::FightScene(Graphics&)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fightScene.hpp:59:8: warning: 'FightScene::_pokemonScaleFactor' will be initialized after [-Wreorder]
+  float _pokemonScaleFactor;
+        ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fightScene.hpp:32:7: warning:   'bool FightScene::_visible' [-Wreorder]
+  bool _visible;
+       ^
+..\source\src\Fight\fightScene.cpp:16:1: warning:   when initialized here [-Wreorder]
+ FightScene::FightScene(Graphics &graphics) :
+ ^
+..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
+..\source\src\Fight\fightScene.cpp:183:10: warning: statement has no effect [-Wunused-value]
+  txtWidth;
+          ^
+..\source\src\Fight\fightScene.cpp:184:11: warning: statement has no effect [-Wunused-value]
+  txtHeight;
+           ^
+..\source\src\Fight\fightScene.cpp:195:10: warning: statement has no effect [-Wunused-value]
+  txtWidth;
+          ^
+..\source\src\Fight\fightScene.cpp:196:11: warning: statement has no effect [-Wunused-value]
+  txtHeight;
+           ^
+..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawPokemons(Graphics&, Pokemon&, Pokemon&)':
+..\source\src\Fight\fightScene.cpp:255:47: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _playersPokemonDstRect = {85, 213, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+                                               ^
+..\source\src\Fight\fightScene.cpp:255:80: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _playersPokemonDstRect = {85, 213, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+                                                                                ^
+..\source\src\Fight\fightScene.cpp:263:48: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _enemiessPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+                                                ^
+..\source\src\Fight\fightScene.cpp:263:81: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _enemiessPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+                                                                                 ^
+In file included from ..\source\src\Fight\fightScene.cpp:6:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^
+g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
 Info: Nothing to build for Pokemon
 Info: Nothing to build for Pokemon
-21:45:40 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:46:16 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:46:37 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:47:55 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:48:19 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawPokemons(Graphics&, Pokemon&, Pokemon&)':
-..\source\src\Fight\fightScene.cpp:247:41: warning: narrowing conversion of '(scaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {150, 230, 64 * scaleFactor, 64 * scaleFactor};
-                                         ^
-..\source\src\Fight\fightScene.cpp:247:59: warning: narrowing conversion of '(scaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {150, 230, 64 * scaleFactor, 64 * scaleFactor};
-                                                           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:48:44 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawPokemons(Graphics&, Pokemon&, Pokemon&)':
-..\source\src\Fight\fightScene.cpp:247:41: warning: narrowing conversion of '(scaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {130, 230, 64 * scaleFactor, 64 * scaleFactor};
-                                         ^
-..\source\src\Fight\fightScene.cpp:247:59: warning: narrowing conversion of '(scaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {130, 230, 64 * scaleFactor, 64 * scaleFactor};
-                                                           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:49:05 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawAttackInfo(Graphics&, Pokemon&, int)':
-..\source\src\Fight\fightScene.cpp:174:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:175:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp:186:10: warning: statement has no effect [-Wunused-value]
-  txtWidth;
-          ^
-..\source\src\Fight\fightScene.cpp:187:11: warning: statement has no effect [-Wunused-value]
-  txtHeight;
-           ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawPokemons(Graphics&, Pokemon&, Pokemon&)':
-..\source\src\Fight\fightScene.cpp:247:41: warning: narrowing conversion of '(scaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {100, 230, 64 * scaleFactor, 64 * scaleFactor};
-                                         ^
-..\source\src\Fight\fightScene.cpp:247:59: warning: narrowing conversion of '(scaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {100, 230, 64 * scaleFactor, 64 * scaleFactor};
-                                                           ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:49:35 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:51:22 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 

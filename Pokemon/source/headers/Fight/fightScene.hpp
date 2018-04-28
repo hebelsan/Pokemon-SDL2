@@ -52,6 +52,11 @@ private:
 	SDL_Rect _playersPokemonSrcRect;
 	SDL_Rect _playersPokemonDstRect;
 	SDL_Texture* _playersPokemonTexture;
+	// PokemonsTextures
+	SDL_Rect _enemiesPokemonSrcRect;
+	SDL_Rect _enemiessPokemonDstRect;
+	SDL_Texture* _enemiesPokemonTexture;
+	float _pokemonScaleFactor;
 };
 
 
