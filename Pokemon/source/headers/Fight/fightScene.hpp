@@ -26,6 +26,8 @@ public:
 	void drawNavigationArrow(Graphics &graphics, Player &player, fight::FightStatus fightStatus, fight::NavMainItems navMainItem, fight::AttackItems attackItem);
 	void drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
 	void drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
+	void drawPokemonsSex(Graphics &graphics, char sex, SDL_Rect &dstRect);
+	void drawHealthBar(Graphics &graphics, int currentHealth, int maxHealth, SDL_Rect &dstRect);
 
 	bool visible() const;
 	void setVisible(bool value);
@@ -45,18 +47,9 @@ private:
 	SDL_Rect _selectArrowDstRect;
 	SDL_Texture* _selectArrowTexture;
 
-	// Attacken Text
-	SDL_Texture* _fontTexture;
-	SDL_Surface* _fontSurface;
-
-	// Geschlecht texture
-	SDL_Rect _masculinSrcRect;
-	SDL_Rect _masculinDstRect;
-	SDL_Texture* _masculinTexture;
-	SDL_Rect _femininSrcRect;
-	SDL_Rect _femininDstRect;
-	SDL_Texture* _femininTexture;
-
+	/*
+	 * Pokemons Textures
+	 */
 	float _pokemonScaleFactor;
 	// players PokemonsTextures
 	SDL_Rect _playersPokemonSrcRect;
@@ -67,6 +60,9 @@ private:
 	SDL_Rect _enemiesPokemonDstRect;
 	SDL_Texture* _enemiesPokemonTexture;
 
+	/*
+	 * Pokemons Infos
+	 */
 	// players pokemonInfo
 	SDL_Rect _playersPkmInfoSrcRect;
 	SDL_Rect _playersPkmInfoDstRect;
@@ -75,6 +71,22 @@ private:
 	SDL_Rect _enemiesPkmInfoSrcRect;
 	SDL_Rect _enemiesPkmInfoDstRect;
 	SDL_Texture* _enemiesPkmInfoTexture;
+	// Geschlecht texture
+	SDL_Rect _playerSexDstRect;
+	SDL_Rect _enemySexDstRect;
+
+	SDL_Rect _masculinSrcRect;
+	SDL_Texture* _masculinTexture;
+	SDL_Rect _femininSrcRect;
+	SDL_Texture* _femininTexture;
+	// HealthBar
+	SDL_Rect _playerHealtBarDstRect;
+	SDL_Rect _enemyHealtBarDstRect;
+
+	SDL_Rect _healthBarSrcRect;
+	SDL_Texture* _healthBarGreenTexture;
+	SDL_Texture* _healthBarOrangeTexture;
+	SDL_Texture* _healthBarRedTexture;
 };
 
 

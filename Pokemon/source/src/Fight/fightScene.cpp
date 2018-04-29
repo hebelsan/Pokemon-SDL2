@@ -90,37 +90,52 @@ FightScene::FightScene(Graphics &graphics) :
 		printf("\nError: Unable to load image Pokemons front\n");
 	}
 
-	this->_playersPkmInfoSrcRect = {0,0,0,0};
-	this->_playersPkmInfoDstRect = {0,0,0,0};
+	this->_playersPkmInfoSrcRect = {0, 0, 412, 144};
+	this->_playersPkmInfoDstRect = {350, 245, 270, 110};
 
 	this->_playersPkmInfoTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/playerInfo.png"));
 	if (this->_playersPkmInfoTexture == NULL) {
 		printf("\nError: Unable to load image players Pokemon info\n");
 	}
 
-	this->_enemiesPkmInfoSrcRect = {0,0,0,0};
-	this->_enemiesPkmInfoDstRect = {0,0,0,0};
+	this->_enemiesPkmInfoSrcRect = {0, 0, 400, 112};
+	this->_enemiesPkmInfoDstRect = {40, 50, 270, 80};
 
 	this->_enemiesPkmInfoTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/enemyInfo.png"));
 	if (this->_enemiesPkmInfoTexture == NULL) {
 		printf("\nError: Unable to load enemies Pokemons info\n");
 	}
 
+	// pokemons sex
 	this->_masculinSrcRect = {0,0,29,34};
-	this->_masculinDstRect = {385,315,19,24};
-
 	this->_masculinTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/masculin.png"));
 	if (this->_masculinTexture == NULL) {
 		printf("\nError: Unable to load masculin sign BattleScene\n");
 	}
-
 	this->_femininSrcRect = {0,0,29,36};
-	this->_femininDstRect = {385,315,19,24};
-
 	this->_femininTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/feminin.png"));
 	if (this->_masculinTexture == NULL) {
 		printf("\nError: Unable to load feminin sign BattleScene\n");
 	}
+	this->_playerSexDstRect = {385,312,16,21};
+	this->_enemySexDstRect = {50,90,16,21};
+
+	// pokemons health
+	this->_healthBarSrcRect = {0,0,191,8};
+	this->_healthBarGreenTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/healthBarGreen.png"));
+	if (this->_healthBarGreenTexture == NULL) {
+		printf("\nError: Unable to load HealthbarGreen in battleScene\n");
+	}
+	this->_healthBarOrangeTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/healthBarOrange.png"));
+	if (this->_healthBarOrangeTexture == NULL) {
+		printf("\nError: Unable to load HealthbarOrange in battleScene\n");
+	}
+	this->_healthBarRedTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage("content/sprites/fightScene/healthBarRed.png"));
+	if (this->_healthBarRedTexture == NULL) {
+		printf("\nError: Unable to load HealthbarRed in battleScene\n");
+	}
+	_playerHealtBarDstRect = {473, 296, 127, 7};
+	_enemyHealtBarDstRect = {145, 98, 130, 6};
 }
 
 void FightScene::draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus,
@@ -246,7 +261,7 @@ void FightScene::drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, 
 	int x = ((plyersPokedexNumber - 1) % 25) * 64;
 	int y = ((plyersPokedexNumber - 1) / 25) * 64;
 	_playersPokemonSrcRect = {x, y, 64, 64};
-	_playersPokemonDstRect = {85, 213, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+	_playersPokemonDstRect = {85, 213, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
 	graphics.blitSurface(this->_playersPokemonTexture, &_playersPokemonSrcRect, &_playersPokemonDstRect);
 
 	// Draw enemies pokemon
@@ -254,33 +269,67 @@ void FightScene::drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, 
 	x = ((enemiesPokedexNumber - 1) % 25) * 64;
 	y = ((enemiesPokedexNumber - 1) / 25) * 64;
 	_enemiesPokemonSrcRect = {x, y, 64, 64};
-	_enemiesPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
+	_enemiesPokemonDstRect = {400, 60, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
 	graphics.blitSurface(this->_enemiesPokemonTexture, &_enemiesPokemonSrcRect, &_enemiesPokemonDstRect);
 
 	drawPokemonsInfo(graphics, playerActivePokemon, enemyActivePokemon);
 }
 
 void FightScene::drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon) {
-	// Draw players pokemon Info
-	_playersPkmInfoSrcRect = {0, 0, 412, 144};
-	_playersPkmInfoDstRect = {350, 245, 270, 110};
+	/*
+	 * Draw players pokemon Info
+	 */
 	graphics.blitSurface(this->_playersPkmInfoTexture, &_playersPkmInfoSrcRect, &_playersPkmInfoDstRect);
 
 	std::string playersPkmName = playerActivePokemon.getName();
 	std::string playersPkmLevel = "Lv." + std::to_string(playerActivePokemon.getLevel());
+	int playerPkmCurrentHealth = playerActivePokemon.getCurrentHealth();
+	int playerPkmMaxHealth = playerActivePokemon.getKP();
+	std::string playersPkmHealthString = std::to_string(playerPkmCurrentHealth) + "/ " + std::to_string(playerPkmMaxHealth);
 
 	Font::drawText(graphics, playersPkmName, 395, 260, Font::getStandartFont(28), Font::colorBlack(), 100);
 	Font::drawText(graphics, playersPkmLevel, 545, 260, Font::getStandartFont(28), Font::colorBlack(), 100);
-	if (playerActivePokemon.getSex() == 'm') {
-		graphics.blitSurface(this->_masculinTexture, &_masculinSrcRect, &_masculinDstRect);
-	} else if (playerActivePokemon.getSex() == 'f') {
-		graphics.blitSurface(this->_femininTexture, &_femininSrcRect, &_femininDstRect);
-	}
+	Font::drawText(graphics, playersPkmHealthString, 520, 315, Font::getStandartFont(28), Font::colorBlack(), 100);
+	// pokemons Sex
+	drawPokemonsSex(graphics, playerActivePokemon.getSex(), _playerSexDstRect);
+	// pokemons HealthBar
+	drawHealthBar(graphics, playerPkmCurrentHealth, playerPkmMaxHealth, _playerHealtBarDstRect);
 
-	// Draw enemies pokemon Info
-	_enemiesPkmInfoSrcRect = {0, 0, 400, 112};
-	_enemiesPkmInfoDstRect = {40, 50, 270, 80};
+	/*
+	 * Draw enemies pokemon Info
+	 */
 	graphics.blitSurface(this->_enemiesPkmInfoTexture, &_enemiesPkmInfoSrcRect, &_enemiesPkmInfoDstRect);
+
+	std::string enemiesPkmName = enemyActivePokemon.getName();
+	std::string enemiesPkmLevel = "Lv." + std::to_string(enemyActivePokemon.getLevel());
+	int enemiesPkmCurrentHealth = enemyActivePokemon.getCurrentHealth();
+	int enemiesPkmMaxHealth = enemyActivePokemon.getKP();
+
+	Font::drawText(graphics, enemiesPkmName, 60, 64, Font::getStandartFont(28), Font::colorBlack(), 100);
+	Font::drawText(graphics, enemiesPkmLevel, 215, 64, Font::getStandartFont(28), Font::colorBlack(), 100);
+	// pokemons Sex
+	drawPokemonsSex(graphics, playerActivePokemon.getSex(), _enemySexDstRect);
+	// pokemons HealthBar
+	drawHealthBar(graphics, enemiesPkmCurrentHealth, enemiesPkmMaxHealth, _enemyHealtBarDstRect);
+}
+
+void FightScene::drawPokemonsSex(Graphics &graphics, char sex, SDL_Rect &dstRect) {
+	if (sex == 'm') {
+		graphics.blitSurface(this->_masculinTexture, &_masculinSrcRect, &_playerSexDstRect);
+	} else if (sex == 'f') {
+		graphics.blitSurface(this->_femininTexture, &_femininSrcRect, &_playerSexDstRect);
+	}
+}
+
+void FightScene::drawHealthBar(Graphics &graphics, int pkmCurrentHealth, int pkmMaxHealth, SDL_Rect &dstRect) {
+	dstRect.w = (int)(dstRect.w * ((float)pkmCurrentHealth / pkmMaxHealth));
+	if (pkmCurrentHealth >= (int)(pkmMaxHealth/2)) {
+		graphics.blitSurface(this->_healthBarGreenTexture, &_healthBarSrcRect, &dstRect);
+	} else if (pkmCurrentHealth >= (int)(pkmMaxHealth/5)) {
+		graphics.blitSurface(this->_healthBarOrangeTexture, &_healthBarSrcRect, &dstRect);
+	} else if (pkmCurrentHealth < (int)(pkmMaxHealth/5)) {
+		graphics.blitSurface(this->_healthBarRedTexture, &_healthBarSrcRect, &dstRect);
+	}
 }
 
 bool FightScene::visible() const {

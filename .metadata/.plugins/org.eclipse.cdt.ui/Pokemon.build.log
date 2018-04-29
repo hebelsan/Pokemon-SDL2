@@ -1,4 +1,4 @@
-20:44:16 **** Incremental Build of configuration Debug for project Pokemon ****
+13:48:50 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
 g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
 In file included from ..\source\src\Fight\fightScene.cpp:6:0:
@@ -7,18 +7,18 @@ C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverte
    switch(typ) {
          ^
 ..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawPokemons(Graphics&, Pokemon&, Pokemon&)':
-..\source\src\Fight\fightScene.cpp:249:47: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {85, 213, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
-                                               ^
-..\source\src\Fight\fightScene.cpp:249:80: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {85, 213, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
-                                                                                ^
-..\source\src\Fight\fightScene.cpp:257:47: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _enemiesPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
-                                               ^
-..\source\src\Fight\fightScene.cpp:257:80: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _enemiesPokemonDstRect = {400, 60, (float)64 * _pokemonScaleFactor, (float)64 * _pokemonScaleFactor};
-                                                                                ^
+..\source\src\Fight\fightScene.cpp:264:40: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _playersPokemonDstRect = {85, 213, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
+                                        ^
+..\source\src\Fight\fightScene.cpp:264:66: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _playersPokemonDstRect = {85, 213, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
+                                                                  ^
+..\source\src\Fight\fightScene.cpp:272:40: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _enemiesPokemonDstRect = {400, 60, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
+                                        ^
+..\source\src\Fight\fightScene.cpp:272:66: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
+  _enemiesPokemonDstRect = {400, 60, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
+                                                                  ^
 In file included from ..\source\src\Fight\fightScene.cpp:6:0:
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
@@ -26,5 +26,5 @@ C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverte
   ^
 g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
 
-20:44:20 Build Finished (took 4s.222ms)
+13:48:54 Build Finished (took 4s.272ms)
 
