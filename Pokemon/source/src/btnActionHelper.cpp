@@ -1,10 +1,10 @@
+#include <attacke.hpp>
 #include "btnActionHelper.hpp"
 #include "input.hpp"
 #include "player.hpp"
 #include "npc.hpp"
 #include "level.hpp"
 #include "GUI.hpp"
-#include "attacken.hpp"
 #include "pokemonFactory.hpp"
 #include "globals.hpp"
 
@@ -131,7 +131,7 @@ namespace btnActionHelper {
 
 						// TEST
 						player.addPokemon(PokemonFactory::createPokemon(level.getLevelItems().at(i).getItemAction(), 5));
-						std::vector<Attacken> attacken = player.getPokemon(0).getAttacken();
+						std::vector<Attacke> attacken = player.getPokemon(0).getAttacken();
 						for (unsigned int i = 0; i < attacken.size(); i++) {
 							std::cout << attacken.at(i).getName() << std::endl;
 						}

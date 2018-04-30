@@ -1,30 +1,144 @@
-13:48:50 **** Incremental Build of configuration Debug for project Pokemon ****
+01:50:55 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:17:9: warning: enumeration value 'UNKNOWNTYPE' not handled in switch [-Wswitch]
-   switch(typ) {
-         ^
-..\source\src\Fight\fightScene.cpp: In member function 'void FightScene::drawPokemons(Graphics&, Pokemon&, Pokemon&)':
-..\source\src\Fight\fightScene.cpp:264:40: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {85, 213, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
-                                        ^
-..\source\src\Fight\fightScene.cpp:264:66: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _playersPokemonDstRect = {85, 213, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
-                                                                  ^
-..\source\src\Fight\fightScene.cpp:272:40: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _enemiesPokemonDstRect = {400, 60, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
-                                        ^
-..\source\src\Fight\fightScene.cpp:272:66: warning: narrowing conversion of '(((FightScene*)this)->FightScene::_pokemonScaleFactor * 6.4e+1f)' from 'float' to 'int' inside { } [-Wnarrowing]
-  _enemiesPokemonDstRect = {400, 60, 64 * _pokemonScaleFactor, 64 * _pokemonScaleFactor};
-                                                                  ^
-In file included from ..\source\src\Fight\fightScene.cpp:6:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
-  }
-  ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacken.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\HandleAttack.o" "..\\source\\src\\Fight\\HandleAttack.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from ..\source\src\Fight\HandleAttack.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from ..\source\src\Fight\HandleAttack.cpp:1:0:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\btnActionHelper.o" "..\\source\\src\\btnActionHelper.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from ..\source\src\btnActionHelper.cpp:7:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from ..\source\src\btnActionHelper.cpp:7:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\GUI.o" "..\\source\\src\\GUI.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from ..\source\src\GUI.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from ..\source\src\GUI.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
+                 from ..\source\src\game.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
+                 from ..\source\src\game.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
+                 from ..\source\src\main.cpp:6:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
+                 from ..\source\src\main.cpp:6:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from ..\source\src\buttonAction.cpp:7:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
+                 from ..\source\src\buttonAction.cpp:7:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:12:0,
+                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
+                 from ..\source\src\Fight\fight.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp: In static member function 'static bool Random::flipCoin()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/random.hpp:20:7: warning: unused variable 'dvRand' [-Wunused-variable]
+   int dvRand = (rand() % 31) + 1;
+       ^
+In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14:0,
+                 from ..\source\src\Fight\fight.cpp:1:
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp: In member function 'void HandleAttack::handleAttack()':
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'NOT_FIGHTING' not handled in switch [-Wswitch]
+   switch (_state) {
+          ^
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_ATTACK' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'WRITE_SECOND_STATE_CHANGE' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'REDUCE_SECOND_HP' not handled in switch [-Wswitch]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:56:10: warning: enumeration value 'CHECK_END' not handled in switch [-Wswitch]
+g++ -o Pokemon.exe "source\\src\\Fight\\HandleAttack.o" "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
 
-13:48:54 Build Finished (took 4s.272ms)
+01:51:06 Build Finished (took 11s.3ms)
 

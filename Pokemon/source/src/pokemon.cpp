@@ -75,6 +75,10 @@ void Pokemon::setLevel(int level) {
 	this->_init = ((((float)2 * _b_init + _dv_init + (_fp_init / (float)4) * _level) / 100) + 5) * _w_init;
 }
 
+void Pokemon::setCurrenHealth(int currentHealth) {
+	this->_currentKP = currentHealth;
+}
+
 std::string Pokemon::getName() {
 	return this->_name;
 }
@@ -99,7 +103,7 @@ int Pokemon::getPokedexNumber() {
 	return this->_pokedexNumber;
 }
 
-std::vector<Attacken> Pokemon::getAttacken(){
+std::vector<Attacke> Pokemon::getAttacken(){
 	return this->_attacken;
 }
 
@@ -131,9 +135,9 @@ int Pokemon::getInitiative() {
 	return this->_init;
 }
 
-void Pokemon::initiateAttacksHelper(std::vector<Attacken> &attacken,
-			std::multimap <int, Attacken> &lernbareAttacken, int level) {
-	std::vector<Attacken> attacks;
+void Pokemon::initiateAttacksHelper(std::vector<Attacke> &attacken,
+			std::multimap <int, Attacke> &lernbareAttacken, int level) {
+	std::vector<Attacke> attacks;
 	for (auto const& x : lernbareAttacken)
 	{
 		if (x.first <= level) {
@@ -183,20 +187,20 @@ Endivie::Endivie(int level) :
 	this->_b_spcDef = 65;
 	this->_b_init = 45;
 
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Tackle()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Heuler()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(6, Rasierblatt()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(9, Giftpuder()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(12, Synthese()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(17, Reflektor()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(20, Zauberblatt()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(23, Beerenkraefte()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(28, Lockduft()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(31, Lichtschild()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(34, Bodyslam()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(39, Bodyguard()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(42, Aromakur()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(45, Solarstrahl()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(1, Tackle()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(1, Heuler()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(6, Rasierblatt()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(9, Giftpuder()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(12, Synthese()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(17, Reflektor()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(20, Zauberblatt()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(23, Beerenkraefte()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(28, Lockduft()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(31, Lichtschild()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(34, Bodyslam()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(39, Bodyguard()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(42, Aromakur()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(45, Solarstrahl()));
 	this->setLevel(level);
 	this->initiateAttacksHelper(_attacken, _lernbareAttacken, level);
 
@@ -220,22 +224,22 @@ Feurigel::Feurigel(int level) :
 	this->_b_spcDef = 50;
 	this->_b_init = 65;
 
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Tackle()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Silberblick()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(6, Rauchwolke()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(10, Glut()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(13, Ruckzuckhieb()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(19, Flammenrad()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(22, Einigler()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(28, Nitroladung()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(31, Sternschauer()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(37, Flammensturm()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(40, Flammenwurf()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(46, Inferno()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(49, Walzer()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(55, Risikotackle()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(58, Ausbrennen()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(64, Eruption()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(1, Tackle()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(1, Silberblick()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(6, Rauchwolke()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(10, Glut()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(13, Ruckzuckhieb()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(19, Flammenrad()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(22, Einigler()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(28, Nitroladung()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(31, Sternschauer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(37, Flammensturm()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(40, Flammenwurf()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(46, Inferno()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(49, Walzer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(55, Risikotackle()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(58, Ausbrennen()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(64, Eruption()));
 	this->setLevel(level);
 	this->initiateAttacksHelper(_attacken, _lernbareAttacken, level);
 
@@ -259,22 +263,22 @@ Karnimani::Karnimani(int level) :
 	this->_b_spcDef = 48;
 	this->_b_init = 43;
 
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Kratzer()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(1, Silberblick()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(6, Aquaknarre()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(10, Raserei()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(13, Biss()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(15, Grimasse()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(20, Eiszahn()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(22, Dreschflegel()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(27, Knirscher()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(29, Zermuerben()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(34, Schlitzer()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(36, Kreideschrei()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(41, Fuchtler()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(43, Nassschweif()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(48, Kraftkoloss()));
-	this->_lernbareAttacken.insert(std::pair<int, Attacken>(50, Hydropumpe()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(1, Kratzer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(1, Silberblick()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(6, Aquaknarre()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(10, Raserei()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(13, Biss()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(15, Grimasse()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(20, Eiszahn()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(22, Dreschflegel()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(27, Knirscher()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(29, Zermuerben()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(34, Schlitzer()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(36, Kreideschrei()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(41, Fuchtler()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(43, Nassschweif()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(48, Kraftkoloss()));
+	this->_lernbareAttacken.insert(std::pair<int, Attacke>(50, Hydropumpe()));
 	this->setLevel(level);
 	this->initiateAttacksHelper(_attacken, _lernbareAttacken, level);
 

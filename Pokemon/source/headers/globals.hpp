@@ -37,7 +37,8 @@ namespace sides {
 namespace fight {
 	enum FightStatus {
 		NAVMAIN,
-		SELECTATTACK
+		SELECTATTACK,
+		FIGHTING
 	};
 
 	enum NavMainItems {

@@ -17,6 +17,8 @@ FightScene::FightScene(Graphics &graphics) :
 	_visible(false),
 	_pokemonScaleFactor(2.3)
 {
+	_fightTextBox = new FightTextBox(graphics);
+
 	this->_backgroundSrcRect.x = 0;
 	this->_backgroundSrcRect.y = 0;
 	this->_backgroundSrcRect.w = 240;
@@ -141,6 +143,7 @@ FightScene::FightScene(Graphics &graphics) :
 void FightScene::draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus,
 		fight::NavMainItems navMainItem, fight::AttackItems attackItem, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon) {
 	if (this->_visible) {
+		_fightTextBox->draw(graphics);
 		graphics.blitSurface(this->_backgroundTexture, &this->_backgroundSrcRect, &this->_backgroundDstRect);
 		drawMainNav(graphics, fightStatus);
 		drawAttackSelection(graphics, fightStatus, playerActivePokemon, attackItem);
@@ -232,6 +235,7 @@ void FightScene::drawNavigationArrow(Graphics &graphics, Player &player,
 				_selectArrowDstRect.y = globals::SCREEN_HEIGHT - 49;
 				break;
 		}
+		graphics.blitSurface(this->_selectArrowTexture, &this->_selectArrowSrcRect, &this->_selectArrowDstRect);
 	} else if (fightStatus == fight::FightStatus::SELECTATTACK) {
 		switch(attackItem) {
 			case fight::AttackItems::TL:
@@ -251,8 +255,8 @@ void FightScene::drawNavigationArrow(Graphics &graphics, Player &player,
 				_selectArrowDstRect.y = 430;
 				break;
 		}
+		graphics.blitSurface(this->_selectArrowTexture, &this->_selectArrowSrcRect, &this->_selectArrowDstRect);
 	}
-	graphics.blitSurface(this->_selectArrowTexture, &this->_selectArrowSrcRect, &this->_selectArrowDstRect);
 }
 
 void FightScene::drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon) {
@@ -315,9 +319,9 @@ void FightScene::drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokem
 
 void FightScene::drawPokemonsSex(Graphics &graphics, char sex, SDL_Rect &dstRect) {
 	if (sex == 'm') {
-		graphics.blitSurface(this->_masculinTexture, &_masculinSrcRect, &_playerSexDstRect);
+		graphics.blitSurface(this->_masculinTexture, &_masculinSrcRect, &dstRect);
 	} else if (sex == 'f') {
-		graphics.blitSurface(this->_femininTexture, &_femininSrcRect, &_playerSexDstRect);
+		graphics.blitSurface(this->_femininTexture, &_femininSrcRect, &dstRect);
 	}
 }
 
@@ -340,6 +344,8 @@ void FightScene::setVisible(bool value) {
 	this->_visible = value;
 }
 
-
+FightTextBox* FightScene::getFightTextBox() {
+	return this->_fightTextBox;
+}
 
 

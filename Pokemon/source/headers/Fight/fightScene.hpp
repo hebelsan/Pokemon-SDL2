@@ -11,6 +11,7 @@
 #include "graphics.hpp"
 #include "player.hpp"
 #include "globals.hpp"
+#include "fightTextBox.hpp"
 
 class FightScene {
 public:
@@ -31,8 +32,10 @@ public:
 
 	bool visible() const;
 	void setVisible(bool value);
+	FightTextBox* getFightTextBox();
 private:
 	bool _visible;
+	FightTextBox* _fightTextBox;
 
 	SDL_Rect _backgroundSrcRect;
 	SDL_Rect _backgroundDstRect;

@@ -4,6 +4,7 @@ Fight::Fight() {}
 
 Fight::Fight(Graphics &graphics) {
 	this->_fightScene = new FightScene(graphics);
+	_attackHandler = new HandleAttack(_fightScene->getFightTextBox());
 	_mainNavItemsIndex = 0;
 	_attackItemsIndex = 0;
 }
@@ -106,11 +107,20 @@ void Fight::pushA() {
 				break;
 		}
 	}
+	else if (this->_status == fight::FightStatus::SELECTATTACK) {
+		_status = fight::FightStatus::FIGHTING;
+		_attackHandler->startAtack(getPlayersActivePokemon(), getEnemysActivePokemon(), getPlayerActiveAttack());
+	}
+	else if (this->_status == fight::FightStatus::FIGHTING) {
+		_attackHandler->handleAttack();
+	}
 }
 
 void Fight::pushB() {
 	if (this->_status == fight::FightStatus::SELECTATTACK) {
 		setStatus(fight::FightStatus::NAVMAIN);
+	} else if (this->_status == fight::FightStatus::FIGHTING) {
+		_attackHandler->handleAttack();
 	}
 }
 
@@ -128,6 +138,10 @@ void Fight::setNavMainItem(fight::NavMainItems navMainItem) {
 	} else if (navMainItem == fight::NavMainItems::Flucht) {
 		_mainNavItemsIndex = 3;
 	}
+}
+
+Attacke& Fight::getPlayerActiveAttack() {
+	return getPlayersActivePokemon().getAttacken().at(_attackItemsIndex);
 }
 
 fight::AttackItems Fight::getAttackItem() {

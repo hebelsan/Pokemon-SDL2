@@ -11,6 +11,7 @@
 #include "graphics.hpp"
 #include "Fight/fightScene.hpp"
 #include "globals.hpp"
+#include "handleAttack.hpp"
 
 class Fight {
 public:
@@ -33,13 +34,15 @@ public:
 	fight::NavMainItems getNavMainItem();
 	void setNavMainItem(fight::NavMainItems navMainItem);
 
+	Attacke& getPlayerActiveAttack();
 	fight::AttackItems getAttackItem();
 	void setAttackItem(fight::AttackItems attackItem);
 
 	Pokemon& getPlayersActivePokemon();
 	Pokemon& getEnemysActivePokemon();
 private:
-	FightScene *_fightScene;
+	FightScene* _fightScene;
+	HandleAttack* _attackHandler;
 	fight::FightStatus _status;
 
 	int _mainNavItemsIndex;
