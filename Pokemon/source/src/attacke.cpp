@@ -8,7 +8,9 @@ Attacke::Attacke() :
 		_strength(0),
 		_accuracy(0),
 		_ap(0),
-		_apMax(0)
+		_apMax(0),
+		_hasEffect(false),
+		_speedBonus(false)
 {
 }
 
@@ -42,6 +44,16 @@ int Attacke::getStrength() const {
 
 PokemonTyp Attacke::getTyp() const {
 	return _typ;
+}
+
+bool Attacke::hasSpeedBonus() const {
+	return _speedBonus;
+}
+
+void Attacke::reduceAp() {
+	if (_ap > 0) {
+		_ap--;
+	}
 }
 
 /*
@@ -139,6 +151,7 @@ Silberblick::Silberblick() :
 	this->_accuracy = 100;
 	this->_ap = 30;
 	this->_apMax = 30;
+	this->_hasEffect = true;
 }
 
 Biss::Biss() :
@@ -165,6 +178,7 @@ Heuler::Heuler() :
 	this->_accuracy = 100;
 	this->_ap = 40;
 	this->_apMax = 40;
+	this->_hasEffect = true;
 }
 
 Glut::Glut() :
@@ -255,6 +269,7 @@ Giftpuder::Giftpuder() :
 	this->_accuracy = 75;
 	this->_ap = 35;
 	this->_apMax = 35;
+	this->_hasEffect = true;
 }
 
 Ruckzuckhieb::Ruckzuckhieb() :
@@ -268,6 +283,7 @@ Ruckzuckhieb::Ruckzuckhieb() :
 	this->_accuracy = 100;
 	this->_ap = 30;
 	this->_apMax = 30;
+	this->_speedBonus = true;
 }
 
 Raserei::Raserei() :
@@ -294,6 +310,7 @@ Kreideschrei::Kreideschrei() :
 	this->_accuracy = 85;
 	this->_ap = 40;
 	this->_apMax = 40;
+	this->_hasEffect = true;
 }
 
 Rauchwolke::Rauchwolke() :
@@ -303,7 +320,7 @@ Rauchwolke::Rauchwolke() :
 	this->_name = "Rauchwolke";
 	this->_typ = PokemonTyp::NORMAL;
 	this->_schadensKlasse = SchadensKlasse::STATUS;
-	this->_strength = 0;
+	this->_strength = -1;
 	this->_accuracy = 100;
 	this->_ap = 20;
 	this->_apMax = 20;
@@ -316,7 +333,7 @@ Einigler::Einigler() :
 	this->_name = "Einigler";
 	this->_typ = PokemonTyp::NORMAL;
 	this->_schadensKlasse = SchadensKlasse::STATUS;
-	this->_strength = 0;
+	this->_strength = -1;
 	this->_accuracy = 0;
 	this->_ap = 40;
 	this->_apMax = 40;

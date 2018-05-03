@@ -103,7 +103,7 @@ int Pokemon::getPokedexNumber() {
 	return this->_pokedexNumber;
 }
 
-std::vector<Attacke> Pokemon::getAttacken(){
+std::vector<Attacke>& Pokemon::getAttacken(){
 	return this->_attacken;
 }
 

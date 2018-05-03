@@ -8,9 +8,12 @@
 #ifndef FIGHT_HANDLEATTACK_HPP_
 #define FIGHT_HANDLEATTACK_HPP_
 
+#include <Fight/damage.hpp>
 #include "pokemon.hpp"
 #include "random.hpp"
 #include "fightTextBox.hpp"
+#include "stufenSystem.hpp"
+#include "damage.hpp"
 
 #include <string>
 #include <iostream>
@@ -26,111 +29,49 @@ enum AttackState {
 	WRITE_FIRST_ATTACK, // calculate init, set Text for first attack
 	WRITE_FIRST_STATE_CHANGE,
 	REDUCE_FIRST_HP,
+	CHECK_KO_FIRST,
 	WRITE_SECOND_ATTACK,
 	WRITE_SECOND_STATE_CHANGE,
 	REDUCE_SECOND_HP,
-	// reduce AP -> then check if one Pokemon has <= 0 hp
-	CHECK_END
+	CHECK_KO_SECOND, // reduce AP -> then check if one Pokemon has <= 0 hp
 };
 
 class HandleAttack {
 public:
-	HandleAttack(FightTextBox* fightTextBox) {
-		_state = AttackState::NOT_FIGHTING;
-		this->_fightTextBox = fightTextBox;
-	}
+	HandleAttack(FightTextBox* fightTextBox);
 
-	void startAtack(Pokemon &playersPokemon, Pokemon &enemysPokemon, Attacke &playersAttack) {
-		this->_playersPokemon = playersPokemon;
-		this->_enemysPokemon = enemysPokemon;
-		this->_playersAttack = playersAttack;
-		this->_enemyAttack = calculateEnemiesAttack(enemysPokemon);
+	void startAttack(Pokemon &playersPokemon, Pokemon &enemysPokemon, int playersAttackIndex);
 
-		calculateInit(playersPokemon, enemysPokemon);
+	void handleAttack();
 
-		_state = AttackState::WRITE_FIRST_ATTACK;
-		handleAttack();
-	}
+	Attacke* calculateEnemiesAttack(Pokemon &enemysPokemon);
 
-	void handleAttack() {
-		switch (_state) {
-			case AttackState::WRITE_FIRST_ATTACK:
-				{
-					std::string firstAttackString = getFirstAttackString();
-					_fightTextBox->setText(firstAttackString);
-					_state = AttackState::WRITE_FIRST_STATE_CHANGE;
-				}
-				break;
-			case AttackState::WRITE_FIRST_STATE_CHANGE:
-				{
-					// TODO check if state changes
-					//if state does not change
-					_state = AttackState::REDUCE_FIRST_HP;
-					handleAttack();
-				}
-				break;
-			case AttackState::REDUCE_FIRST_HP:
-				{
-					// TODO check if damage was done
-					std::cout << "damage" << std::endl;
-					_playersPokemon.setCurrenHealth(_playersPokemon.getCurrentHealth() -_enemyAttack.getStrength());
-				}
-				break;
-		}
-	}
+	void calculateInit();
 
-	Attacke& calculateEnemiesAttack(Pokemon &enemysPokemon) {
-		int numberAttacks = enemysPokemon.getAttacken().size();
-		// get random attack
-		struct timespec ts;
-		clock_gettime(CLOCK_MONOTONIC, &ts);
-		srand((time_t)ts.tv_nsec);
-		int attackRand = (rand() % numberAttacks); // number 0 <= x < numberAttacks Wenn size = 2 dann zwischen null und eins
+	bool checkSpecialInitAttack(); // like ruckzuckhieb
 
-		return enemysPokemon.getAttacken().at(attackRand);
-	}
-
-	void calculateInit(Pokemon &playersPokemon, Pokemon &enemysPokemon) {
-		if (playersPokemon.getInitiative() > enemysPokemon.getInitiative()) {
-			_higherInit = HigherInit::PLAYER;
-		}
-		else if (enemysPokemon.getInitiative() > playersPokemon.getInitiative()) {
-			_higherInit = HigherInit::ENEMY;
-		}
-		else if (enemysPokemon.getInitiative() == playersPokemon.getInitiative()) {
-			switch (Random::flipCoin())
-			{
-				case true:
-					_higherInit = HigherInit::PLAYER;
-					break;
-				case false:
-					_higherInit = HigherInit::ENEMY;
-					break;
-			}
-		}
-	}
-
-	std::string getFirstAttackString() {
-		std::string firstAttackString;
-		switch(_higherInit)
-		{
-			case HigherInit::PLAYER:
-				firstAttackString = _playersPokemon.getName() + " setzt " + _playersAttack.getName() + " ein.";
-				break;
-			case HigherInit::ENEMY:
-				firstAttackString = _enemysPokemon.getName() + " setzt " + _enemyAttack.getName() + " ein.";
-				break;
-		}
-		return firstAttackString;
-	}
+	void resetPokemonsStufenSystem();
 private:
 	HigherInit _higherInit;
 	AttackState _state;
-	Pokemon _playersPokemon;
-	Attacke _playersAttack;
-	Pokemon _enemysPokemon;
-	Attacke _enemyAttack;
+	Pokemon* _playersPokemon;
+	Attacke* _playersAttack;
+	Pokemon* _enemysPokemon;
+	Attacke* _enemyAttack;
 	FightTextBox *_fightTextBox;
+
+	StufenSystem _playerStufenSystem;
+	StufenSystem _enemyStufenSystem;
+
+	Damage _damage;
+
+	std::string getFirstAttackString();
+	Pokemon* getFirstPokemon();
+	Pokemon* getSecondPokemon();
+	Attacke* getFirstAttack();
+	Attacke* getSecondAttack();
+	StufenSystem& getFirstStufenSystem();
+	StufenSystem& getSecondStufenSystem();
 };
 
 

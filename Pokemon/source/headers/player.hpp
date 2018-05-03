@@ -67,7 +67,7 @@ public:
 
 	void addPokemon(Pokemon pokemon);
 	int getNumberOfPokemons();
-	Pokemon getPokemon(int index);
+	Pokemon& getPokemon(int index);
 	const std::vector<Pokemon>& getAllPokemons();
 private:
 	float _dx, _dy;

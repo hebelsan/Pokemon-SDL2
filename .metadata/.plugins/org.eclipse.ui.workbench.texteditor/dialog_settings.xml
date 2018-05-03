@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="KAMPF" key="selection"/>
+		<item value="_m" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="_m"/>
+			<item value="_fontTexture"/>
+			<item value="_fontSurface"/>
 			<item value="KAMPF"/>
 			<item value="handleNpcCollision"/>
 			<item value="poke"/>
@@ -20,9 +23,6 @@
 			<item value="grimasse"/>
 			<item value="font"/>
 			<item value="fon"/>
-			<item value="closest"/>
-			<item value="textPosY"/>
-			<item value="textPosX"/>
 		</list>
 		<list key="replacehistory">
 		</list>

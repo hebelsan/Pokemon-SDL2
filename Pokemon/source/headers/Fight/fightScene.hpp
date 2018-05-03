@@ -28,7 +28,7 @@ public:
 	void drawPokemons(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
 	void drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokemon, Pokemon &enemyActivePokemon);
 	void drawPokemonsSex(Graphics &graphics, char sex, SDL_Rect &dstRect);
-	void drawHealthBar(Graphics &graphics, int currentHealth, int maxHealth, SDL_Rect &dstRect);
+	void drawHealthBar(Graphics &graphics, int currentHealth, int maxHealth, SDL_Rect &dstRect, int healthBarWidthMax);
 
 	bool visible() const;
 	void setVisible(bool value);

@@ -23,6 +23,9 @@ public:
 	SchadensKlasse getSchadensKlasse() const;
 	int getStrength() const;
 	PokemonTyp getTyp() const;
+	bool hasSpeedBonus() const;
+
+	void reduceAp();
 protected:
 	int _id;
 	std::string _name;
@@ -32,6 +35,8 @@ protected:
 	int _accuracy;
 	int _ap;
 	int _apMax;
+	bool _hasEffect;
+	bool _speedBonus;
 };
 
 class Pfund : public Attacke {

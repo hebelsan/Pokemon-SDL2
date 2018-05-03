@@ -231,7 +231,7 @@ void Player::addPokemon(Pokemon pokemon) {
 	}
 }
 
-Pokemon Player::getPokemon(int index) {
+Pokemon& Player::getPokemon(int index) {
 	if (index > this->_amountPokemon) {
 		std::cout << "FALSCHER INDEX ZUGRIFF AUF PLAYERS POKEMON" << std::endl;
 	}

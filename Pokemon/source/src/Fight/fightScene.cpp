@@ -297,7 +297,7 @@ void FightScene::drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokem
 	// pokemons Sex
 	drawPokemonsSex(graphics, playerActivePokemon.getSex(), _playerSexDstRect);
 	// pokemons HealthBar
-	drawHealthBar(graphics, playerPkmCurrentHealth, playerPkmMaxHealth, _playerHealtBarDstRect);
+	drawHealthBar(graphics, playerPkmCurrentHealth, playerPkmMaxHealth, _playerHealtBarDstRect, 127);
 
 	/*
 	 * Draw enemies pokemon Info
@@ -314,7 +314,7 @@ void FightScene::drawPokemonsInfo(Graphics &graphics, Pokemon &playerActivePokem
 	// pokemons Sex
 	drawPokemonsSex(graphics, playerActivePokemon.getSex(), _enemySexDstRect);
 	// pokemons HealthBar
-	drawHealthBar(graphics, enemiesPkmCurrentHealth, enemiesPkmMaxHealth, _enemyHealtBarDstRect);
+	drawHealthBar(graphics, enemiesPkmCurrentHealth, enemiesPkmMaxHealth, _enemyHealtBarDstRect, 130);
 }
 
 void FightScene::drawPokemonsSex(Graphics &graphics, char sex, SDL_Rect &dstRect) {
@@ -325,8 +325,8 @@ void FightScene::drawPokemonsSex(Graphics &graphics, char sex, SDL_Rect &dstRect
 	}
 }
 
-void FightScene::drawHealthBar(Graphics &graphics, int pkmCurrentHealth, int pkmMaxHealth, SDL_Rect &dstRect) {
-	dstRect.w = (int)(dstRect.w * ((float)pkmCurrentHealth / pkmMaxHealth));
+void FightScene::drawHealthBar(Graphics &graphics, int pkmCurrentHealth, int pkmMaxHealth, SDL_Rect &dstRect, int healthBarWidthMax) {
+	dstRect.w = healthBarWidthMax * (pkmCurrentHealth / (float)pkmMaxHealth);
 	if (pkmCurrentHealth >= (int)(pkmMaxHealth/2)) {
 		graphics.blitSurface(this->_healthBarGreenTexture, &_healthBarSrcRect, &dstRect);
 	} else if (pkmCurrentHealth >= (int)(pkmMaxHealth/5)) {

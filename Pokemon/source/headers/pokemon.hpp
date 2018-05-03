@@ -29,7 +29,7 @@ public:
 	PokemonExpTyp getExpType();
 	PokemonTyp getTyp();
 	int getPokedexNumber();
-	std::vector<Attacke> getAttacken();
+	std::vector<Attacke>& getAttacken();
 
 	int getCurrentHealth();
 

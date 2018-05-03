@@ -17,14 +17,23 @@ public:
 		struct timespec ts;
 		clock_gettime(CLOCK_MONOTONIC, &ts);
 		srand((time_t)ts.tv_nsec);
-		int dvRand = (rand() % 31) + 1;
-		int sexRand = (rand() % 4) + 1; // number 1 <= x <= 4
+		int coinRand = (rand() % 4) + 1; // number 1 <= x <= 4
 
-		if(sexRand <= 2) {
+		if(coinRand <= 2) {
 			return true;
 		} else {
 			return false;
 		}
+	}
+
+	// calculates a number for battle,  indem von 100 eine zufällige Zahl zwischen 0 und 15 abgezogen wird
+	static int calculateZ() {
+		struct timespec ts;
+		clock_gettime(CLOCK_MONOTONIC, &ts);
+		srand((time_t)ts.tv_nsec);
+		int randNumber = (rand() % 16); // number 0 <= x <= 15
+
+		return (100 - randNumber);
 	}
 };
 

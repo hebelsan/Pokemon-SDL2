@@ -109,7 +109,7 @@ void Fight::pushA() {
 	}
 	else if (this->_status == fight::FightStatus::SELECTATTACK) {
 		_status = fight::FightStatus::FIGHTING;
-		_attackHandler->startAtack(getPlayersActivePokemon(), getEnemysActivePokemon(), getPlayerActiveAttack());
+		_attackHandler->startAttack(getPlayersActivePokemon(), getEnemysActivePokemon(), _playersActivePokemon);
 	}
 	else if (this->_status == fight::FightStatus::FIGHTING) {
 		_attackHandler->handleAttack();
@@ -141,7 +141,7 @@ void Fight::setNavMainItem(fight::NavMainItems navMainItem) {
 }
 
 Attacke& Fight::getPlayerActiveAttack() {
-	return getPlayersActivePokemon().getAttacken().at(_attackItemsIndex);
+	return this->_playersPokemons.at(_playersActivePokemon).getAttacken().at(_attackItemsIndex);
 }
 
 fight::AttackItems Fight::getAttackItem() {
