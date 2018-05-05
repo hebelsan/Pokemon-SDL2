@@ -25,9 +25,9 @@ void StartScreen::setupAnimations() {
 
 void StartScreen::animationDone(std::string currentAnimation) {}
 
-void StartScreen::startStartScreenLoop(Graphics &graphics, Input &input, SDL_Event &event, Music &music) {
-	music.loadMusicFile("content/music/TitleScreenTheme.mp3");
-	music.fadeIn(-1, 1000);
+void StartScreen::startStartScreenLoop(Graphics &graphics, Input &input, SDL_Event &event) {
+	Music::getInstance()->loadMusicFile("content/music/TitleScreenTheme.mp3");
+	Music::getInstance()->fadeIn(-1, 1000);
 
 	int LAST_UPDATE_TIME = SDL_GetTicks();
 		// start game loop
@@ -50,11 +50,11 @@ void StartScreen::startStartScreenLoop(Graphics &graphics, Input &input, SDL_Eve
 				return;
 			}
 			else if (input.wasKeyPressed(SDL_SCANCODE_SPACE) == true) {
-				music.fadeOut(2000);
+				Music::getInstance()->fadeOut(2000);
 				return;
 			}
 			else if (input.wasKeyPressed(SDL_SCANCODE_RETURN) == true) {
-				music.fadeOut(2000);
+				Music::getInstance()->fadeOut(2000);
 				return;
 			}
 

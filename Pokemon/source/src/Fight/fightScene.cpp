@@ -136,8 +136,8 @@ FightScene::FightScene(Graphics &graphics) :
 	if (this->_healthBarRedTexture == NULL) {
 		printf("\nError: Unable to load HealthbarRed in battleScene\n");
 	}
-	_playerHealtBarDstRect = {473, 296, 127, 7};
-	_enemyHealtBarDstRect = {145, 98, 130, 6};
+	_playerHealtBarDstRect = {473, 297, 127, 6};
+	_enemyHealtBarDstRect = {145, 99, 130, 5};
 }
 
 void FightScene::draw(Graphics &graphics, Player &player, fight::FightStatus fightStatus,

@@ -24,17 +24,16 @@ Game::~Game() {
 void Game::gameLoop() {
 	Graphics graphics;
 	Input input;
-	Music music;
 	SDL_Event event;
 
 	StartScreen startScreen(graphics);
-	startScreen.startStartScreenLoop(graphics, input, event, music);
+	startScreen.startStartScreenLoop(graphics, input, event);
 
 	this->_level = Level("StartTown", graphics);
 	this->_player = Player(graphics, this->_level.getPlayerSpawnPoint("start"));
 	this->_player.addPokemon(Karnimani(5));
-	music.loadMusicFile("content/music/LittlerootTown.mp3");
-	music.play(-1);
+	Music::getInstance()->loadMusicFile("content/music/LittlerootTown.mp3");
+	Music::getInstance()->play(-1);
 
 	this->_gui = GUI(graphics);
 

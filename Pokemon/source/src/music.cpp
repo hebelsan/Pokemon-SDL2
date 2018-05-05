@@ -1,6 +1,14 @@
 #include "music.hpp"
 #include <SDL2/SDL.h>
 
+Music* Music::_instance = 0;
+
+Music* Music::getInstance() {
+	if (!_instance)
+		_instance = new Music();
+	return _instance;
+}
+
 Music::Music() {
 	int flags = MIX_INIT_MP3;
 	int result = 0;

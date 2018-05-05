@@ -1,114 +1,20 @@
-23:33:48 **** Incremental Build of configuration Debug for project Pokemon ****
+15:44:37 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-Info: Nothing to build for Pokemon
-23:35:05 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-23:35:48 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:52:15 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
 In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
                  from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\game.cpp:1:
+                 from ..\source\src\Fight\fight.cpp:1:
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:52:9: warning: unused variable 'brt' [-Wunused-variable]
    float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:53:9: warning: unused variable 'rl' [-Wunused-variable]
    float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:54:9: warning: unused variable 'vs2' [-Wunused-variable]
    float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\buttonAction.cpp:7:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:55:9: warning: unused variable 'ff' [-Wunused-variable]
    float ff = 1.0; // TODO check Feuerfänger spezialfall
          ^
 g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\btnActionHelper.o" "..\\source\\src\\btnActionHelper.cpp" 
@@ -117,496 +23,41 @@ In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\heade
                  from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
                  from ..\source\src\btnActionHelper.cpp:7:
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:52:9: warning: unused variable 'brt' [-Wunused-variable]
    float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:53:9: warning: unused variable 'rl' [-Wunused-variable]
    float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:54:9: warning: unused variable 'vs2' [-Wunused-variable]
    float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from ..\source\src\Fight\fight.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\GUI.o" "..\\source\\src\\GUI.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\GUI.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\main.cpp:6:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:55:9: warning: unused variable 'ff' [-Wunused-variable]
    float ff = 1.0; // TODO check Feuerfänger spezialfall
          ^
 g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-21:59:32 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-22:00:09 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-22:36:42 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-22:44:00 **** Incremental Build of configuration Debug for project Pokemon ****
+15:45:14 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
 g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
 In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
                  from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
                  from ..\source\src\Fight\fight.cpp:1:
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:52:9: warning: unused variable 'brt' [-Wunused-variable]
    float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:53:9: warning: unused variable 'rl' [-Wunused-variable]
    float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:54:9: warning: unused variable 'vs2' [-Wunused-variable]
    float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\btnActionHelper.o" "..\\source\\src\\btnActionHelper.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\btnActionHelper.cpp:7:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\GUI.o" "..\\source\\src\\GUI.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\GUI.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\game.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\main.cpp:6:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\buttonAction.cpp:7:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:55:9: warning: unused variable 'ff' [-Wunused-variable]
    float ff = 1.0; // TODO check Feuerfänger spezialfall
          ^
 g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-22:47:18 **** Incremental Build of configuration Debug for project Pokemon ****
+15:46:35 **** Incremental Build of configuration Debug for project Pokemon ****
 Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from ..\source\src\Fight\fight.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\btnActionHelper.o" "..\\source\\src\\btnActionHelper.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\btnActionHelper.cpp:7:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\game.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\buttonAction.cpp:7:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\main.cpp:6:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\GUI.o" "..\\source\\src\\GUI.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\GUI.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
-22:51:59 **** Incremental Build of configuration Debug for project Pokemon ****
-Info: Internal Builder is used for build
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\level.o" "..\\source\\src\\level.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\npc.o" "..\\source\\src\\npc.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\handleAttack.o" "..\\source\\src\\Fight\\handleAttack.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from ..\source\src\Fight\handleAttack.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonFactory.o" "..\\source\\src\\pokemonFactory.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\game.o" "..\\source\\src\\game.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\game.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from ..\source\src\Fight\fight.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\GUI.o" "..\\source\\src\\GUI.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\GUI.cpp:1:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\player.o" "..\\source\\src\\player.cpp" 
-In file included from ..\source\src\player.cpp:1:0:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp: In constructor 'Player::Player(Graphics&, Vector2)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp:80:11: warning: 'Player::_camera' will be initialized after [-Wreorder]
-  SDL_Rect _camera;
-           ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/player.hpp:78:6: warning:   'int Player::_amountPokemon' [-Wreorder]
-  int _amountPokemon;
-      ^
-..\source\src\player.cpp:19:1: warning:   when initialized here [-Wreorder]
- Player::Player(Graphics &graphics, Vector2 spawnPoint) :
- ^
-..\source\src\player.cpp: In member function 'void Player::handleTileCollisions(std::vector<Rectangle>&)':
-..\source\src\player.cpp:139:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp:142:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
-    switch (collisionSide) {
-           ^
-..\source\src\player.cpp: In member function 'void Player::handleSlopeCollisions(std::vector<Slope>&)':
-..\source\src\player.cpp:163:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp: In member function 'void Player::handleDoorCollision(std::vector<Door>&, Level&, Graphics&)':
-..\source\src\player.cpp:181:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp: In member function 'void Player::handleNpcCollision(std::vector<Npc*>)':
-..\source\src\player.cpp:190:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < others.size(); i++) {
-                                  ^
-..\source\src\player.cpp:194:11: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
-    switch (collisionSide) {
-           ^
 g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fightScene.o" "..\\source\\src\\Fight\\fightScene.cpp" 
 In file included from ..\source\src\Fight\fightScene.cpp:6:0:
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp: In static member function 'static std::string PokemonTypeConverter::pokemonTypToString(PokemonTyp)':
@@ -631,60 +82,34 @@ C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverte
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/PokemonTypeConverter.hpp:70:2: warning: control reaches end of non-void function [-Wreturn-type]
   }
   ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemon.o" "..\\source\\src\\pokemon.cpp" 
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\btnActionHelper.o" "..\\source\\src\\btnActionHelper.cpp" 
+g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+Info: Nothing to build for Pokemon
+15:51:41 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+15:54:02 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\Fight\\fight.o" "..\\source\\src\\Fight\\fight.cpp" 
 In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
                  from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\btnActionHelper.cpp:7:
+                 from ..\source\src\Fight\fight.cpp:1:
 C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:52:9: warning: unused variable 'brt' [-Wunused-variable]
    float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:53:9: warning: unused variable 'rl' [-Wunused-variable]
    float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:54:9: warning: unused variable 'vs2' [-Wunused-variable]
    float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
          ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
+C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:55:9: warning: unused variable 'ff' [-Wunused-variable]
    float ff = 1.0; // TODO check Feuerfänger spezialfall
          ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\buttonAction.o" "..\\source\\src\\buttonAction.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from ..\source\src\buttonAction.cpp:7:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
-g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\main.o" "..\\source\\src\\main.cpp" 
-In file included from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/handleAttack.hpp:11:0,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/fight.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/GUI.hpp:14,
-                 from C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/game.hpp:12,
-                 from ..\source\src\main.cpp:6:
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp: In member function 'void Damage::handleDamage(Pokemon*, Attacke*, Pokemon*, StufenSystem&, StufenSystem&)':
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:57:9: warning: unused variable 'brt' [-Wunused-variable]
-   float brt = 1.0; // TODO check if verbrennung -> dann 0.5 auf physische attacken
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:58:9: warning: unused variable 'rl' [-Wunused-variable]
-   float rl = 1.0; // TODO check if lichtschild oder reflektor aktiv
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:59:9: warning: unused variable 'vs2' [-Wunused-variable]
-   float vs2 = 1.0; // TODO check if multikampf, wenn attacke 2 trifft dann ist 0.75
-         ^
-C:\Users\Alexander\Desktop\C++Pokemon\Pokemon\source\headers/Fight/damage.hpp:60:9: warning: unused variable 'ff' [-Wunused-variable]
-   float ff = 1.0; // TODO check Feuerfänger spezialfall
-         ^
+g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 
+15:54:47 **** Incremental Build of configuration Debug for project Pokemon ****
+Info: Internal Builder is used for build
+g++ -std=c++11 "-IC:\\Users\\Alexander\\Desktop\\C++Pokemon\\Pokemon\\source\\headers" -O0 -g3 -Wall -c -fmessage-length=0 -o "source\\src\\pokemonBag.o" "..\\source\\src\\pokemonBag.cpp" 
 g++ -o Pokemon.exe "source\\src\\Fight\\fight.o" "source\\src\\Fight\\fightScene.o" "source\\src\\Fight\\fightTextBox.o" "source\\src\\Fight\\handleAttack.o" "source\\src\\GUI.o" "source\\src\\animatedTile.o" "source\\src\\animtedSprite.o" "source\\src\\attacke.o" "source\\src\\btnActionHelper.o" "source\\src\\buttonAction.o" "source\\src\\game.o" "source\\src\\graphics.o" "source\\src\\input.o" "source\\src\\level.o" "source\\src\\levelItem.o" "source\\src\\main.o" "source\\src\\menuBox.o" "source\\src\\music.o" "source\\src\\npc.o" "source\\src\\player.o" "source\\src\\pokemon.o" "source\\src\\pokemonBag.o" "source\\src\\pokemonFactory.o" "source\\src\\sprite.o" "source\\src\\startScreen.o" "source\\src\\textBox.o" "source\\src\\tile.o" "source\\src\\tinyxml2.o" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf 

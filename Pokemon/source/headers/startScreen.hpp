@@ -20,7 +20,7 @@ class StartScreen : public AnimatedSprite {
 public:
 	StartScreen(Graphics &graphics);
 	// show startScreen until enter is pressed
-	void startStartScreenLoop(Graphics &graphics, Input &input, SDL_Event &event, Music &music);
+	void startStartScreenLoop(Graphics &graphics, Input &input, SDL_Event &event);
 	void draw(Graphics &graphics);
 	void update(float elapsedTime);
 

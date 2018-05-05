@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="652" key="DIALOG_X_ORIGIN"/>
+		<item value="363" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="_m" key="selection"/>
+		<item value="reset" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="reset"/>
+			<item value="music"/>
+			<item value="healthbar"/>
 			<item value="_m"/>
 			<item value="_fontTexture"/>
 			<item value="_fontSurface"/>
@@ -20,9 +27,6 @@
 			<item value="endivie"/>
 			<item value="pokemon"/>
 			<item value="for (unsigned int i = 0; i &lt; this-&gt;_tilesets.size(); i++) {"/>
-			<item value="grimasse"/>
-			<item value="font"/>
-			<item value="fon"/>
 		</list>
 		<list key="replacehistory">
 		</list>

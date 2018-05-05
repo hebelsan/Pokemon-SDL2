@@ -11,9 +11,6 @@ void HandleAttack::startAttack(Pokemon &playersPokemon, Pokemon &enemysPokemon, 
 	this->_playersAttack = &_playersPokemon->getAttacken().at(playersAttackIndex);
 	this->_enemyAttack = calculateEnemiesAttack(enemysPokemon);
 
-	std::cout << "pAttackDamage " << _playersAttack->getStrength() << std::endl;
-	std::cout << "eAttackDamage " << _enemyAttack->getStrength() << std::endl;
-
 	calculateInit();
 
 	_state = AttackState::WRITE_FIRST_ATTACK;
@@ -24,18 +21,13 @@ void HandleAttack::handleAttack() {
 	switch (_state) {
 		case AttackState::WRITE_FIRST_ATTACK:
 			{
-				std::cout << "test2: " << getFirstAttack()->getStrength() << std::endl;
-
-				std::string firstAttackString = getFirstAttackString();
+				std::string firstAttackString = getAttackString(getFirstPokemon(), getFirstAttack());
 				_fightTextBox->setText(firstAttackString);
 				_state = AttackState::WRITE_FIRST_STATE_CHANGE;
 			}
 			break;
 		case AttackState::WRITE_FIRST_STATE_CHANGE:
 			{
-
-				std::cout << "pAttackDamage " << _playersAttack->getStrength() << std::endl;
-				std::cout << "eAttackDamage " << _enemyAttack->getStrength() << std::endl;
 				// TODO check if state changes
 				//if state does not change
 				_state = AttackState::REDUCE_FIRST_HP;
@@ -45,7 +37,6 @@ void HandleAttack::handleAttack() {
 		case AttackState::REDUCE_FIRST_HP:
 			{
 				// TODO check if damage was done
-				std::cout << "test1" << getFirstAttack()->getStrength();
 				if(getFirstAttack()->getStrength() > 0) {
 					_damage.handleDamage(getFirstPokemon(), getFirstAttack(), getSecondPokemon(), getFirstStufenSystem(), getSecondStufenSystem());
 					_state = AttackState::CHECK_KO_FIRST;
@@ -59,6 +50,43 @@ void HandleAttack::handleAttack() {
 		case AttackState::CHECK_KO_FIRST:
 			{
 				// TODO check if faster pokemon is dead
+				_state = AttackState::WRITE_SECOND_ATTACK;
+				handleAttack();
+			}
+			break;
+		case AttackState::WRITE_SECOND_ATTACK:
+			{
+				std::string secondAttackString = getAttackString(getSecondPokemon(), getSecondAttack());
+				_fightTextBox->setText(secondAttackString);
+				_state = AttackState::WRITE_SECOND_STATE_CHANGE;
+			}
+			break;
+		case AttackState::WRITE_SECOND_STATE_CHANGE:
+			{
+				// TODO check if state changes
+				//if state does not change
+				_state = AttackState::REDUCE_SECOND_HP;
+				handleAttack();
+			}
+			break;
+		case AttackState::REDUCE_SECOND_HP:
+			{
+				if(getSecondAttack()->getStrength() > 0) {
+					_damage.handleDamage(getSecondPokemon(), getSecondAttack(), getFirstPokemon(), getSecondStufenSystem(), getFirstStufenSystem());
+					_state = AttackState::CHECK_KO_SECOND;
+					handleAttack();
+				}
+				else {
+					_state = AttackState::CHECK_KO_SECOND;
+					handleAttack();
+				}
+			}
+			break;
+		case AttackState::CHECK_KO_SECOND:
+			{
+				// TODO check if slower pokemon is dead
+				// if not dead
+				_state = AttackState::NOT_FIGHTING;
 			}
 			break;
 		default:
@@ -127,18 +155,16 @@ bool HandleAttack::checkSpecialInitAttack() {
 	return hasSpecialInitAttack;
 }
 
-std::string HandleAttack::getFirstAttackString() {
-	std::string firstAttackString;
-	switch(_higherInit)
-	{
-		case HigherInit::PLAYER:
-			firstAttackString = _playersPokemon->getName() + " setzt " + _playersAttack->getName() + " ein.";
-			break;
-		case HigherInit::ENEMY:
-			firstAttackString = _enemysPokemon->getName() + " setzt " + _enemyAttack->getName() + " ein.";
-			break;
-	}
-	return firstAttackString;
+AttackState HandleAttack::getAttackState() {
+	return this->_state;
+}
+
+void HandleAttack::resetPlayersStufenSystem() {
+	_playerStufenSystem.resetStufenSystem();
+}
+
+void HandleAttack::resetEnemiesStufenSystem() {
+	_enemyStufenSystem.resetStufenSystem();
 }
 
 void HandleAttack::resetPokemonsStufenSystem() {
@@ -151,6 +177,10 @@ void HandleAttack::resetPokemonsStufenSystem() {
  * Private
  *
  */
+std::string HandleAttack::getAttackString(Pokemon *pokemon, Attacke *attack) {
+	return pokemon->getName() + " setzt " + attack->getName() + " ein.";
+}
+
 Pokemon* HandleAttack::getFirstPokemon() {
 	if(_higherInit == HigherInit::PLAYER)
 		return _playersPokemon;

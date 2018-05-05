@@ -177,40 +177,19 @@ void PokemonBag::drawSinglePokemonStat(Graphics & graphics, Player &player, int 
 	SDL_Rect dstRectBall = {ballX, ballY, 58, 58};
 	graphics.blitSurface(this->_pokeBallTexture, &srcRectBall, &dstRectBall);
 
-	SDL_Surface* fontSurfacePName = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-		pokemonName.c_str(), Font::colorWhite(), 200);
-	int nameW, nameH;
-	SDL_Texture* fontTexturePName = SDL_CreateTextureFromSurface(graphics.getRenderer(), fontSurfacePName);
-	SDL_QueryTexture(fontTexturePName, NULL, NULL, &nameW, &nameH);
-	SDL_Rect srcRectPName = {0,0, nameW, nameH};
-	SDL_Rect dstRectPName = {nameX,nameY, nameW, nameH};
-	graphics.blitSurface(fontTexturePName, &srcRectPName, &dstRectPName);
+	Font::drawText(graphics, pokemonName, nameX, nameY, Font::getStandartFont(22), Font::colorWhite(), 200);
 
 	// draw lv
 	std::string level = "lv" + std::to_string(pokemonLevel) + "    sex: " + pokemonSex;
-	SDL_Surface* levelSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-		level.c_str(), Font::colorWhite(), 200);
-	int levelWidth, levelHeight;
-	SDL_Texture* levelTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), levelSurface);
-	SDL_QueryTexture(levelTexture, NULL, NULL, &levelWidth, &levelHeight);
-	SDL_Rect srcRectLevel = {0,0, levelWidth, levelHeight};
-	SDL_Rect dstRectLevel = {lvX, lvY, levelWidth, levelHeight};
-	graphics.blitSurface(levelTexture, &srcRectLevel, &dstRectLevel);
+	Font::drawText(graphics, level, lvX, lvY, Font::getStandartFont(22), Font::colorWhite(), 200);
 
 	//draw Health Text
-	std::string health = std::to_string(pokemonMaxHealth) + "/ " + std::to_string(pokemonCurrentHealtH);
-	SDL_Surface* healthSurface = TTF_RenderUTF8_Blended_Wrapped(Font::getStandartFont(22),
-			health.c_str(), Font::colorWhite(), 200);
-	int healtStrWidth, healthStrHeight;
-	SDL_Texture* healthTexture = SDL_CreateTextureFromSurface(graphics.getRenderer(), healthSurface);
-	SDL_QueryTexture(healthTexture, NULL, NULL, &healtStrWidth, &healthStrHeight);
-	SDL_Rect srcRectHealth = {0,0, healtStrWidth, healthStrHeight};
-	SDL_Rect dstRectHealth = {healthX, healthY, healtStrWidth, healthStrHeight};
-	graphics.blitSurface(healthTexture, &srcRectHealth, &dstRectHealth);
+	std::string health = std::to_string(pokemonCurrentHealtH) + "/ " + std::to_string(pokemonMaxHealth);
+	Font::drawText(graphics, health, healthX, healthY, Font::getStandartFont(22), Font::colorWhite(), 200);
 
 	//draw HealthBar
 	int maxHealtWidth = 133;
-	int healthW = maxHealtWidth * (pokemonCurrentHealtH / pokemonMaxHealth);
+	int healthW = maxHealtWidth * ((float)pokemonCurrentHealtH / pokemonMaxHealth);
 	SDL_Rect srcRectHealthBar = {0, 0, 50, 5};
 	SDL_Rect dstRectHealthBar = {healthBarX, healthBarY, healthW, 10};
 	graphics.blitSurface(this->_healthBarTexture, &srcRectHealthBar, &dstRectHealthBar);

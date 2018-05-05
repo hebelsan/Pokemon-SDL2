@@ -19,7 +19,7 @@ public:
 	Fight(Graphics &graphics);
 	void draw(Graphics &graphics, Player &player);
 
-	void startFight(const std::vector<Pokemon> &playerPokemon, const std::vector<Pokemon> &enemyPokemon);
+	void startFight(std::vector<Pokemon> &playerPokemon, std::vector<Pokemon> &enemyPokemon);
 	void endFight();
 	bool isFighting();
 
@@ -59,8 +59,8 @@ private:
 			fight::AttackItems::BL,
 			fight::AttackItems::BR
 	};
-	std::vector<Pokemon> _playersPokemons;
-	std::vector<Pokemon> _enemysPokemons;
+	std::vector<Pokemon>* _playersPokemons;
+	std::vector<Pokemon>* _enemysPokemons;
 	int _playersActivePokemon;
 	int _enemysActivePokemon;
 };

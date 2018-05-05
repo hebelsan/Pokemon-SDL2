@@ -50,6 +50,10 @@ public:
 
 	bool checkSpecialInitAttack(); // like ruckzuckhieb
 
+	AttackState getAttackState();
+
+	void resetPlayersStufenSystem();
+	void resetEnemiesStufenSystem();
 	void resetPokemonsStufenSystem();
 private:
 	HigherInit _higherInit;
@@ -65,7 +69,7 @@ private:
 
 	Damage _damage;
 
-	std::string getFirstAttackString();
+	std::string getAttackString(Pokemon *pokemon, Attacke *attack);
 	Pokemon* getFirstPokemon();
 	Pokemon* getSecondPokemon();
 	Attacke* getFirstAttack();

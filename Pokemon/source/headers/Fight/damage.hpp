@@ -17,11 +17,6 @@
 class Damage{
 public:
 	void handleDamage(Pokemon* attackPkm, Attacke* attack, Pokemon* defPkm, StufenSystem &attackPkmStuSys, StufenSystem &defPkmStuSys) {
-		std::cout << "attacke" << attack->getStrength() << std::endl;
-		std::cout << "attacke" << attack->getName() << std::endl;
-
-
-
 	/*
 	 * Schaden=( (Level⋅(2/5)+2) * Basisschaden * ((Sp.)Angr / 50*(Sp.)Vert.) * ⋅F1+2) *Volltreffer*F2⋅(Z/100)*STAB*Typ1*Typ2*F3
 	 */

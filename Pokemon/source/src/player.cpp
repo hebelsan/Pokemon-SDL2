@@ -238,7 +238,7 @@ Pokemon& Player::getPokemon(int index) {
 	return this->_pokemons[index];
 }
 
-const std::vector<Pokemon>& Player::getAllPokemons() {
+std::vector<Pokemon>& Player::getAllPokemons() {
 	return this->_pokemons;
 }
 

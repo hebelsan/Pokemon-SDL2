@@ -1,5 +1,7 @@
 #include "Fight/fight.hpp"
 
+#include "music.hpp"
+
 Fight::Fight() {}
 
 Fight::Fight(Graphics &graphics) {
@@ -16,18 +18,29 @@ void Fight::draw(Graphics &graphics, Player &player) {
 	}
 }
 
-void Fight::startFight(const std::vector<Pokemon> &playerPokemon, const std::vector<Pokemon> &enemyPokemon) {
+void Fight::startFight(std::vector<Pokemon> &playerPokemon, std::vector<Pokemon> &enemyPokemon) {
 	this->_fightScene->setVisible(true);
 	setStatus(fight::FightStatus::NAVMAIN);
 	_mainNavItemsIndex = 0;
-	this->_playersPokemons = playerPokemon;
-	this->_enemysPokemons = enemyPokemon;
+	this->_playersPokemons = &playerPokemon;
+	this->_enemysPokemons = &enemyPokemon;
 	this->_playersActivePokemon = 0;;
 	this->_enemysActivePokemon = 0;
+
+	_attackHandler->resetPokemonsStufenSystem();
+
+	Music::getInstance()->fadeOut(30);
+	Music::getInstance()->loadMusicFile("content/music/battle/Battle_Trainer.mp3");
+	Music::getInstance()->play(-1);
 }
 
 void Fight::endFight() {
 	this->_fightScene->setVisible(false);
+
+	// TODO check map and play music depending on map
+	Music::getInstance()->fadeOut(30);
+	Music::getInstance()->loadMusicFile("content/music/LittlerootTown.mp3");
+	Music::getInstance()->play(-1);
 }
 
 bool Fight::isFighting() {
@@ -112,6 +125,11 @@ void Fight::pushA() {
 		_attackHandler->startAttack(getPlayersActivePokemon(), getEnemysActivePokemon(), _playersActivePokemon);
 	}
 	else if (this->_status == fight::FightStatus::FIGHTING) {
+		// check if attack session finished
+		if (_attackHandler->getAttackState() == AttackState::NOT_FIGHTING) {
+			this->_status = fight::FightStatus::NAVMAIN;
+			this->_fightScene->getFightTextBox()->setText("");
+		}
 		_attackHandler->handleAttack();
 	}
 }
@@ -141,7 +159,7 @@ void Fight::setNavMainItem(fight::NavMainItems navMainItem) {
 }
 
 Attacke& Fight::getPlayerActiveAttack() {
-	return this->_playersPokemons.at(_playersActivePokemon).getAttacken().at(_attackItemsIndex);
+	return this->_playersPokemons->at(_playersActivePokemon).getAttacken().at(_attackItemsIndex);
 }
 
 fight::AttackItems Fight::getAttackItem() {
@@ -162,9 +180,9 @@ void Fight::setAttackItem(fight::AttackItems attackItem) {
 }
 
 Pokemon& Fight::getPlayersActivePokemon() {
-	return this->_playersPokemons.at(_playersActivePokemon);
+	return this->_playersPokemons->at(_playersActivePokemon);
 }
 
 Pokemon& Fight::getEnemysActivePokemon() {
-	return this->_enemysPokemons.at(_enemysActivePokemon);
+	return this->_enemysPokemons->at(_enemysActivePokemon);
 }

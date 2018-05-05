@@ -12,8 +12,7 @@
 
 class Music {
 public:
-	Music();
-	~Music();
+	static Music* getInstance();
 	void loadMusicFile(std::string fileName);
 	void play(int loops);
 	void playIfReady(int loops);
@@ -23,6 +22,10 @@ public:
 	void fadeIn(int loops, int milliSek);
 	void fadeOut(int milliSec);
 private:
+	static Music* _instance;
+	Music();
+	Music( const Music& );
+	~Music();
 	Mix_Music* _music;
 };
 
