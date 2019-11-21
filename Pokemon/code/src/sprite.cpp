@@ -2,6 +2,8 @@
 #include "graphics.hpp"
 #include "globals.hpp"
 
+#include <iostream>
+
 Sprite::Sprite() {}
 
 Sprite::Sprite(Graphics &graphics, const std::string &filePath, int sourceX, int sourceY, int width, int height, float posX, float posY) :
@@ -14,8 +16,8 @@ Sprite::Sprite(Graphics &graphics, const std::string &filePath, int sourceX, int
 
 	this->_spriteSheet = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage(filePath));
 	if (this->_spriteSheet == NULL) {
-		printf("\nError: Unable to load image Sprite\n");
-		printf(filePath.c_str());
+	    std::cout << "Error: Unable to load image Sprite" << std::endl;
+	    std::cout << "Path is: " << filePath << std::endl;
 	}
 
 	this->_boundingBox = Rectangle(this->_x, this->_y, width * globals::SPRITE_SCALE, height * globals::SPRITE_SCALE);

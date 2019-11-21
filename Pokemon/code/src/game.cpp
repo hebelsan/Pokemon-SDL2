@@ -21,7 +21,8 @@ Game::~Game() {
 
 }
 
-void Game::gameLoop() {
+void Game::gameLoop()
+{
 	Graphics graphics;
 	Input input;
 	SDL_Event event;

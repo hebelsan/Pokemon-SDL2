@@ -37,7 +37,7 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 
 	XMLElement* mapNode = doc.FirstChildElement("map");
 
-	//Get the width and the height of the whole map and sotre it in _size
+	//Get the width and the height of the whole map and store it in _size
 	int width, height;
 	mapNode->QueryIntAttribute("width", &width);
 	mapNode->QueryIntAttribute("height", &height);
