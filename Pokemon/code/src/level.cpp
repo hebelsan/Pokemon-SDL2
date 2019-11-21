@@ -33,7 +33,11 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 	XMLDocument doc;
 	std::stringstream ss;
 	ss << "content/maps/" << mapName << ".tmx";
-	doc.LoadFile(ss.str().c_str());
+	XMLError err = doc.LoadFile(ss.str().c_str());
+    if (err != XML_SUCCESS) {
+        std::cout << "Error loading filemap: " << (int) err << std::endl;
+        std::cout << "Check Mapname!: " << ss.str().c_str() << std::endl;
+    }
 
 	XMLElement* mapNode = doc.FirstChildElement("map");
 

@@ -30,7 +30,7 @@ void Game::gameLoop()
 	StartScreen startScreen(graphics);
 	startScreen.startStartScreenLoop(graphics, input, event);
 
-	this->_level = Level("StartTown", graphics);
+	this->_level = Level("startTown", graphics);
 	this->_player = Player(graphics, this->_level.getPlayerSpawnPoint("start"));
 	this->_player.addPokemon(Karnimani(5));
 	Music::getInstance()->loadMusicFile("content/music/LittlerootTown.mp3");
