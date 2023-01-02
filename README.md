@@ -11,5 +11,11 @@ Still I'm proud of what I achieved and I think others can learn from it, too.</p
 ./build.sh && ./build/pokemon
 ```
 
+## Gameplay screenshots
+![home](https://github.com/hebelsan/Pokemon-SDL2/blob/master/Screenshots/home.png)
+![professor](https://github.com/hebelsan/Pokemon-SDL2/blob/master/Screenshots/professor.png)
+![city](https://github.com/hebelsan/Pokemon-SDL2/blob/master/Screenshots/city.png)
+![route](https://github.com/hebelsan/Pokemon-SDL2/blob/master/Screenshots/route.png)
+
 
  
